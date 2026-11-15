@@ -924,12 +924,44 @@ body:before{display:none}
 @media(max-width:1100px){.friction-row{grid-template-columns:44px minmax(200px,.9fr) minmax(280px,1.4fr);column-gap:14px;min-height:clamp(75px,11vh,100px)}.friction-title{font-size:clamp(21px,2.1vw,27px)}.friction-desc{font-size:clamp(15px,1.4vw,18px)}}
 @media(max-width:700px){.friction-row{grid-template-columns:40px 1fr;min-height:0;row-gap:5px;padding:9px 2px}.friction-desc{grid-column:2;font-size:14px}.friction-title{font-size:19px}.friction-takeaway{font-size:14px;gap:9px;flex-wrap:wrap}}
 
+
+/* 5 USE CASES — one editorial overview, no stacked cards */
+.slide:has(.uc-shell) .slide-header{margin-bottom:clamp(11px,1.3vh,18px)}
+.uc-shell{display:flex;flex-direction:column;flex:1;min-height:0;width:100%;}
+.uc-intro{flex:0 0 auto;margin-bottom:clamp(12px,1.6vh,21px)}
+.uc-kicker{font-size:clamp(10px,.82vw,12px);font-weight:900;letter-spacing:.15em;color:#117b80;margin-bottom:clamp(5px,.85vh,12px)}
+.uc-intro h1{font-size:clamp(33px,3.55vw,55px);font-weight:880;letter-spacing:-.06em;line-height:1.03;color:#173047;margin:0}
+.uc-intro .gradient{background:linear-gradient(110deg,#147f87,#3baaa9);background-clip:text;-webkit-background-clip:text;color:transparent}
+.uc-intro p{font-size:clamp(14px,1.14vw,18px);color:#526b7b;line-height:1.35;margin:clamp(6px,.8vh,10px) 0 0}
+.uc-headings,.uc-row{display:grid;grid-template-columns:clamp(28px,2.4vw,38px) minmax(178px,1.02fr) minmax(0,1.16fr) clamp(24px,2.3vw,36px) minmax(0,1.26fr);gap:clamp(9px,1.4vw,23px);align-items:center}
+.uc-headings{flex:0 0 auto;border-top:1px solid #d9e4ea;padding:clamp(8px,1.2vh,14px) 0 clamp(6px,.8vh,9px);font-size:clamp(10px,.79vw,12px);font-weight:850;letter-spacing:.14em;color:#8296a6}
+.uc-headings span:last-child{color:#18828a}
+.uc-list{display:grid;grid-template-rows:repeat(5,minmax(0,1fr));flex:1;min-height:0;border-bottom:1px solid #d9e4ea}
+.uc-row{border-top:1px solid #e6edf1;padding:clamp(6px,1.1vh,14px) 0;min-height:0;transition:background .22s}
+.uc-row:first-child{border-top-color:#d9e4ea}
+.uc-row:hover{background:linear-gradient(90deg,transparent,rgba(9,124,135,.035) 36%,rgba(9,124,135,.025) 90%,transparent)}
+.uc-num{align-self:center;font-size:clamp(14px,1.35vw,21px);font-weight:820;letter-spacing:-.055em;color:#21868b}
+.uc-area{min-width:0}
+.uc-area>span{display:block;font-size:clamp(9px,.75vw,11px);font-weight:850;letter-spacing:.11em;color:#879ba7;margin-bottom:clamp(2px,.55vh,7px)}
+.uc-area h2{font-size:clamp(18px,1.58vw,25px);font-weight:840;line-height:1.13;letter-spacing:-.04em;color:#172f43;margin:0}
+.uc-old,.uc-new{font-size:clamp(13px,1.17vw,18px);line-height:1.28;margin:0;min-width:0}
+.uc-old{color:#637484}.uc-new{color:#173e47;font-weight:675}
+.uc-arrow{text-align:center;color:#168b90;font-size:clamp(25px,2vw,34px);font-weight:450;line-height:1}
+.uc-footer{display:flex;flex:0 0 auto;align-items:center;gap:clamp(9px,1vw,14px);margin-top:clamp(12px,1.9vh,24px);font-size:clamp(12px,1.08vw,17px);color:#4a6575}
+.uc-footer b{color:#176d77}.uc-foot-mark{width:clamp(24px,2.5vw,36px);height:3px;background:#168b90;border-radius:2px;flex:none}
+.uc-human{margin-left:auto;white-space:nowrap;font-size:clamp(10px,.88vw,14px);color:#718791}
+.slide.incoming .uc-row{animation:ucReveal .46s both;animation-delay:calc(.07s * var(--i,1))}
+.uc-row:nth-child(1){--i:1}.uc-row:nth-child(2){--i:2}.uc-row:nth-child(3){--i:3}.uc-row:nth-child(4){--i:4}.uc-row:nth-child(5){--i:5}
+@keyframes ucReveal{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@media(max-width:1150px){.uc-headings,.uc-row{grid-template-columns:26px minmax(155px,1.05fr) minmax(0,1.1fr) 23px minmax(0,1.2fr);gap:10px}.uc-area h2{font-size:clamp(16px,1.58vw,20px)}.uc-old,.uc-new{font-size:clamp(12px,1.15vw,16px)}}
+@media(max-width:730px){.uc-headings,.uc-row{grid-template-columns:24px minmax(0,1fr) 15px minmax(0,1fr);gap:8px}.uc-headings span:nth-child(3),.uc-row .uc-old{display:none}.uc-headings span:last-child{grid-column:4}.uc-arrow{font-size:18px}.uc-area h2{font-size:clamp(14px,2.4vw,20px)}.uc-area>span{font-size:9px}.uc-new{font-size:clamp(11px,1.8vw,14px)}.uc-human{display:none}}
+@media(prefers-reduced-motion:reduce){.slide.incoming .uc-row{animation:none!important}}
 </style>
 </head>
 <body>
 <div id="app">
   <main class="presentation" id="deck" aria-label="Interactive workshop presentation"><div id="slideHost"></div><div class="progress-track"><div class="progress-fill" id="progress"></div></div></main>
-  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 26</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
+  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 20</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
   <div class="help" id="help"><strong>Keyboard shortcuts</strong><p><kbd>→</kbd> <kbd>Space</kbd> Next slide</p><p><kbd>←</kbd> Previous slide</p><p><kbd>Home</kbd> First slide · <kbd>End</kbd> Last</p><p><kbd>G</kbd> Agenda · <kbd>F</kbd> Fullscreen</p><p><kbd>P</kbd> Print/PDF</p><p><kbd>?</kbd> This help</p><p style="color:#9eb1cd">Animations run automatically. Slides work offline; using a live AI assistant requires internet.</p></div>
   <div id="announce" aria-live="polite"></div>
 </div>
@@ -961,9 +993,9 @@ add(0,'hero','AI-Powered Services for Digital Transformation of MSMEs in the Wes
 add(0,'agenda','Workshop Overview',`${head(0,'Workshop overview','')}<div class="journey-landing journey-rows-layout"><div class="journey-intro"><div class="overline">FIVE CONVERSATIONS · ONE SHARED FUTURE</div><h1>Where could your business <span class="gradient">go next?</span></h1><p>Explore the challenges and opportunities shaping the future of SMEs.</p></div><div class="journey-rows">
 <div class="journey-row journey-card-1" data-jump="2" role="button" tabindex="0" aria-label="Explore The SME Advantage"><span class="jr-number">01</span><h2>The SME Advantage</h2><p>What if being smaller made you faster?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 <div class="journey-row journey-card-2" data-jump="4" role="button" tabindex="0" aria-label="Explore The Hidden Cost"><span class="jr-number">02</span><h2>The Hidden Cost of Manual Work</h2><p>Where is your time slipping away?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-3" data-jump="8" role="button" tabindex="0" aria-label="Explore Real Business Opportunities"><span class="jr-number">03</span><h2>Real Business Opportunities</h2><p>What could work automatically?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-4" data-jump="17" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-5" data-jump="21" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-3" data-jump="6" role="button" tabindex="0" aria-label="Explore Real Business Opportunities"><span class="jr-number">03</span><h2>Real Business Opportunities</h2><p>What could work automatically?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-4" data-jump="11" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-5" data-jump="15" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 </div><div class="journey-footer"><span class="journey-pulse"></span> Different industries. Shared challenges. New opportunities.</div></div>`,{notes:'Introduce the five themes conversationally. Click any row to jump to its chapter. Ask which theme feels most relevant to the audience.'});
 
 // 01 — SME ADVANTAGE
@@ -999,7 +1031,20 @@ block(2,'Where manual work slows business','Three hidden drains on SME productiv
 
 // 03 — USE CASES
 section(3,'THE POSSIBILITIES','What can automation & AI <span class="gradient">actually do?</span>','Five familiar business challenges. Five animated examples. One hands-on experiment that connects them.',['Communication','Documents & reporting','Invoicing','Inventory','Customers'],'Make clear these are animations of possible workflow patterns, not integrations with live company systems.');
-CASES.forEach(cs);
+
+add(3,'usecase-overview','Five everyday use cases',`${head(3,'Real business opportunities','FIVE USE CASES')}<div class="uc-shell">
+  <div class="uc-intro"><div class="uc-kicker">FIVE APPLICATIONS · EVERYDAY BUSINESS</div><h1>Five processes. <span class="gradient">One smarter business.</span></h1><p>Practical ways to reduce repetitive work, connect information and serve customers better.</p></div>
+  <div class="uc-headings" aria-hidden="true"><span></span><span>BUSINESS AREA</span><span>BEFORE</span><span></span><span>WITH AUTOMATION &amp; AI</span></div>
+  <div class="uc-list">
+    <div class="uc-row"><span class="uc-num">01</span><div class="uc-area"><span>COMMUNICATION</span><h2>Inbox &amp; requests</h2></div><p class="uc-old">Scattered messages and slow follow-ups</p><span class="uc-arrow" aria-hidden="true">→</span><p class="uc-new">Sort requests, identify urgency and draft replies</p></div>
+    <div class="uc-row"><span class="uc-num">02</span><div class="uc-area"><span>INFORMATION</span><h2>Documents &amp; reports</h2></div><p class="uc-old">PDFs, spreadsheets and manual data entry</p><span class="uc-arrow" aria-hidden="true">→</span><p class="uc-new">Extract, verify and turn data into insights</p></div>
+    <div class="uc-row"><span class="uc-num">03</span><div class="uc-area"><span>FINANCE</span><h2>Invoicing</h2></div><p class="uc-old">Time-consuming checks and payment chasing</p><span class="uc-arrow" aria-hidden="true">→</span><p class="uc-new">Match invoices, flag issues and prepare reminders</p></div>
+    <div class="uc-row"><span class="uc-num">04</span><div class="uc-area"><span>OPERATIONS</span><h2>Inventory</h2></div><p class="uc-old">Unexpected shortages and reactive purchasing</p><span class="uc-arrow" aria-hidden="true">→</span><p class="uc-new">Monitor stock, predict risks and trigger alerts</p></div>
+    <div class="uc-row"><span class="uc-num">05</span><div class="uc-area"><span>CUSTOMER EXPERIENCE</span><h2>Cross-border service</h2></div><p class="uc-old">Language barriers and inconsistent updates</p><span class="uc-arrow" aria-hidden="true">→</span><p class="uc-new">Prepare faster, multilingual customer responses</p></div>
+  </div>
+  <div class="uc-footer"><div class="uc-foot-mark"></div><span><b>The common thread:</b> Less repetition. Better information. More time for people.</span><span class="uc-human">Human review stays essential</span></div>
+</div>`,{notes:'Five use cases now share one overview slide. Discuss each process briefly; connect daily friction to opportunity without technical detail. Human review and verification remain important.'});
+
 block(3,'One business. Five connected processes.','Automation becomes more valuable when information flows between teams instead of stopping at every handoff.',`<div class="process-shell"><div class="process-grid"><div class="proc-card request"><div class="proc-kicker">01 · CUSTOMER</div><div class="proc-icon">📩</div><h3>Customer Request</h3><p>An enquiry or order arrives by email, website form or sales call.</p><div class="proc-chip">Trigger point</div></div><div class="proc-connector right c12"></div><div class="proc-card inventory"><div class="proc-kicker">02 · OPERATIONS</div><div class="proc-icon">📦</div><h3>Inventory Check</h3><p>Availability is checked against stock, capacity or resources.</p><div class="proc-chip alt">Operational validation</div></div><div class="proc-connector right c23"></div><div class="proc-card quote"><div class="proc-kicker">03 · SALES</div><div class="proc-icon">💶</div><h3>Quotation</h3><p>Pricing, delivery assumptions and terms are prepared for review.</p><div class="proc-chip hot">Human approval checkpoint</div></div><div class="proc-connector down c34"></div><div class="proc-card invoice"><div class="proc-kicker">04 · FINANCE</div><div class="proc-icon">🧾</div><h3>Invoice</h3><p>Once the order is confirmed, financial documents can be prepared faster.</p><div class="proc-chip">Document workflow</div></div><div class="proc-connector left c45"></div><div class="proc-card report"><div class="proc-kicker">05 · MANAGEMENT</div><div class="proc-icon">📊</div><h3>Reporting</h3><p>Business data feeds dashboards, follow-ups and better decisions.</p><div class="proc-chip alt">Decision support</div></div></div><div class="process-foot"><div class="process-note"><b>Key idea:</b> One customer interaction can trigger multiple connected business processes.</div><div class="process-note"><b>Why it matters:</b> The more connected the flow is, the less information gets retyped, delayed or lost.</div></div></div><div class="bottom-msg">The goal is connected work with clear checkpoints — not automation for its own sake.</div>`, 'Use this slide to show the business process as a connected chain rather than isolated automations. Emphasize that human approval remains essential at key points.');
 block(3,'The AI Business Challenge','A practical example connecting customer requests, inventory availability and AI-assisted quotations.',`<div class="challenge-grid"><div class="code-card"><div class="caption">CUSTOMER EMAIL + INVENTORY</div><pre>Customer: “Please quote 12 units of Product A
 and 8 units of Product B for next week.”
