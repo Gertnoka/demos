@@ -1146,6 +1146,89 @@ body:before{display:none}
 @media(max-width:950px){.ae-row{grid-template-columns:36px minmax(0,1.15fr) minmax(0,.9fr);gap:12px;padding:12px 2px}.ae-primary h2{font-size:19px}.ae-primary p{font-size:12px}.ae-answer strong{font-size:14px}.ae-answer p{font-size:12px}}
 @media(max-width:620px){.ae-row{grid-template-columns:28px 1fr;gap:8px}.ae-answer{grid-column:2}.ae-primary h2{font-size:18px}.ae-primary p{margin-top:3px}}
 
+
+/* cleaner slide 4 / chapter 02 */
+.problem-clean{display:flex;flex-direction:column;justify-content:center;gap:20px;max-width:1220px;min-height:0}
+.problem-clean .pc-kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#2f7e8a}
+.problem-clean h1{margin:0;font-size:clamp(40px,4vw,66px);line-height:1.02;letter-spacing:-.06em;color:#102741;max-width:900px}
+.problem-clean h1 .gradient{background:linear-gradient(110deg,#155f85,#2da5a3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.problem-clean .pc-sub{font-size:clamp(17px,1.35vw,22px);line-height:1.52;color:#5b6d80;max-width:930px}
+.problem-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:8px}
+.problem-item{padding:18px 18px 16px;border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f8fbfd 100%);border:1px solid #d9e7ee;box-shadow:0 10px 24px rgba(31,63,99,.06)}
+.problem-item .pc-no{font-size:13px;font-weight:900;letter-spacing:.12em;color:#6e8b97;margin-bottom:10px}
+.problem-item h3{margin:0 0 10px;font-size:clamp(24px,1.95vw,33px);line-height:1.04;letter-spacing:-.045em;color:#14324b}
+.problem-item p{margin:0;font-size:clamp(15px,1.08vw,18px);line-height:1.5;color:#5b6d80}
+.problem-foot{display:flex;align-items:center;gap:14px;padding-top:8px;color:#35526e;font-size:clamp(15px,1.08vw,18px);line-height:1.45}
+.problem-foot .mark{width:34px;height:4px;border-radius:999px;background:linear-gradient(90deg,#2da5a3,#155f85);flex:none}
+@media(max-width:1050px){.problem-grid{grid-template-columns:1fr;gap:12px}.problem-clean h1{font-size:clamp(34px,5vw,52px)}}
+
+
+/* Slide 04 — minimalist editorial SME advantage overview */
+body:has(.adv-editorial) .progress-fill{background:linear-gradient(90deg,#0a747d,#18979a)!important}
+body:has(.adv-editorial) .navbtn.primary{background:#0b8288!important;border-color:#0b8288!important;box-shadow:none!important}
+body:has(.adv-editorial) .navbtn.primary:hover{background:#076a73!important}
+
+.slide:has(.adv-editorial){background:#fff;color:#142c42;overflow:hidden}
+.slide:has(.adv-editorial) .slide-header{margin-bottom:clamp(9px,1.65vh,17px)}
+.slide:has(.adv-editorial) .number-chip{color:#087d83;border-color:#d4e7e9;background:#eef9f8}
+.slide:has(.adv-editorial) .clock-chip .dot{background:#087d83}
+.adv-editorial{--ae-ink:#142b40;--ae-muted:#5b7284;--ae-accent:#087d83;--ae-line:#dbe7eb;display:flex;flex:1;min-height:0;min-width:0;flex-direction:column;gap:0}
+.adv-top{display:flex;flex-direction:column;flex:none;min-width:0}
+.adv-tag{display:flex;align-items:center;gap:11px;font-size:clamp(10px,.82vw,13px);font-weight:900;letter-spacing:.14em;color:var(--ae-accent);text-transform:uppercase}
+.adv-tag:before{content:"";display:block;width:22px;height:3px;background:var(--ae-accent);border-radius:4px}
+.adv-top h1{font-size:clamp(32px,4.4vw,68px);font-weight:920;letter-spacing:-.067em;line-height:1.04;color:var(--ae-ink);margin:clamp(8px,1.25vh,15px) 0 0}
+.adv-top h1 span{color:var(--ae-accent)}
+.adv-top p{color:var(--ae-muted);font-size:clamp(13px,1.28vw,20px);line-height:1.4;margin:clamp(6px,.85vh,12px) 0 0}
+.adv-axis{display:grid;grid-template-columns:48px minmax(0,1.05fr) minmax(0,1fr);gap:clamp(12px,2.1vw,32px);margin-top:clamp(16px,2.7vh,32px);padding:0 0 clamp(7px,.9vh,12px);border-bottom:2px solid #93c4c8;flex:none}
+.adv-axis span{font-size:clamp(9px,.74vw,12px);font-weight:900;letter-spacing:.14em;color:#6f8493}
+.adv-axis span:first-child{grid-column:2}
+.adv-lines{min-height:0;display:grid;grid-template-rows:repeat(3,minmax(0,1fr));flex:1}
+.adv-line{display:grid;grid-template-columns:48px minmax(0,1.05fr) minmax(0,1fr);gap:clamp(12px,2.1vw,32px);align-items:center;min-height:0;padding:clamp(10px,1.4vh,19px) 0;border-bottom:1px solid var(--ae-line)}
+.adv-line:last-child{border-bottom:0}
+.adv-num{align-self:start;padding-top:clamp(5px,.75vh,9px);font-size:clamp(23px,2.4vw,38px);line-height:1;font-weight:900;letter-spacing:-.05em;color:#9bbcc1}
+.adv-question{min-width:0}
+.adv-question .adv-label{display:block;font-size:clamp(10px,.78vw,12px);font-weight:880;letter-spacing:.13em;color:var(--ae-accent);margin-bottom:clamp(5px,.8vh,11px)}
+.adv-question h2{font-size:clamp(22px,2.55vw,39px);line-height:1.09;font-weight:850;letter-spacing:-.045em;color:var(--ae-ink);margin:0;max-width:640px}
+.adv-question h2 em{font-style:normal;color:var(--ae-accent)}
+.adv-action{min-width:0;align-self:center}
+.adv-action strong{display:block;color:#234357;font-size:clamp(13px,1.17vw,18px);line-height:1.25;font-weight:850;letter-spacing:-.01em}
+.adv-action p{margin:clamp(5px,.72vh,9px) 0 0;color:var(--ae-muted);font-size:clamp(12px,.94vw,15px);line-height:1.42}
+.adv-steps{display:flex;align-items:center;flex-wrap:wrap;gap:clamp(4px,.6vw,9px);margin-top:clamp(5px,.7vh,10px)}
+.adv-steps span{font-size:clamp(11px,.98vw,15px);font-weight:870;letter-spacing:.04em;color:#126d77}
+.adv-steps i{font-size:clamp(12px,1.15vw,17px);font-style:normal;color:#a1c0c3}
+.adv-bottom{flex:none;display:flex;align-items:center;gap:clamp(9px,1.2vw,18px);margin-top:clamp(7px,1.2vh,16px);font-size:clamp(12px,1.03vw,17px);line-height:1.25;color:#597185}
+.adv-bottom strong{font-weight:900;color:#1b4953;white-space:nowrap}
+.adv-bottom-rule{display:block;width:30px;height:3px;border-radius:5px;background:var(--ae-accent);flex:none}
+.slide.incoming .adv-top{animation:revealIn .45s .08s both}
+.slide.incoming .adv-line:nth-child(1){animation:revealIn .44s .2s both}
+.slide.incoming .adv-line:nth-child(2){animation:revealIn .44s .3s both}
+.slide.incoming .adv-line:nth-child(3){animation:revealIn .44s .4s both}
+@media(max-width:1000px){
+ .adv-axis,.adv-line{grid-template-columns:36px minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(9px,1.8vw,16px)}
+ .adv-num{font-size:25px}
+ .adv-question h2{font-size:clamp(20px,2.6vw,26px)}
+ .adv-top h1{font-size:clamp(33px,4.6vw,47px)}
+ .adv-bottom{font-size:12px}
+}
+@media(max-height:700px){
+ .slide:has(.adv-editorial){padding-top:clamp(17px,2.2vh,26px);padding-bottom:clamp(17px,2.2vh,25px)}
+ .adv-axis{margin-top:clamp(10px,1.4vh,17px)}
+ .adv-top h1{font-size:clamp(31px,3.7vw,47px)}
+ .adv-question h2{font-size:clamp(21px,2.3vw,29px)}
+ .adv-line{padding:7px 0}
+ .adv-action p{margin-top:4px}
+}
+@media(max-width:640px){
+ .slide:has(.adv-editorial){overflow:auto}
+ .adv-line,.adv-axis{grid-template-columns:32px minmax(0,1fr);gap:8px}
+ .adv-axis span{display:none}
+ .adv-lines{display:flex;flex-direction:column}
+ .adv-line{padding:10px 0;align-items:start}
+ .adv-action{grid-column:2}
+ .adv-bottom{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.slide.incoming .adv-top,.slide.incoming .adv-line{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -1190,30 +1273,33 @@ add(0,'agenda','Workshop Overview',`${head(0,'Workshop overview','')}<div class=
 
 // 01 — SME ADVANTAGE
 section(1,'THE ADVANTAGE','Small in size. <span class="gradient">Fast in innovation.</span>','SMEs may lack the budgets of large corporations, but they can often experiment, adapt and make decisions faster.',['Faster decisions','Closer to customers','Room to experiment'],'This is not a claim that every SME is faster or more innovative. Frame it as an advantage they can choose to cultivate.');
-add(1,'discussion','The SME Advantage: Three Perspectives',`${head(1,SECTION_NAMES[1],'THREE COMPETITIVE ADVANTAGES')}<div class="sme-onepage">
-  <div class="sme-discussion-heading"><div class="overline">THE SME ADVANTAGE · THREE PERSPECTIVES</div><h1>Small teams. <span class="gradient">Big moves.</span></h1><p>Three perspectives on why SMEs can compete, adapt and innovate.</p></div>
-  <div class="sme-discussion-grid">
-    <article class="sme-discussion sme-discussion-one">
-      <div class="sme-discussion-label"><span>01</span> DECISION SPEED</div>
-      <h2>Can 10 people <em>outmove</em> 1,000?</h2>
-      <div class="sme-contrast"><div class="sme-contrast-row"><b>BIG COMPANY</b><span>Idea → Reviews → Approvals → Rollout</span></div><div class="sme-contrast-row fast"><b>AGILE SME</b><span>Idea → Pilot → Learn → Improve</span></div></div>
-      <p class="sme-panel-insight">Fewer layers and closer customer relationships can make decisions faster.</p>
-    </article>
-    <article class="sme-discussion sme-discussion-two">
-      <div class="sme-discussion-label"><span>02</span> FUTURE COMPETITION</div>
-      <h2>What if your next competitor <em>doesn't exist yet?</em></h2>
-      <div class="sme-steps"><div><i>1</i><span>Spot a customer frustration</span></div><div><i>2</i><span>Test a digital service</span></div><div><i>3</i><span>Raise market expectations</span></div></div>
-      <p class="sme-panel-insight">Convenience, speed and continuous learning can matter as much as scale.</p>
-    </article>
-    <article class="sme-discussion sme-discussion-three">
-      <div class="sme-discussion-label"><span>03</span> PRACTICAL INNOVATION</div>
-      <h2>Too small to innovate — <em>or too small not to?</em></h2>
-      <div class="sme-experiment"><div><span>ONE</span><b>Problem.</b></div><div><span>ONE</span><b>Experiment.</b></div><div><span>ONE</span><b>Measurable result.</b></div></div>
-      <p class="sme-panel-insight">Start small, reduce risk, measure progress. Doing nothing has a cost too.</p>
-    </article>
+add(1,'discussion','The SME Advantage: Three Perspectives',`${head(1,SECTION_NAMES[1],'THREE COMPETITIVE ADVANTAGES')}
+<div class="adv-editorial">
+  <div class="adv-top">
+    <div class="adv-tag">THE SME ADVANTAGE</div>
+    <h1>Small teams. <span>Big moves.</span></h1>
+    <p>Three ways smaller businesses can compete through speed, customer focus and experimentation.</p>
   </div>
-  <div class="sme-discussion-prompt"><span>KEY TAKEAWAY</span><strong>Small businesses can compete through quick decisions, customer focus and practical experimentation.</strong></div>
-</div>`,{notes:'One combined discussion replacing the former slides 4–6. Topic 1: ask whether a 10-person company can be faster than a 1,000-person corporation; acknowledge that large companies have important resources and scale, while small teams can shorten decision cycles and stay close to customers. Topic 2: discuss a new competitor identifying a customer frustration, testing a digital service, and changing expectations through speed/convenience. Topic 3: emphasize small innovations, no need for million-euro projects: one practical problem, one small experiment, one measurable outcome. Invite participants to select which advantage matters most in their company. Allow roughly 5–6 minutes for all three prompts.'});
+  <div class="adv-axis" aria-hidden="true"><span>THE BIG QUESTION</span><span>THE BUSINESS ADVANTAGE</span></div>
+  <div class="adv-lines">
+    <div class="adv-line">
+      <div class="adv-num">01</div>
+      <div class="adv-question"><span class="adv-label">DECISION SPEED</span><h2>Can 10 people <em>outmove 1,000?</em></h2></div>
+      <div class="adv-action"><strong>From idea to action, faster.</strong><div class="adv-steps"><span>IDEA</span><i>→</i><span>PILOT</span><i>→</i><span>LEARN</span></div><p>Fewer approval layers can shorten the distance between a decision and a result.</p></div>
+    </div>
+    <div class="adv-line">
+      <div class="adv-num">02</div>
+      <div class="adv-question"><span class="adv-label">FUTURE COMPETITION</span><h2>What if your next competitor <em>doesn't exist yet?</em></h2></div>
+      <div class="adv-action"><strong>Customer needs create opportunities.</strong><div class="adv-steps"><span>LISTEN</span><i>→</i><span>TEST</span><i>→</i><span>ADAPT</span></div><p>A better digital experience can shift expectations before the market catches up.</p></div>
+    </div>
+    <div class="adv-line">
+      <div class="adv-num">03</div>
+      <div class="adv-question"><span class="adv-label">PRACTICAL INNOVATION</span><h2>Too small to innovate — <em>or too small not to?</em></h2></div>
+      <div class="adv-action"><strong>Innovation begins with one problem.</strong><div class="adv-steps"><span>PROBLEM</span><i>→</i><span>EXPERIMENT</span><i>→</i><span>RESULT</span></div><p>Try one manageable improvement, measure the outcome, and expand what works.</p></div>
+    </div>
+  </div>
+  <div class="adv-bottom"><span class="adv-bottom-rule"></span><strong>THE SME EDGE</strong><span>Decide faster. Stay closer. Test what matters.</span></div>
+</div>`);
 
 // 02 — HIDDEN COST
 section(2,'THE PROBLEM','Busy is not the same as <span class="gradient">productive.</span>','Every business loses time through repeated tasks, errors, workarounds and information that is difficult to find.',['Repetitive work','Hidden operational costs','Key-person dependency']);
@@ -1366,7 +1452,7 @@ function cleanHeadings(slide){
     }
   });
 }
-function render(index,dir=1){if(index<0||index>=S.length)return;cancelDemos();active=index;const s=S[index];setAccent(s.section);const el=document.createElement('section');el.className='slide '+(dir<0?'reverse':'incoming');el.innerHTML=s.html;cleanHeadings(el);el.setAttribute('aria-label',`Slide ${index+1}: ${s.title}`);el.dataset.slide=index;host.replaceChildren(el);label.textContent=`${String(index+1).padStart(2,'0')} / ${String(S.length).padStart(2,'0')}`;progress.style.width=`${(index+1)/S.length*100}%`;prev.disabled=index===0;next.disabled=index===S.length-1;document.getElementById('announce').textContent=`Slide ${index+1} of ${S.length}: ${s.title}`;history.replaceState(null,'',`#${index+1}`);el.querySelectorAll('[data-jump]').forEach(x=>{x.addEventListener('click',()=>render(Number(x.dataset.jump)));x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();render(Number(x.dataset.jump))}})});el.querySelectorAll('[data-replay]').forEach(x=>x.addEventListener('click',()=>runDemo(x.dataset.replay)));el.querySelectorAll('[data-copy]').forEach(x=>x.addEventListener('click',()=>copyText(x.dataset.copy,x)));el.querySelectorAll('#team,#min,#rate').forEach(x=>x.addEventListener('input',updateCalc));updateCalc();if(s.caseId)demoTimers.push(setTimeout(()=>runDemo(s.caseId),550));}
+function render(index,dir=1){if(index<0||index>=S.length)return;cancelDemos();active=index;const s=S[index];setAccent(s.section);if(index===3)document.documentElement.style.setProperty('--accent','#087d83');const el=document.createElement('section');el.className='slide '+(dir<0?'reverse':'incoming');el.innerHTML=s.html;cleanHeadings(el);el.setAttribute('aria-label',`Slide ${index+1}: ${s.title}`);el.dataset.slide=index;host.replaceChildren(el);label.textContent=`${String(index+1).padStart(2,'0')} / ${String(S.length).padStart(2,'0')}`;progress.style.width=`${(index+1)/S.length*100}%`;prev.disabled=index===0;next.disabled=index===S.length-1;document.getElementById('announce').textContent=`Slide ${index+1} of ${S.length}: ${s.title}`;history.replaceState(null,'',`#${index+1}`);el.querySelectorAll('[data-jump]').forEach(x=>{x.addEventListener('click',()=>render(Number(x.dataset.jump)));x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();render(Number(x.dataset.jump))}})});el.querySelectorAll('[data-replay]').forEach(x=>x.addEventListener('click',()=>runDemo(x.dataset.replay)));el.querySelectorAll('[data-copy]').forEach(x=>x.addEventListener('click',()=>copyText(x.dataset.copy,x)));el.querySelectorAll('#team,#min,#rate').forEach(x=>x.addEventListener('input',updateCalc));updateCalc();if(s.caseId)demoTimers.push(setTimeout(()=>runDemo(s.caseId),550));}
 function go(delta){render(active+delta,delta)}
 const STORY_STAGES={
  inbox:['Reading customer messages','Sorting by urgency and owner','Preparing draft answers','Ready for human review'],
