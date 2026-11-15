@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f8fafb">
-<meta name="description" content="A practical AI and automation assessment for small and medium businesses. Describe a process, copy the prompt, and discuss the AI recommendations.">
-<title>Find Your First AI Opportunity — SME Workshop Assessment</title>
+<meta name="description" content="A practical AI solution builder for small and medium businesses. Describe a challenge and get recommended technologies, setup steps, and an achievable action plan.">
+<title>Build Your First AI Solution — SME Workshop</title>
 <style>
 :root{color-scheme:light;--ink:#143047;--ink2:#23455a;--muted:#667b8c;--teal:#0e857d;--teal-deep:#08726e;--bg:#f8fafb;--line:#dce6ea;--white:#fff;--shadow:0 18px 52px rgba(27,58,79,.05)}
 *{box-sizing:border-box}
@@ -88,33 +88,33 @@ footer .shell{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
 </style>
 </head>
 <body>
-<header class="topbar"><div class="shell"><div class="brand"><span class="brand-symbol" aria-hidden="true">✳</span><div><span class="brand-name">SME · AI & Digital Transformation</span><span class="brand-tag">Workshop companion</span></div></div><div class="top-right">Participant self-assessment · 10 minutes</div></div></header>
+<header class="topbar"><div class="shell"><div class="brand"><span class="brand-symbol" aria-hidden="true">✳</span><div><span class="brand-name">SME · AI & Digital Transformation</span><span class="brand-tag">Workshop companion</span></div></div><div class="top-right">Participant solution exercise · 10 minutes</div></div></header>
 <main class="shell">
 <section class="hero" aria-labelledby="main-title">
 <div class="eyebrow">A practical exercise · No technical skills required</div>
-<h1 id="main-title">What should your business <span>automate first?</span></h1>
-<p class="intro">Find one process worth improving. Use AI as a thinking partner to explore your options, build a realistic starting plan, and bring your findings back for our workshop discussion.</p>
+<h1 id="main-title">How can AI help you <span>solve it?</span></h1>
+<p class="intro">Choose one business challenge. Get a concrete recommendation with specific tools, implementation steps and a realistic first pilot you can start yourself.</p>
 </section>
 <section class="journey" aria-label="How this works">
-<div class="journey-step"><span class="journey-number">1</span><div><b>Describe one process</b><span>Choose a task that takes time, causes delays or involves repetitive work.</span></div></div>
-<div class="journey-step"><span class="journey-number">2</span><div><b>Copy the assessment prompt</b><span>Paste the full prompt into ChatGPT, Gemini, Claude or another AI chatbot.</span></div></div>
-<div class="journey-step"><span class="journey-number">3</span><div><b>Discuss the recommendations</b><span>Bring the AI's suggested improvement, a small pilot and one open question.</span></div></div>
+<div class="journey-step"><span class="journey-number">1</span><div><b>Choose one challenge</b><span>Describe a business task that you want to solve or improve.</span></div></div>
+<div class="journey-step"><span class="journey-number">2</span><div><b>Copy your solution prompt</b><span>Paste it into ChatGPT, Gemini, Claude or another AI chatbot.</span></div></div>
+<div class="journey-step"><span class="journey-number">3</span><div><b>Share your action plan</b><span>Bring the recommended tools, first action and any practical blockers.</span></div></div>
 </section>
 <div class="workspace" id="assessment">
 <section class="edit-panel" aria-labelledby="describe-title">
 <div class="section-heading"><span class="num">01</span> Your business challenge</div>
-<h2 id="describe-title">Start with a real problem.</h2>
-<p class="section-sub">Describe the work as it happens today. You can also leave the fields blank and fill in the placeholders directly in your AI chatbot.</p>
-<div class="field"><label for="usecase">What task or process would you improve?</label><textarea id="usecase" spellcheck="true" placeholder="For example: Every morning we read customer emails, check availability in Excel, prepare quotations and send replies manually."></textarea><div class="helper">A few sentences are enough. Explain what starts the task, who does it, and what takes the most time.</div></div>
+<h2 id="describe-title">What would you like to solve?</h2>
+<p class="section-sub">Describe one process you want to improve. You can also leave the fields blank and fill in the placeholders inside your AI chatbot.</p>
+<div class="field"><label for="usecase">Which task or problem do you want to solve?</label><textarea id="usecase" spellcheck="true" placeholder="For example: We receive customer orders by email, check stock in Excel, prepare quotes manually and send replies. I want to reduce this work."></textarea><div class="helper">A few sentences are enough. Mention the tools you use today, the desired result and anything that must remain under human approval.</div></div>
 <div class="field"><label for="industry">Your business or industry <span class="optional">Optional</span></label><input id="industry" type="text" placeholder="e.g. retail shop, manufacturing, accounting firm, travel agency"></div>
 <div class="field"><label for="frequency">How often is this task done? <span class="optional">Optional</span></label><input id="frequency" type="text" placeholder="e.g. 15 times per day, 2 hours every Monday"></div>
 <div class="examples"><b>Need an idea?</b><p>Think about customer requests, invoicing, inventory, reporting, order processing, appointment scheduling or copying data between tools. Choose <strong>one</strong> specific workflow rather than your whole business.</p></div>
-<div class="panel-actions"><button type="button" class="btn primary" id="copyMain"><span aria-hidden="true">⧉</span> Copy full AI assessment prompt</button><button type="button" class="btn ghost" id="clearFields">Clear fields</button></div>
+<div class="panel-actions"><button type="button" class="btn primary" id="copyMain"><span aria-hidden="true">⧉</span> Copy AI solution prompt</button><button type="button" class="btn ghost" id="clearFields">Clear fields</button></div>
 </section>
-<section class="prompt-panel" aria-labelledby="prompt-title"><div class="prompt-head"><div><div class="section-heading"><span class="num">02</span> Ready for any AI chatbot</div><h2 id="prompt-title">Your AI assessment prompt</h2><p>It updates automatically as you describe your process. Copy everything below and paste it into the AI tool you already use.</p></div><button type="button" class="copy-top" id="copyTop">⧉ Copy prompt</button></div><pre class="prompt-text" id="promptPreview" aria-label="Full AI assessment prompt"></pre><div class="prompt-footer"><small>This page does not send your text anywhere. The assessment begins only when you paste the prompt into an AI chatbot.</small><button type="button" class="btn secondary" id="copyBottom">Copy the complete prompt</button></div></section>
+<section class="prompt-panel" aria-labelledby="prompt-title"><div class="prompt-head"><div><div class="section-heading"><span class="num">02</span> Ready for any AI chatbot</div><h2 id="prompt-title">Your AI solution prompt</h2><p>The prompt asks for real tools, an implementation blueprint, a first-day checklist and a pilot plan. Copy it into any AI chatbot.</p></div><button type="button" class="copy-top" id="copyTop">⧉ Copy prompt</button></div><pre class="prompt-text" id="promptPreview" aria-label="Full AI assessment prompt"></pre><div class="prompt-footer"><small>This page does not send your text anywhere. The AI advice begins only when you paste this prompt into your chatbot.</small><button type="button" class="btn secondary" id="copyBottom">Copy the complete prompt</button></div></section>
 </div>
-<section class="discussion" aria-labelledby="discussion-title"><div class="discussion-intro"><div class="section-heading"><span class="num">03</span> Bring your findings back</div><h2 id="discussion-title">Three things to share in our discussion.</h2><p>After your chatbot answers, don't worry about presenting the entire analysis. Come back with these three takeaways:</p></div><div class="return-grid"><div class="return"><div class="return-n">01 / THE OPPORTUNITY</div><h3>What would you improve?</h3><p>State your process and the best improvement AI suggested, in one sentence.</p></div><div class="return"><div class="return-n">02 / THE FIRST STEP</div><h3>What can you test?</h3><p>Describe a small pilot your team could realistically try during the next 30 days.</p></div><div class="return"><div class="return-n">03 / THE REAL QUESTION</div><h3>What's still uncertain?</h3><p>Bring one question about cost, feasibility, data, staff adoption or how to get started.</p></div></div></section>
-<div class="note"><strong>Privacy and accuracy:</strong> Use a fictional or anonymized example. Do not paste customer names, personal data, account credentials, confidential contracts or commercially sensitive records. AI recommendations are starting points, not validated cost estimates or implementation guarantees.</div>
+<section class="discussion" aria-labelledby="discussion-title"><div class="discussion-intro"><div class="section-heading"><span class="num">03</span> Bring your findings back</div><h2 id="discussion-title">Bring back your solution plan.</h2><p>You do not need to present the full chatbot response. Share these three concrete outcomes:</p></div><div class="return-grid"><div class="return"><div class="return-n">01 / THE SOLUTION</div><h3>What will you implement?</h3><p>Explain the proposed solution in one sentence and name the recommended tools.</p></div><div class="return"><div class="return-n">02 / FIRST ACTION</div><h3>What will you do first?</h3><p>Name one specific setup action you could take this week, and the test you will run.</p></div><div class="return"><div class="return-n">03 / BLOCKERS</div><h3>What is holding you back?</h3><p>Bring one practical blocker such as access, cost, skills, data privacy or approvals.</p></div></div></section>
+<div class="note"><strong>Privacy and accuracy:</strong> Use a fictional or anonymized example. Do not paste customer names, personal data, account credentials, confidential contracts or commercially sensitive records. Verify recommended tool features, prices and integration availability before purchasing or connecting real data.</div>
 </main>
 <footer><div class="shell"><span>SME Workshop · AI-Powered Services for Digital Transformation</span><span>Small steps. Practical progress.</span></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -136,56 +136,63 @@ function buildPrompt(){
 const process = usecase.value.trim() || fallback.usecase;
 const sector = industry.value.trim() || fallback.industry;
 const volume = frequency.value.trim() || fallback.frequency;
-return `You are an independent business process improvement, automation and AI adoption adviser for a small or medium-sized business (SME/MSME).
+return `You are a practical digital transformation implementation consultant for a small or medium-sized business (SME). Your job is to help me SOLVE one business problem with specific actions, affordable technology, and a solution I can begin testing immediately. Speak to a non-technical business owner. Be practical, direct and specific—not theoretical.
 
-I want to understand whether one workflow in my business could be improved using simpler processes, traditional automation, or AI. I am not a technical specialist. Please give practical, realistic guidance that I can use to plan a small experiment.
+BUSINESS CONTEXT
+Business / industry: ${sector}
+The problem or process I want to improve: ${process}
+How often it happens: ${volume}
 
-MY BUSINESS CONTEXT
-Business or industry: ${sector}
-Task / use case to assess: ${process}
-How often we perform it: ${volume}
+YOUR MISSION: GIVE ME AN IMPLEMENTABLE SOLUTION
+Focus at least 90% of your answer on WHAT TO DO NEXT, not on explaining the problem or the benefits of AI. If any detail is missing, make reasonable, clearly labeled assumptions and proceed with a proposed solution. Ask no more than 3 essential follow-up questions at the very end.
 
-YOUR TASK — COMPLETE THE FOLLOWING ASSESSMENT
+1. YOUR RECOMMENDED SOLUTION (START HERE)
+- In plain language, propose the single BEST solution for my business problem.
+- Show the new workflow as: Trigger → Action 1 → Action 2 → Human check (if needed) → Final result.
+- Specify which steps are handled by people, by standard automation, and by AI. Do NOT force AI into steps where simpler automation is more reliable.
+- State exactly what the employee will do differently once the solution is working.
 
-1. UNDERSTAND THE CURRENT WORKFLOW
-- Briefly restate what this process is trying to achieve.
-- Outline its likely steps: what triggers it, what information is needed, who acts, and what the output should be.
-- Identify repeated manual work, delays, errors and fragile handoffs.
-- If my description is incomplete, clearly label assumptions instead of inventing facts.
+2. RECOMMEND REAL TECHNOLOGIES, BY NAME
+- Name the exact tools/products I could use, not just categories such as 'an automation platform' or 'an AI tool'.
+- Consider practical SME options where suitable, such as Microsoft Power Automate, Make, Zapier, n8n, Google Apps Script, UiPath, Excel, Google Sheets, Airtable, Microsoft 365, Google Workspace, ChatGPT, Claude or Gemini. Choose only tools relevant to MY scenario; these are examples, not a required list.
+- Provide a table with: Tool | Its job in my solution | Why this tool | Setup difficulty | Cost model (free tier / subscription / usage-based / needs checking).
+- If I can solve the problem using tools I probably already have, prioritize that approach.
+- Offer ONE lower-cost alternative and ONE more capable alternative, explaining when each makes sense.
+- Never invent product integrations, current prices or features. Mark information requiring verification as 'Check current availability/pricing'.
 
-2. FIND THE OPPORTUNITY
-- Separate improvements into (a) simplifying the process, (b) rule-based automation, and (c) tasks where AI could genuinely add value.
-- Explain what should stay under human control or approval.
-- Show what a simple improved workflow might look like, step by step.
+3. SHOW ME HOW TO BUILD IT, STEP BY STEP
+- Write a numbered, beginner-friendly implementation checklist using the chosen tools by name.
+- Be concrete: what account/access I need, which tool to open, which trigger to configure, which fields to map, what rules or AI instructions to create, and where the result goes.
+- Explain how information moves between the tools with a small, realistic example.
+- Include a copy-ready example AI instruction/prompt IF AI is actually needed for this solution.
+- Describe how to handle missing data, errors, exceptions and human approval. Avoid sending anything to customers automatically until it has been tested.
+- If steps depend on a specific software version, tell me what must be checked rather than inventing button names.
 
-3. RECOMMEND THREE OPTIONS
-- Suggest three practical improvement ideas, from easiest to more ambitious.
-- For each, describe the benefit, setup effort, likely ongoing maintenance, main risk and possible tools or approaches.
-- Use Low / Medium / High for effort, cost and risk; do not invent exact prices or guaranteed savings.
-- Recommend ONE best first pilot and explain why it is suitable for a small business.
+4. MY FIRST 60 MINUTES
+- Give me a precise 5–8 step plan for what I can do TODAY on my laptop using sample or fictional data.
+- List exactly what I should create (e.g., a sample spreadsheet, a test form, a draft workflow), what to enter, and what result I should see.
+- Include a simple pass/fail check so I can tell whether the first test worked.
 
-4. CREATE A REALISTIC 30-DAY PILOT
-- Week 1: Understand and measure the current process.
-- Week 2: Test a simple improvement with sample data.
-- Week 3: Involve the people doing the work, review quality and exceptions.
-- Week 4: Compare results, document learnings and decide whether to continue.
-- Explain what resources, permissions and human checks are needed.
+5. FIRST 30 DAYS — FROM TEST TO PILOT
+- Give a realistic weekly plan for Weeks 1–4, with concrete deliverables rather than generic advice.
+- Estimate time/effort as Low / Medium / High and list the access, skills, budget items and approvals I need.
+- Explain how to measure success using no more than three simple metrics. Include a lightweight way to compare the old process and the test solution.
+- Identify the two main implementation risks (especially privacy, unreliable AI output or integration failures) and how to mitigate them.
 
-5. MEASURE WHETHER IT IS WORTH IT
-- Choose three simple KPIs, including time saved, quality or errors, and business impact.
-- Give a basic ROI calculation template with editable numbers, but do not assume any figures I have not provided.
-- Mention data protection, accuracy and change-management risks in plain language.
+6. A SHORT ACTION CARD FOR MY WORKSHOP
+Finish with exactly these five lines, suitable for discussing with other participants:
+BUSINESS TASK: [my use case in one sentence]
+SOLUTION: [one sentence explaining the actual new workflow]
+TECHNOLOGY: [the 1–3 named tools to use first]
+FIRST ACTION: [one concrete thing I can do today]
+BLOCKER TO DISCUSS: [one specific uncertainty or permission I need]
 
-6. PREPARE MY WORKSHOP DISCUSSION SUMMARY
-At the end, give me a short, easy-to-share summary containing:
-A. Process selected (one sentence)
-B. Biggest current problem (one sentence)
-C. Best recommended improvement (one sentence)
-D. A realistic first step I can try in the next 30 days
-E. One KPI I would measure
-F. One risk or unanswered question to discuss with the workshop group
-
-Keep the writing clear, specific and nontechnical. If important details are missing, finish with up to three questions I can answer to refine the recommendations. Do not pretend to have accessed my real systems, files or data.`;
+OUTPUT RULES
+- Focus on implementation, not a lengthy assessment, generic AI explanations or sales pitches.
+- Do not invent data about my systems, capabilities, integrations, or prices.
+- Use fictional/anonymized data in examples and explain when human review is required.
+- Be specific enough that I can follow your instructions or ask a colleague to help set them up.
+- If the requested use case is still a placeholder, FIRST ask me to describe the business problem and do not assume one for me.`;
 }
 function update(){preview.textContent=buildPrompt();}
 let lastToast=0;
@@ -202,7 +209,7 @@ else{showToast('Select the prompt text and copy it manually.');preview.focus();}
 }
 [usecase,industry,frequency].forEach(input=>input.addEventListener('input',update));
 ['copyMain','copyTop','copyBottom'].forEach(id=>document.getElementById(id).addEventListener('click',copyPrompt));
-document.getElementById('clearFields').addEventListener('click',()=>{usecase.value='';industry.value='';frequency.value='';update();usecase.focus();showToast('Fields cleared. The generic prompt is ready.');});
+document.getElementById('clearFields').addEventListener('click',()=>{usecase.value='';industry.value='';frequency.value='';update();usecase.focus();showToast('Fields cleared. The solution prompt is ready.');});
 update();
 })();
 </script>
