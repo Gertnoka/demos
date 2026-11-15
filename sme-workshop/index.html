@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f3f6fb" />
+<meta name="description" content="Interactive 60-minute SME workshop deck: Digital Transformation, Automation and AI" />
+<title>AI-Powered Services for Digital Transformation of MSMEs in the Western Balkans · Workshop</title>
+<style>
+:root{--bg:#070b18;--ink:#f5f8ff;--muted:#aab8d4;--soft:#7f90b0;--a:#9d6bff;--b:#33e2d0;--c:#ff6fbd;--d:#f9b94e;--e:#72e9a2;--card:rgba(255,255,255,.055);--line:rgba(217,226,255,.13);--sh:0 28px 90px rgba(0,0,0,.45)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #86f4ed;outline-offset:3px}body{overflow:hidden;background:radial-gradient(circle at 10% 9%,#18183a 0,transparent 38%),radial-gradient(circle at 90% 93%,#062d39 0,transparent 37%),#070a17}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(#bdd0ff .75px,transparent .75px);background-size:27px 27px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+#app{width:100vw;height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:17px 18px 12px;position:relative}.presentation{width:min(96vw,calc(177.778dvh - 164px));max-height:calc(100dvh - 92px);aspect-ratio:16/9;min-height:0;position:relative;border-radius:25px;overflow:hidden;border:1px solid rgba(214,227,255,.2);box-shadow:var(--sh),0 0 70px rgba(114,81,255,.09);background:#0d1024;isolation:isolate}.presentation:after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.05);pointer-events:none;border-radius:inherit;z-index:5}
+.slide{position:absolute;inset:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#53617a transparent;padding:clamp(22px,3.15vw,48px) clamp(26px,4.4vw,68px) clamp(23px,3vw,45px);display:flex;flex-direction:column;background:radial-gradient(circle at 87% 5%,color-mix(in srgb,var(--accent) 24%,transparent),transparent 35%),radial-gradient(circle at -9% 93%,rgba(23,109,180,.22),transparent 40%),linear-gradient(122deg,#0b1023 2%,#11172c 50%,#0b1224 100%)}.slide:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.3;background-image:linear-gradient(rgba(240,244,255,.036) 1px,transparent 1px),linear-gradient(90deg,rgba(240,244,255,.036) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 70% 30%,#000 7%,transparent 77%)}.slide:after{content:"";pointer-events:none;position:absolute;border:1px solid var(--accent);height:450px;width:450px;right:-260px;top:-250px;border-radius:50%;opacity:.13}.slide.incoming{animation:pageIn .6s cubic-bezier(.19,1,.22,1) both}.slide.reverse{animation:pageBack .53s cubic-bezier(.19,1,.22,1) both}@keyframes pageIn{0%{opacity:0;transform:translateX(42px) scale(.975);filter:blur(7px)}100%{opacity:1;transform:none;filter:blur(0)}}@keyframes pageBack{0%{opacity:0;transform:translateX(-42px) scale(.975);filter:blur(7px)}100%{opacity:1;transform:none;filter:blur(0)}}
+.slide-header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:clamp(15px,2.3vw,29px);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#c6d6f1}.number-chip,.section-chip{display:inline-flex;align-items:center;gap:8px;min-height:27px;padding:6px 11px;border-radius:20px;border:1px solid color-mix(in srgb,var(--accent) 54%,transparent);background:color-mix(in srgb,var(--accent) 12%,transparent);color:color-mix(in srgb,var(--accent) 70%,white)}.header-separator{width:26px;height:1px;background:var(--line)}.clock-chip{margin-left:auto;color:#aab7d1;display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 15px var(--accent)}
+.h1,.h2,.h3{margin:0;font-weight:850;letter-spacing:-.055em;line-height:1.05}.h1{font-size:clamp(38px,5vw,76px)}.h2{font-size:clamp(30px,4.2vw,59px)}.h3{font-size:clamp(24px,3.1vw,43px)}.gradient{background:linear-gradient(100deg,#fff 3%,color-mix(in srgb,var(--accent) 65%,#fff) 65%,#fff 145%);color:transparent;background-clip:text;-webkit-background-clip:text}.overline{letter-spacing:.22em;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--accent);margin-bottom:16px}.sub{font-size:clamp(15px,1.68vw,22px);line-height:1.45;color:#bfcee6;max-width:850px}.intro{max-width:740px}.small{font-size:13px;color:var(--muted);line-height:1.55}.slim{font-size:clamp(13px,1.3vw,17px);line-height:1.46}.bottom-msg{margin-top:auto;font-size:14px;color:#cddaf0;display:flex;align-items:center;gap:11px}.bottom-msg:before{content:"";width:17px;height:3px;border-radius:5px;background:var(--accent);flex:none}.emoji{font-size:30px;line-height:1}.accent{color:var(--accent)}.muted{color:var(--muted)}
+.t-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.t-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.t-grid.five{grid-template-columns:repeat(5,minmax(0,1fr))}.panel{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:clamp(15px,2.1vw,27px);box-shadow:inset 0 1px rgba(255,255,255,.05);backdrop-filter:blur(13px)}.panel.hot{border-color:color-mix(in srgb,var(--accent) 46%,transparent);background:linear-gradient(130deg,color-mix(in srgb,var(--accent) 12%,transparent),rgba(255,255,255,.04))}.panel-title{font-size:15px;font-weight:800;margin-bottom:10px}.panel.big{min-height:155px}.lead-icon{width:46px;height:46px;border-radius:14px;background:color-mix(in srgb,var(--accent) 18%,transparent);border:1px solid color-mix(in srgb,var(--accent) 24%,transparent);display:flex;align-items:center;justify-content:center;margin-bottom:13px;color:var(--accent)}.lead-icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bullets{display:grid;gap:12px;align-content:start}.point{display:flex;align-items:start;gap:12px;font-size:clamp(14px,1.47vw,18px);line-height:1.4;color:#e6edfb}.point .marker{flex:none;width:8px;height:8px;margin-top:8px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}.question-wrap{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;flex:1;gap:30px;min-height:0}.question-lead{font-size:clamp(33px,4.2vw,62px);max-width:720px}.question-lead em{font-style:normal;color:var(--accent)}.question-blurb{margin-top:19px;font-size:clamp(15px,1.5vw,19px);line-height:1.5;color:#aabbd9;max-width:620px}.story-panel{display:flex;flex-direction:column;gap:12px}.story-item{display:flex;align-items:flex-start;gap:11px;padding:12px 14px;border-radius:13px;background:rgba(255,255,255,.045);border:1px solid rgba(234,241,255,.09);font-size:clamp(13px,1.32vw,17px);line-height:1.45}.story-item b{color:var(--accent);white-space:nowrap;font-size:14px}.hero-center{margin:auto 0;position:relative;max-width:950px}.hero-deco{position:absolute;width:390px;height:390px;right:-80px;top:-55px;border-radius:48% 52% 34% 66%;background:conic-gradient(from 35deg,transparent,color-mix(in srgb,var(--accent) 40%,transparent),transparent,#2b8bd366,transparent);filter:blur(6px);opacity:.55;animation:slowspin 12s linear infinite;z-index:-1}.hero-deco:after{content:"";position:absolute;inset:67px;border:1px solid #d3cbff55;border-radius:50%}@keyframes slowspin{to{transform:rotate(360deg)}}.hero-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.25em;font-weight:850;color:#adc4e8}.hero-title{max-width:1000px;font-size:clamp(47px,6.3vw,93px);margin:18px 0;line-height:1.03}.hero-title .gradient{display:block}.hero-lede{font-size:clamp(16px,1.84vw,23px);max-width:720px;line-height:1.5;color:#c8d5ed}.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.pill{font-size:12px;letter-spacing:.04em;font-weight:720;border:1px solid var(--line);border-radius:20px;padding:9px 13px;background:#ffffff0b}.hero-footer{font-size:12px;color:#8fa5c5;display:flex;gap:22px;flex-wrap:wrap;margin-top:22px}.section-giant{font-size:clamp(82px,16vw,240px);line-height:1;font-weight:950;position:absolute;right:20px;top:40%;transform:translateY(-50%);letter-spacing:-.1em;color:color-mix(in srgb,var(--accent) 15%,transparent);pointer-events:none}.section-title{max-width:860px;font-size:clamp(43px,5.5vw,82px)}.section-intro{margin-top:22px;max-width:740px;font-size:clamp(17px,1.85vw,24px);line-height:1.46;color:#bdcde8}.section-questions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;max-width:790px}.section-questions span{border:1px solid var(--line);padding:11px 14px;border-radius:12px;background:#ffffff0a;font-size:13px;color:#cfdef8}
+.agenda-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:22px}.agenda-item{display:flex;gap:18px;align-items:center;padding:15px 19px;border:1px solid var(--line);border-radius:14px;background:var(--card);cursor:pointer;transition:transform .2s,border-color .2s}.agenda-item:hover{border-color:var(--accent);transform:translateY(-3px)}.agenda-num{font-size:26px;font-weight:900;color:var(--accent);letter-spacing:-.05em}.agenda-detail{flex:1}.agenda-title{font-size:15px;font-weight:780}.agenda-short{font-size:11px;color:var(--muted);margin-top:4px}.agenda-time{font-size:12px;font-weight:850;color:var(--accent);white-space:nowrap}.agenda-item:last-child{grid-column:1/-1}.foot-mini{font-size:12px;color:#96a9ca;margin-top:16px}
+.before-after{display:grid;grid-template-columns:1fr auto 1fr;gap:13px;align-items:center;margin-top:23px}.ba-ctrl{padding:18px;border:1px solid var(--line);border-radius:17px;background:#ffffff08;min-height:162px}.ba-ctrl.after{background:color-mix(in srgb,var(--accent) 10%,transparent);border-color:color-mix(in srgb,var(--accent) 35%,transparent)}.ba-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:900;color:#a5b6d0;margin-bottom:16px}.ba-ctrl.after .ba-label{color:var(--accent)}.ba-item{font-size:15px;line-height:1.7;color:#ebf1fd}.arrow-big{font-size:31px;color:var(--accent);opacity:.9}.stat-big{font-size:clamp(32px,4vw,59px);letter-spacing:-.05em;font-weight:950;color:var(--accent)}
+/* use case slides */
+.case-title{font-size:clamp(30px,3.2vw,49px)}.case-hook{font-size:clamp(16px,1.65vw,21px);color:#ccddf7;margin:12px 0 15px;line-height:1.4}.case-stage{display:grid;grid-template-columns:.82fr 1.2fr;gap:17px;flex:1;min-height:0}.case-left{display:flex;flex-direction:column;gap:10px}.case-before{background:rgba(255,103,149,.06);border:1px solid rgba(255,114,161,.24);border-radius:16px;padding:17px}.case-before .ba-label{color:#ff9cb9}.case-before ul{margin:0;padding-left:18px;line-height:1.75;font-size:clamp(13px,1.28vw,16px);color:#d9e4f8}.case-outcome{background:rgba(63,232,195,.07);border:1px solid rgba(77,229,201,.22);padding:16px;border-radius:16px;flex:1}.case-outcome .ba-label{color:#66f3cb}.case-outcome p{margin:0;font-size:clamp(13px,1.24vw,16px);line-height:1.55;color:#d6e5fb}.case-right{background:#070d20b3;border:1px solid rgba(233,242,255,.13);border-radius:18px;padding:17px;display:flex;flex-direction:column;gap:8px;min-height:0;overflow:hidden;position:relative}.case-screen-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#a5bbdc;font-weight:800;letter-spacing:.02em}.fake-dots{display:flex;gap:5px}.fake-dots i{width:7px;height:7px;border-radius:50%;background:#aab4c13b}.fake-dots i:first-child{background:#ff7c90}.fake-dots i:nth-child(2){background:#ffd27e}.fake-dots i:nth-child(3){background:#6ff3b7}.pipeline{display:flex;align-items:center;gap:6px;margin:5px 0}.step{flex:1;min-width:0;min-height:47px;border:1px solid #ffffff1f;background:#ffffff08;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:clamp(10px,1vw,12px);text-align:center;padding:6px 4px;color:#a6badb;font-weight:720;transition:.5s}.step.active,.step.done{color:#fff;background:color-mix(in srgb,var(--accent) 25%,transparent);border-color:var(--accent);box-shadow:0 0 28px color-mix(in srgb,var(--accent) 15%,transparent)}.step.done:before{content:'✓ ';color:#7cf4ba}.step-arrow{color:var(--accent);font-size:19px}.viz-area{flex:1;min-height:130px;border:1px solid #ffffff18;border-radius:13px;background:radial-gradient(circle at 90% 25%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 55%),#0b1426;display:flex;justify-content:center;align-items:center;overflow:hidden;position:relative;padding:12px}.viz-area::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#ffffff06 50%,transparent 67%);background-size:200% 100%;animation:shimmer 6s linear infinite}@keyframes shimmer{to{background-position:200% 0}}.actionbar{display:flex;align-items:center;gap:10px;justify-content:space-between;margin-top:4px}.run-btn,.accent-btn{color:#0a1120;font-size:12px;font-weight:850;background:var(--accent);border:0;padding:10px 16px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 18px color-mix(in srgb,var(--accent) 20%,transparent);transition:transform .2s,filter .2s}.run-btn:hover,.accent-btn:hover{filter:brightness(1.13);transform:translateY(-2px)}.run-state{font-size:12px;color:#a2b6d4}.case-goal{font-size:12px;color:#adbee0;max-width:540px}.small-tag{background:var(--accent);color:#10172b;font-size:10px;font-weight:950;letter-spacing:.1em;text-transform:uppercase;padding:5px 8px;border-radius:6px;display:inline-block;margin-right:8px}
+/* app mockups */
+.mail-mock{width:100%;max-width:340px;display:grid;gap:6px}.mail-row{display:grid;grid-template-columns:19px 1fr auto;gap:9px;align-items:center;padding:8px 10px;border:1px solid #ffffff1d;border-radius:9px;background:#ffffff09;font-size:11px;color:#d5e3f6}.mail-row .flag{width:9px;height:9px;border-radius:50%;background:#fbd06d}.mail-row:nth-child(2) .flag{background:#ff8eaa}.mail-row:nth-child(3) .flag{background:#7ce2da}.mail-row b{font-weight:800}.mail-row i{font-size:10px;color:#93aacc;font-style:normal}.animating .mail-row{animation:sortmail 2.2s ease-in-out infinite;animation-delay:calc(var(--i)*.25s)}@keyframes sortmail{0%,100%{transform:translateX(0);border-color:#ffffff1d}50%{transform:translateX(9px);border-color:var(--accent);box-shadow:0 0 18px color-mix(in srgb,var(--accent) 17%,transparent)}}
+.doc-mock{display:grid;grid-template-columns:120px 1fr;gap:16px;width:100%;max-width:400px;align-items:center}.doc-sheet{height:116px;background:#edf5ff;border-radius:8px;padding:14px;display:grid;gap:9px;transform:rotate(-5deg);box-shadow:0 8px 20px #0007}.doc-sheet i{height:6px;border-radius:4px;background:#b6caeb;display:block}.doc-sheet i:nth-child(2){width:70%}.doc-sheet i:nth-child(4){width:56%}.data-bars{display:flex;gap:13px;align-items:end;height:106px;border-bottom:1px solid #ffffff55;padding:0 7px}.data-bars span{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(0deg,var(--accent),#b7ebff);height:var(--h);transform-origin:bottom}.animating .data-bars span{animation:barRise 1.6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.18s)}@keyframes barRise{0%{transform:scaleY(.04)}100%{transform:scaleY(1)}}
+.invoice-mock{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;width:100%;max-width:400px}.inv{border-radius:12px;border:1px solid #ffffff26;background:#ffffff11;padding:13px;display:grid;gap:8px;text-align:center;min-width:0}.inv strong{font-size:16px}.inv small{font-size:10px;color:#aac1dd}.inv .inv-dash{height:6px;background:#8ca3c033;border-radius:5px}.inv.ok{border-color:#54f2bd77;background:#3adea814}.inv-status{position:absolute;right:16px;top:14px;background:#133b36;border:1px solid #4feab783;border-radius:20px;padding:4px 9px;color:#74f6d3;font-size:10px;font-weight:900;opacity:0;transform:translateY(-8px)}.animating .inv-status{animation:appearAfter 3s both .9s}@keyframes appearAfter{0%{opacity:0;transform:translateY(-8px)}25%,100%{opacity:1;transform:none}}.animating .inv.ok{animation:pulseGreen 2s infinite .5s}@keyframes pulseGreen{0%,100%{box-shadow:0 0 0 transparent}50%{box-shadow:0 0 27px #55edb044}}
+.stock-mock{display:grid;grid-template-columns:1fr;gap:13px;width:100%;max-width:350px}.stock-line{display:grid;grid-template-columns:78px 1fr 42px;gap:9px;align-items:center;font-size:12px}.stock-line .stock-track{height:11px;background:#ffffff18;border-radius:15px;overflow:hidden}.stock-fill{height:100%;border-radius:15px;background:var(--accent);width:var(--w);position:relative}.stock-fill.low{background:#ff7aa5}.stock-line label{color:#bdcae4}.stock-line b{font-size:11px;color:#e2ecfa;text-align:right}.stock-alert{display:flex;align-items:center;justify-content:center;gap:8px;background:#f6af391d;border:1px solid #ffb14a88;color:#ffd28c;border-radius:8px;padding:7px;font-size:11px;opacity:.2}.animating .stock-alert{animation:alertOn 3s .2s both}.animating .stock-fill.low{animation:stockDrain 2.5s .2s ease-in-out both}@keyframes stockDrain{0%{width:42%}100%{width:12%}}@keyframes alertOn{0%{opacity:.2;transform:scale(.94)}45%,100%{opacity:1;transform:none}}
+.chat-mock{width:100%;max-width:380px;display:grid;gap:8px}.bubble{font-size:12px;line-height:1.5;max-width:83%;padding:9px 12px;border-radius:13px;background:#ffffff13;color:#d6e5f8;border:1px solid #ffffff22}.bubble.ai{margin-left:auto;background:color-mix(in srgb,var(--accent) 19%,transparent);border-color:color-mix(in srgb,var(--accent) 42%,transparent)}.chat-mock .lang{margin:0 auto;border:1px solid #ffffff26;background:#ffffff10;padding:5px 11px;border-radius:16px;font-size:11px;color:#e6ebfb}.animating .bubble.ai{animation:revealBubble 1.25s 0.7s both}@keyframes revealBubble{0%{opacity:0;transform:translateY(20px) scale(.9)}100%{opacity:1;transform:none}}
+/* workshop */
+.challenge-grid{display:grid;grid-template-columns:.93fr 1.07fr;gap:15px;flex:1;min-height:0}.code-card{background:#070e1d;border:1px solid #ffffff29;border-radius:15px;padding:18px;position:relative;overflow:auto}.code-card .caption{font-size:11px;font-weight:800;letter-spacing:.14em;color:#a6b8d5;margin-bottom:12px}.code-card pre{font-family:ui-monospace,"Cascadia Code",Consolas,monospace;color:#d4e4ff;font-size:clamp(11px,1.1vw,14px);line-height:1.65;white-space:pre-wrap;margin:0}.code-card pre .hl{color:#60e7c4}.action-mini{background:rgba(255,255,255,.1);border:1px solid #ffffff30;color:#fff;border-radius:9px;padding:8px 12px;font-size:12px;font-weight:750}.action-mini:hover{background:#ffffff26}.flow-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.flow-step{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:13px}.flow-step b{display:block;color:var(--accent);font-size:13px;margin-bottom:7px}.flow-step span{font-size:12px;color:#dae4f7}.role-tag{display:inline-block;padding:4px 8px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;border:1px solid #ffffff28;border-radius:30px;color:#a5bbdd}.big-stat-line{display:flex;align-items:center;gap:15px;margin-bottom:9px}.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;align-items:stretch}.vs-header{display:flex;align-items:center;justify-content:space-between;gap:8px}.vs-header h3{margin:0;font-size:19px}.vs-tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}.vs-grid .panel{min-height:170px}.arrow-pill{border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);border-radius:30px;color:var(--accent);padding:7px 11px;font-size:11px;font-weight:850}.float-cards{position:relative;min-height:240px}.float-card{position:absolute;width:42%;max-width:210px;border:1px solid var(--line);border-radius:14px;background:#ffffff0c;backdrop-filter:blur(9px);padding:17px;animation:float 5s ease-in-out infinite}.float-card:nth-child(1){left:0;top:14px}.float-card:nth-child(2){right:3%;top:54px;animation-delay:-1.2s}.float-card:nth-child(3){left:25%;top:145px;animation-delay:-2.6s}@keyframes float{50%{transform:translateY(-11px)}}.float-card .huge{font-size:33px;font-weight:950;color:var(--accent)}.float-card .lbl{color:#c8d8f1;font-size:12px;line-height:1.4}
+/* interactive calculator */
+.calc-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.field{display:grid;gap:7px}.field label{font-size:12px;font-weight:800;color:#b4c5e1}.field input{background:#091329;border:1px solid #ffffff30;border-radius:9px;padding:12px;width:100%;color:#fff;font-size:17px}.calc-result{margin-top:14px;padding:14px 18px;border-radius:13px;background:color-mix(in srgb,var(--accent) 11%,transparent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);display:flex;align-items:center;justify-content:space-between;gap:10px}.calc-result strong{font-size:clamp(27px,3.7vw,48px);color:var(--accent)}.calc-result small{font-size:12px;color:#c3d4ed}
+/* timeline + final */
+.timeline{display:flex;gap:9px;margin:19px 0}.milestone{flex:1;border-top:3px solid var(--accent);padding-top:12px}.milestone span{display:block;font-size:11px;color:#b8c8df;margin-top:7px}.milestone b{font-size:15px}.closing-quote{font-size:clamp(35px,5vw,70px);max-width:940px;font-weight:850;letter-spacing:-.06em;line-height:1.12}.closing-q{margin-top:28px;font-size:clamp(17px,1.85vw,24px);color:#d2e2fa}.closing-list{display:flex;gap:9px;margin-top:26px;flex-wrap:wrap}.closing-list .pill{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+/* chrome */
+.toolbar{display:flex;align-items:center;gap:8px;color:#cad6eb;width:min(96vw,calc(177.778dvh - 164px));justify-content:space-between;min-height:41px}.tool-left,.tool-right{display:flex;align-items:center;gap:8px}.brandbar{font-size:11px;letter-spacing:.13em;font-weight:800;color:#a6b7d3;text-transform:uppercase}.navbtn{border:1px solid #ffffff27;background:#ffffff0c;color:#eef4ff;border-radius:9px;padding:9px 14px;display:flex;align-items:center;gap:8px;font-weight:790;font-size:12px;transition:background .2s,transform .2s}.navbtn:hover:not(:disabled){background:#ffffff24;transform:translateY(-1px)}.navbtn:disabled{opacity:.27;cursor:not-allowed}.navbtn.primary{background:linear-gradient(120deg,#7554fb,#1fbfb9);border-color:transparent}.iconbtn{width:37px;height:37px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;border:1px solid #ffffff24;color:#d7e6f9;background:#ffffff0b;font-size:16px}.iconbtn:hover{background:#ffffff1b}.page-indicator{min-width:70px;text-align:center;font-size:12px;font-weight:900;font-variant-numeric:tabular-nums;color:#c9daee}.progress-track{position:absolute;height:4px;background:#ffffff14;bottom:0;left:0;right:0;z-index:10}.progress-fill{height:100%;background:linear-gradient(90deg,#9e73fd,#38e2cd,#f17aca);width:0%;transition:width .4s}.shortcuts{font-size:11px;color:#647c9e;margin-left:14px}.help{position:absolute;right:18px;bottom:61px;background:#101b33;border:1px solid #ffffff30;box-shadow:0 25px 70px #000b;border-radius:14px;padding:16px;max-width:290px;z-index:40;color:#d5e4f7;font-size:12px;display:none}.help.open{display:block}.help p{margin:8px 0}.help kbd{font-family:inherit;display:inline-block;background:#ffffff18;border:1px solid #ffffff33;border-radius:5px;padding:2px 6px}.notes{display:none;position:absolute;left:16px;right:16px;bottom:17px;z-index:12;background:rgba(5,11,23,.96);border:1px solid #ffffff42;padding:13px 16px;border-radius:11px;font-size:13px;color:#d2e1f6;line-height:1.5;max-height:38%;overflow:auto;box-shadow:0 9px 28px #0007}.notes.visible{display:block}.notes:before{content:'SPEAKER NOTE';display:block;color:#83f1d9;letter-spacing:.16em;font-size:10px;font-weight:900;margin-bottom:5px}#announce{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+/* special visuals */
+.network{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;height:100%;position:relative}.net-node{z-index:1;min-width:92px;padding:11px 9px;text-align:center;border:1px solid #ffffff35;border-radius:12px;background:#ffffff13;font-size:12px;font-weight:800}.net-node.main{background:color-mix(in srgb,var(--accent) 23%,transparent);border-color:var(--accent)}.net-line{height:2px;flex:1;background:linear-gradient(90deg,var(--accent),#ffffff66);position:relative}.net-line:after{content:'›';position:absolute;right:-1px;top:-14px;color:var(--accent);font-size:22px}.roadmap{display:flex;gap:16px;align-items:stretch;flex:1}.roadmap .panel{flex:1}.big-check{width:22px;height:22px;background:#6cf5c51a;border:1px solid #6cf5c559;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#6cf5c5;font-weight:bold}
+@media(max-width:860px){.slide{padding:25px 29px 26px}.question-wrap{gap:15px}.panel{padding:15px}.case-stage{gap:10px}.slide-header{margin-bottom:14px}.case-hook{margin:7px 0 9px}.case-before ul{line-height:1.45}.case-right{padding:11px}.toolbar .brandbar{display:none}.section-intro{margin-top:14px}.section-questions{margin-top:17px}.agenda-grid{gap:8px;margin-top:10px}.agenda-item{padding:11px}.float-card{padding:10px}}
+@media(max-width:640px){#app{padding:8px;gap:8px}.presentation{width:calc(100vw - 16px);max-height:calc(100dvh - 63px);aspect-ratio:auto;min-height:0;flex:1;border-radius:17px}.toolbar{width:calc(100vw - 16px)}.slide{padding:23px 22px 24px}.h1{font-size:44px}.h2{font-size:35px}.h3{font-size:26px}.question-wrap,.case-stage,.challenge-grid,.t-grid,.agenda-grid,.vs-grid{grid-template-columns:1fr;gap:12px}.t-grid.three,.t-grid.five{grid-template-columns:repeat(2,1fr)}.section-giant{top:22%;opacity:.4}.question-lead{font-size:40px}.hero-title{font-size:49px}.case-title{font-size:32px}.case-stage{flex:none}.case-left{display:grid;grid-template-columns:1fr 1fr}.viz-area{min-height:185px}.case-right{min-height:305px}.agenda-item:last-child{grid-column:auto}.story-panel{gap:6px}.calc-row{grid-template-columns:1fr}.flow-steps{grid-template-columns:repeat(2,1fr)}.toolbar .shortcuts{display:none}.toolbar .tool-left{gap:4px}.navbtn{padding:8px 11px}.brandbar{display:none}.page-indicator{min-width:46px}.slide-header .clock-chip{margin-left:0}.bottom-msg{margin-top:20px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+@media print{html,body{background:white!important;color:black!important;overflow:visible!important;height:auto!important}body:before,#app>.toolbar,.help,.notes,.progress-track{display:none!important}#app{height:auto;display:block;padding:0}.presentation{box-shadow:none;border:0;border-radius:0;width:100%;aspect-ratio:auto;height:auto;max-height:none;overflow:visible;display:block}.slide{display:flex!important;position:relative!important;width:100%;height:100vh;min-height:0;break-after:page;page-break-after:always;overflow:hidden;print-color-adjust:exact;-webkit-print-color-adjust:exact}.slide.incoming,.slide.reverse{animation:none!important}.print-only{display:block!important}}
+
+/* Light Edition — refined white presentation skin. Layout, script and animations remain unchanged. */
+:root {
+ --bg:#f3f6fb; --ink:#17243b; --muted:#52647d; --soft:#8290a5;
+ --a:#614cc4; --b:#087e82; --c:#af397a; --d:#9c6317; --e:#167b5e;
+ --card:#ffffff; --line:#e4eaf2; --sh:0 16px 52px rgba(35,57,93,.10);
+}
+html,body{background:#f3f6fb;color:var(--ink)}
+body{background:linear-gradient(145deg,#f8fafd 0%,#eef3f9 100%)}
+body:before{display:none}
+.presentation{background:#fff;border:1px solid #dbe3ee;box-shadow:0 18px 48px rgba(40,59,94,.12),0 3px 12px rgba(38,62,95,.04);border-radius:20px}
+.presentation:after{border-color:rgba(18,41,81,.035)}
+.slide{
+ background:radial-gradient(ellipse at 97% 0%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 34%),linear-gradient(145deg,#fff 0%,#fff 64%,#fafcff 100%);
+ scrollbar-color:#c2ccdb transparent;
+}
+.slide:before{display:none}
+.slide:after{border-color:color-mix(in srgb,var(--accent) 19%,transparent);opacity:.45;right:-320px;top:-335px}
+.slide-header{color:#64768c}
+.number-chip,.section-chip{color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,white);border-color:color-mix(in srgb,var(--accent) 22%,white)}
+.clock-chip{color:#6d7c92}
+.dot{box-shadow:none}
+.h1,.h2,.h3{color:var(--ink)}
+.gradient{background:linear-gradient(105deg,var(--accent),color-mix(in srgb,var(--accent) 68%,#243e6a));-webkit-background-clip:text;background-clip:text;color:transparent}
+.overline{color:var(--accent)}
+.sub,.question-blurb,.hero-lede,.section-intro,.case-hook,.bottom-msg,.closing-q{color:#52657d}
+.small,.foot-mini,.hero-footer,.hero-eyebrow,.agenda-short{color:#60728a}
+.point{color:#263851}
+.story-item{background:#f8fafc;border:1px solid #e6ebf2;color:#2d405a}
+.story-item b{color:var(--accent)}
+.panel{background:#fff;border-color:#e2e9f2;box-shadow:0 5px 18px rgba(39,69,109,.045);backdrop-filter:none}
+.panel.hot{background:linear-gradient(136deg,color-mix(in srgb,var(--accent) 7%,#fff),#fff 78%);border-color:color-mix(in srgb,var(--accent) 29%,#e6ebf2)}
+.lead-icon{background:color-mix(in srgb,var(--accent) 9%,white);border-color:color-mix(in srgb,var(--accent) 16%,white)}
+.hero-deco{opacity:.25;filter:blur(18px)}
+.hero-deco:after{border-color:#e5e9f1}
+.pill,.section-questions span{background:#fff;color:#425570;border:1px solid #e1e8f1}
+.section-giant{color:color-mix(in srgb,var(--accent) 9%,transparent)}
+.agenda-item{background:#fff;border-color:#e1e8f1;box-shadow:0 3px 13px rgba(34,64,105,.035)}
+.agenda-item:hover{background:#fbfcff;box-shadow:0 10px 20px rgba(38,67,106,.07)}
+.ba-ctrl{background:#f8fafc}
+.ba-ctrl.after{background:color-mix(in srgb,var(--accent) 7%,white)}
+.ba-label{color:#697b91}
+.ba-item{color:#2d4059}
+.case-before{background:#fff6f7;border-color:#f3dce2}
+.case-before .ba-label{color:#a83e5b}
+.case-before ul{color:#374c65}
+.case-outcome{background:#f1fbf7;border-color:#cde9dc}
+.case-outcome .ba-label{color:#177c61}
+.case-outcome p{color:#315b52}
+.case-right{background:#fff;border:1px solid #dfe7f0;box-shadow:0 5px 19px rgba(30,57,95,.055)}
+.case-screen-head{color:#5c7189}
+.fake-dots i{background:#e1e8f0}
+.step{background:#f7f9fc;border-color:#e4eaf2;color:#738298}
+.step.active,.step.done{color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,white);border-color:color-mix(in srgb,var(--accent) 50%,white);box-shadow:0 3px 12px color-mix(in srgb,var(--accent) 11%,transparent)}
+.step.done:before{color:#13816c}
+.viz-area{background:radial-gradient(circle at 85% 10%,color-mix(in srgb,var(--accent) 7%,white),#fafcff 75%);border-color:#e3e9f1}
+.viz-area::before{background:linear-gradient(110deg,transparent 35%,#ffffff9c 50%,transparent 67%);background-size:200% 100%;opacity:.5}
+.run-btn,.accent-btn{color:#fff;box-shadow:0 7px 15px color-mix(in srgb,var(--accent) 17%,transparent)}
+.run-btn:hover,.accent-btn:hover{filter:brightness(.94)}
+.run-state,.case-goal{color:#62758d}
+.small-tag{color:#fff}
+.mail-row{background:#fff;border-color:#e3eaf3;color:#354962;box-shadow:0 1px 4px rgba(36,62,91,.04)}
+.mail-row i{color:#687d93}
+@keyframes sortmail{0%,100%{transform:translateX(0);border-color:#e3eaf3}50%{transform:translateX(9px);border-color:var(--accent);box-shadow:0 4px 12px color-mix(in srgb,var(--accent) 13%,transparent)}}
+.doc-sheet{box-shadow:0 8px 18px #263c5522}
+.data-bars{border-color:#cbd5e1}
+.inv{background:#fff;border-color:#dfe7ee;color:#24384e}
+.inv small{color:#65778e}
+.inv .inv-dash{background:#e3e9f2}
+.inv.ok{border-color:#a5dec9;background:#effbf5}
+.inv-status{background:#e7f8ef;color:#14724f;border-color:#b1dec8}
+.stock-line .stock-track{background:#e7ecf3}
+.stock-line label{color:#50647c}
+.stock-line b{color:#32465f}
+.stock-alert{background:#fff5e5;border-color:#f3d29b;color:#9a5b13}
+.bubble{background:#f4f7fa;color:#30465e;border-color:#e0e8f1}
+.bubble.ai{background:color-mix(in srgb,var(--accent) 9%,white);border-color:color-mix(in srgb,var(--accent) 30%,white)}
+.chat-mock .lang{border-color:#dfe5ee;background:#fff;color:#62758b}
+.code-card{background:#f8fafc;border:1px solid #dfe6ef}
+.code-card .caption{color:#60728a}
+.code-card pre{color:#273c53}
+.code-card pre .hl{color:#128069}
+.action-mini{background:#fff;border:1px solid #cfd9e5;color:#29435f}
+.action-mini:hover{background:#eef4fb}
+.flow-step{background:#fff;border-color:#e1e7ef}
+.flow-step span{color:#435a74}
+.role-tag{color:#63768d;border-color:#dce3ec}
+.float-card{background:#fff;box-shadow:0 6px 17px rgba(40,69,111,.065);backdrop-filter:none}
+.float-card .lbl{color:#536984}
+.field label{color:#51667f}
+.field input{background:#fff;border:1px solid #cfdae6;color:#1d314d}
+.calc-result{background:color-mix(in srgb,var(--accent) 7%,white);border-color:color-mix(in srgb,var(--accent) 29%,white)}
+.calc-result small{color:#536781}
+.milestone span{color:#536982}
+.toolbar{color:#43556d}
+.brandbar{color:#5e6f84}
+.navbtn,.iconbtn{background:#fff;border:1px solid #dbe3ed;color:#364a63;box-shadow:0 2px 7px rgba(35,56,91,.03)}
+.navbtn:hover:not(:disabled),.iconbtn:hover{background:#eef3fa}
+.navbtn.primary{background:#654fc8;color:#fff;border-color:#654fc8}
+.navbtn.primary:hover:not(:disabled){background:#5542b9}
+.page-indicator{color:#364963}
+.progress-track{background:#e8edf4}
+.progress-fill{background:linear-gradient(90deg,#7353d3,#249ba0,#d95596)}
+.shortcuts{color:#7e8da2}
+.help{background:#fff;border-color:#dfe6f0;color:#263a53;box-shadow:0 16px 42px rgba(24,48,82,.16)}
+.help kbd{background:#f2f5fa;border-color:#d9e2ec}
+.help p[style]{color:#60748d!important}
+.notes{background:rgba(255,255,255,.98);border-color:#dce5f0;color:#2c405a;box-shadow:0 12px 28px #183b6322}
+.notes:before{color:#087e82}
+.net-node{background:#fff;border-color:#d8e2ed;color:#354a62}
+.net-node.main{background:color-mix(in srgb,var(--accent) 9%,white);border-color:var(--accent)}
+.net-line{background:linear-gradient(90deg,var(--accent),#cad5e4)}
+.big-check{background:#e7f8f0;border-color:#b9e6d2;color:#148263}
+@media print{html,body{background:#fff!important}.slide{background:#fff!important}}
+
+
+/* Welcome / reception slide — calm, white, legible from the back of the room. */
+.slide:has(.welcome-shell){background:radial-gradient(ellipse at 103% -9%,#edeaff 0%,transparent 47%),linear-gradient(135deg,#fff 0%,#fff 73%,#f8faff 100%)}
+.slide:has(.welcome-shell):after{width:620px;height:620px;top:-415px;right:-345px;border-color:#dbd5f6;opacity:.38}
+.welcome-shell{min-height:0;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;padding:0 0 4px}
+.welcome-kicker{display:flex;align-items:center;gap:12px;color:#6552b4;font-weight:850;font-size:clamp(12px,1.15vw,15px);letter-spacing:.19em;text-transform:uppercase;margin-bottom:clamp(18px,2.25vw,31px)}
+.welcome-symbol{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:#f0edfc;border:1px solid #dfd9f5;border-radius:10px;font-size:19px;letter-spacing:0}
+.welcome-title{font-size:clamp(35px,4.55vw,67px);line-height:1.13;letter-spacing:-.052em;font-weight:850;color:#182842;margin:0;max-width:1100px;text-wrap:balance}
+.welcome-title-highlight{background:linear-gradient(102deg,#624bc5,#327da9 95%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.welcome-rule{width:70px;height:4px;border-radius:999px;background:linear-gradient(90deg,#6552c4,#48a2a3);margin-top:clamp(20px,3vw,42px);margin-bottom:16px}
+.welcome-subtitle{margin:0;max-width:720px;color:#53647b;line-height:1.48;font-size:clamp(15px,1.6vw,21px)}
+.welcome-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:clamp(27px,4.3vw,64px);flex-wrap:wrap}
+.welcome-location{font-size:clamp(12px,1.06vw,14px);font-weight:650;color:#6a7890;display:flex;align-items:center;flex-wrap:wrap;gap:13px}
+.welcome-location-divider{height:15px;width:1px;background:#cfd6e3}
+.welcome-standing{display:inline-flex;align-items:center;gap:10px;border:1px solid #dfe5ee;border-radius:30px;background:#fff;padding:10px 15px;font-size:12px;font-weight:750;color:#53647a;box-shadow:0 3px 12px rgba(43,57,89,.035)}
+.welcome-pulse{width:8px;height:8px;border-radius:50%;background:#13967b;box-shadow:0 0 0 4px #e8f8f3;animation:welcomeBreathe 3.1s ease-in-out infinite}
+@keyframes welcomeBreathe{0%,100%{box-shadow:0 0 0 4px #e8f8f3}50%{box-shadow:0 0 0 8px #e8f8f380}}
+@media(max-width:740px){.welcome-title{font-size:clamp(29px,6.2vw,48px)}.welcome-kicker{margin-bottom:18px}.welcome-bottom{margin-top:24px}.welcome-location{gap:8px}.welcome-subtitle{font-size:15px}}
+@media(max-width:440px){.welcome-title{font-size:clamp(27px,7.3vw,36px)}.welcome-standing{font-size:11px}}
+
+
+/* CLEAN V2: remove oversized decorative chapter numbers and unneeded flourishes. */
+.section-giant {display:none!important}
+.slide::after {display:none!important}
+.slide {overflow-x:hidden; background:linear-gradient(150deg,#ffffff 0%,#ffffff 68%,#fbfcff 100%)}
+.slide::before {opacity:.08}
+.header-separator {display:none}
+.slide-header {gap:10px; margin-bottom:clamp(12px,1.8vw,22px)}
+.overline {letter-spacing:.135em}
+.section-title {max-width:1050px}
+.case-title {line-height:1.14; letter-spacing:-.045em}
+.case-title .muted {font-weight:650;color:#596b83}
+.case-hook {line-height:1.35}
+.question-wrap > * {min-width:0}
+.question-lead {overflow-wrap:normal}
+.story-panel,.case-left,.case-right,.challenge-grid > * {min-width:0}
+.float-cards {isolation:isolate}
+.vs-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+.vs-grid .panel {min-width:0}
+.vs-grid .panel div[style*='display:flex'] {flex-wrap:wrap!important}
+.vs-header {flex-wrap:wrap;align-items:flex-start}
+.vs-header h3 {font-size:clamp(16px,1.45vw,19px)}
+/* Prevent the bottom summary from covering content on the process-flow slide. */
+.slide:has(.network) .network {height:130px!important;min-height:0}
+.slide:has(.network) .panel.hot {margin-top:8px!important}
+.slide:has(.network) .panel.hot .small {margin-bottom:0}
+/* Screen/projector layout, especially common 16:9 displays. */
+@media (max-height:820px) and (min-width:641px){
+ .slide {padding:clamp(19px,2.7vh,29px) clamp(25px,4vw,60px) 23px}
+ .h2 {font-size:clamp(30px,3.55vw,52px)}
+ .section-title {font-size:clamp(39px,4.8vw,70px)}
+ .case-title {font-size:clamp(25px,2.7vw,39px)}
+ .case-hook {font-size:clamp(14px,1.4vw,18px);margin:8px 0 10px}
+ .case-stage {gap:11px}
+ .case-before, .case-outcome {padding:13px 14px}
+ .case-right {padding:12px}
+ .case-before ul {line-height:1.39}
+ .bottom-msg {font-size:12px}
+ .slide:has(.network) .network {height:105px!important}
+ .slide:has(.network) .panel {padding:14px 18px}
+ .slide:has(.network) .sub {margin-bottom:12px!important}
+ .slide:has(.flow-steps) .code-card {padding:12px 16px}
+ .slide:has(.flow-steps) .code-card pre {line-height:1.37}
+ .slide:has(.flow-steps) .flow-step {padding:9px 11px}
+ .slide:has(.flow-steps) .sub {margin-bottom:13px!important}
+ .slide:has(.flow-steps) .flow-steps {gap:7px}
+ .slide:has(.flow-steps) .bottom-msg {margin-top:8px}
+}
+@media (max-width:1050px) and (min-width:641px){
+ .case-title {font-size:clamp(24px,2.7vw,33px)}
+ .case-stage {grid-template-columns:.88fr 1.12fr}
+ .question-wrap {gap:16px}
+ .case-before ul {padding-left:18px}
+ .case-stage .ba-label {font-size:10px}
+ .case-right .pipeline {gap:3px}
+ .step {font-size:10px}
+ .stock-line {grid-template-columns:62px 1fr 33px}
+ .net-node {min-width:70px;font-size:11px}
+}
+@media (max-width:860px) and (min-width:641px){
+ .slide {padding:20px 24px}
+ .case-before,.case-outcome {padding:11px}
+ .case-left {gap:8px}
+ .case-right {padding:9px}
+ .case-stage {gap:8px}
+ .case-right .viz-area {min-height:105px}
+ .case-stage .run-btn {padding:7px;font-size:10px}
+ .case-stage .case-screen-head {font-size:9px}
+ .slide:has(.network) .network {height:88px!important;flex-wrap:nowrap!important}
+ .slide:has(.network) .panel {padding:11px 13px}
+}
+@media (max-width:640px){
+ .slide {overflow-y:auto;overflow-x:hidden}
+ .slide:has(.network) .network {height:auto!important;min-height:120px;flex-wrap:wrap!important}
+ .section-title {font-size:clamp(34px,8vw,56px)}
+ .case-title {font-size:clamp(26px,7vw,38px)}
+ .case-left {grid-template-columns:1fr}
+ .case-stage .viz-area {min-height:185px}
+ .question-wrap {align-items:start;flex:none}
+}
+
+
+/* POLISHED V3: clean editorial type, no oversized symbols or stylized punctuation in questions. */
+.question-lead,
+.question-lead em {
+  font-style:normal!important;
+  color:#17243b!important;
+  font-weight:830;
+  letter-spacing:-.044em;
+  text-wrap:balance;
+  overflow-wrap:break-word;
+}
+.question-lead { font-size:clamp(30px,3.55vw,53px)!important; line-height:1.12!important; }
+.question-wrap {grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(16px,2.3vw,34px);}
+.question-blurb {font-size:clamp(14px,1.3vw,18px);line-height:1.5;max-width:580px;}
+.question-wrap .overline {font-size:10px;letter-spacing:.1em;}
+.story-panel {min-width:0;}
+.story-panel .panel {min-width:0;}
+/* Three innovation cards should never float on top of one another. */
+.float-cards {position:static;min-height:0;display:grid;grid-template-columns:1fr;gap:11px;}
+.float-card,.float-card:nth-child(1),.float-card:nth-child(2),.float-card:nth-child(3) {
+ position:relative!important;left:auto!important;right:auto!important;top:auto!important;
+ width:100%!important;max-width:none!important;min-height:0;padding:12px 17px;
+ transform:none!important;animation:none!important;display:flex;align-items:center;gap:16px;
+}
+.float-card .huge{font-size:27px;line-height:1;min-width:32px;}
+.float-card .lbl{font-size:13px;line-height:1.35;}
+/* Use-case titles no longer use a large / separator and two competing font styles. */
+.case-title {font-weight:830!important;line-height:1.08!important;text-wrap:balance;margin:0;}
+.case-topic {font-size:clamp(12px,1.18vw,16px);font-weight:650;color:#5e7189;margin-top:2px;}
+.case-hook {margin-top:5px!important;margin-bottom:11px!important;}
+.case-screen-head {letter-spacing:.09em}
+.case-right .run-btn{white-space:nowrap}
+/* Unified card edge treatment and spacing for large displays. */
+.story-item{box-shadow:none;}
+.panel{box-shadow:0 4px 15px rgba(39,69,109,.038);}
+.section-title{text-wrap:balance;letter-spacing:-.048em;}
+.closing-quote{text-wrap:balance;}
+@media(max-width:1050px) and (min-width:641px){
+ .question-lead {font-size:clamp(28px,3.5vw,41px)!important;}
+ .question-wrap {gap:14px;}
+ .float-card{padding:10px 13px!important;}
+ .float-card .lbl{font-size:12px;}
+ .case-topic{font-size:11px;}
+ .case-hook{font-size:12px;margin:4px 0 7px!important;}
+}
+@media(max-width:640px){
+ .question-lead{font-size:clamp(29px,8vw,40px)!important;}
+ .question-wrap {grid-template-columns:1fr;}
+ .float-cards{min-height:0;}
+ .float-card{padding:10px!important;}
+ .case-topic{font-size:13px;}
+ .case-title{font-size:clamp(24px,6vw,35px)!important;}
+}
+
+
+/* POLISHED V3 / PROJECTOR-READY — clearer hierarchy, larger type, more use of slide space. */
+#app{gap:10px;padding:11px 10px 8px}
+.presentation,.toolbar{width:min(calc(100vw - 28px),calc((100dvh - 76px)*16/9));}
+.presentation{max-height:calc(100dvh - 70px);border-radius:21px}
+.slide{padding:clamp(22px,3.2vh,39px) clamp(33px,3.45vw,69px) clamp(24px,3vh,38px);}
+.slide-header{font-size:clamp(11px,.96vw,15px);margin-bottom:clamp(12px,1.65vh,23px);letter-spacing:.115em}
+.number-chip,.section-chip{font-size:clamp(11px,.98vw,14px);padding:7px 13px}
+.clock-chip{font-size:clamp(11px,.95vw,14px)}
+.overline{font-size:clamp(12px,1.05vw,17px);font-weight:850;margin-bottom:clamp(9px,1.5vh,17px);letter-spacing:.11em}
+.h1{font-size:clamp(49px,5.3vw,88px)}
+.h2{font-size:clamp(42px,4.5vw,74px)}
+.h3{font-size:clamp(31px,3.25vw,52px)}
+.section-title{font-size:clamp(51px,5.7vw,91px);line-height:1.03;max-width:1170px}
+.section-intro{font-size:clamp(21px,2vw,29px);line-height:1.42;max-width:950px}
+.section-questions{max-width:1100px;gap:13px}
+.section-questions span{font-size:clamp(14px,1.3vw,19px);padding:12px 17px;font-weight:650}
+.sub{font-size:clamp(18px,1.76vw,28px);line-height:1.37;max-width:1100px}
+.small{font-size:clamp(14px,1.23vw,18px);line-height:1.47}
+.slim{font-size:clamp(15px,1.35vw,19px)}
+.point{font-size:clamp(17px,1.55vw,23px);line-height:1.34;gap:13px}
+.point .marker{width:9px;height:9px;margin-top:10px}
+.bullets{gap:clamp(10px,1.5vh,16px)}
+.panel{padding:clamp(17px,1.95vw,30px);border-radius:19px}
+.panel-title{font-size:clamp(17px,1.55vw,22px)}
+.bottom-msg{font-size:clamp(14px,1.2vw,18px)}
+.hero-title{font-size:clamp(57px,6.2vw,96px)}
+.hero-lede{font-size:clamp(20px,1.86vw,29px)}
+.welcome-title{font-size:clamp(50px,5vw,82px);max-width:1200px}
+.welcome-subtitle{font-size:clamp(18px,1.68vw,25px)}
+.welcome-kicker{font-size:clamp(13px,1.08vw,18px)}
+.welcome-location{font-size:clamp(14px,1.1vw,19px)}
+.welcome-standing{font-size:clamp(13px,1.08vw,18px)}
+.agenda-grid{gap:clamp(12px,1.7vh,19px);margin-top:clamp(15px,2.3vh,30px)}
+.agenda-item{padding:clamp(17px,2.25vh,26px) clamp(19px,1.9vw,30px)}
+.agenda-num{font-size:clamp(28px,2.7vw,43px)}
+.agenda-title{font-size:clamp(17px,1.45vw,23px)}
+.agenda-short{font-size:clamp(13px,1.16vw,18px)}
+.agenda-time{font-size:clamp(13px,1.16vw,18px)}
+/* Big emotional-question slides: the question leads, rather than small card text. */
+.question-wrap{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(23px,3vw,49px);align-items:center}
+.question-lead{font-size:clamp(46px,4.68vw,78px)!important;line-height:1.095!important;letter-spacing:-.054em;max-width:950px;text-wrap:balance}
+.question-lead.question-medium{font-size:clamp(43px,4.18vw,70px)!important}
+.question-lead.question-long{font-size:clamp(40px,3.65vw,62px)!important}
+.question-blurb{font-size:clamp(18px,1.55vw,26px);line-height:1.42;max-width:770px;margin-top:clamp(14px,2.2vh,25px)}
+.story-panel{gap:clamp(13px,1.6vh,18px)}
+.story-item{font-size:clamp(17px,1.38vw,22px);line-height:1.43;padding:clamp(15px,2vh,22px);border-radius:15px}
+.story-item b{font-size:clamp(15px,1.19vw,18px)}
+.vs-grid{gap:16px}
+.vs-grid .panel{min-height:190px}
+.vs-header h3{font-size:clamp(19px,1.64vw,26px)}
+.vs-tag{font-size:clamp(11px,1vw,15px)}
+.ba-item{font-size:clamp(17px,1.55vw,23px)}
+.ba-label{font-size:clamp(12px,1.08vw,16px);margin-bottom:13px}
+.stat-big{font-size:clamp(39px,3.8vw,62px)}
+.float-card .huge{font-size:clamp(31px,2.8vw,44px)}
+.float-card .lbl{font-size:clamp(16px,1.25vw,21px)}
+.float-cards{gap:14px}
+.float-card,.float-card:nth-child(1),.float-card:nth-child(2),.float-card:nth-child(3){padding:clamp(15px,2vh,22px)}
+/* Simulation slides: larger main areas, bolder and genuinely sequential animation. */
+.case-title{font-size:clamp(40px,3.88vw,62px)!important;line-height:1.04!important}
+.case-topic{font-size:clamp(16px,1.3vw,20px);margin-top:5px}
+.case-hook{font-size:clamp(18px,1.65vw,26px);line-height:1.28;margin:10px 0 16px!important}
+.case-stage{grid-template-columns:minmax(0,.79fr) minmax(0,1.21fr);gap:clamp(15px,1.7vw,25px)}
+.case-left{gap:13px}
+.case-before,.case-outcome{padding:clamp(17px,1.65vw,25px)}
+.case-before ul{font-size:clamp(15px,1.2vw,19px);line-height:1.46;padding-left:21px}
+.case-before li+li{margin-top:9px}
+.case-outcome p{font-size:clamp(15px,1.15vw,18px);line-height:1.5}
+.case-outcome p[style]{font-size:clamp(14px,1.05vw,16px)!important;margin-top:14px!important}
+.case-right{padding:clamp(15px,1.42vw,23px);gap:clamp(9px,1.05vh,14px);border-radius:20px}
+.case-screen-head{font-size:clamp(12px,1.05vw,16px)}
+.pipeline{gap:6px;position:relative;margin:5px 0 0}
+.step{min-height:clamp(51px,6.7vh,70px);font-size:clamp(12px,1.03vw,16px);font-weight:850;transition:background .45s,border-color .45s,transform .45s,box-shadow .45s;position:relative}
+.step.active{transform:translateY(-3px) scale(1.04);z-index:1;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent),0 10px 25px color-mix(in srgb,var(--accent) 20%,transparent);animation:activeStep 1s ease-in-out infinite}
+.step.done{background:color-mix(in srgb,var(--accent) 11%,#fff)}
+@keyframes activeStep{50%{transform:translateY(-5px) scale(1.065)}}
+.step-arrow{font-size:clamp(18px,1.6vw,26px)}
+.viz-area{min-height:clamp(175px,22vh,300px);border-radius:15px;isolation:isolate}
+.viz-area>*:not(.viz-glow){position:relative;z-index:2}
+.viz-glow{position:absolute;width:70px;height:70px;border-radius:50%;background:var(--accent);filter:blur(26px);opacity:0;left:0;top:45%;pointer-events:none;z-index:0}
+.case-right.animating .viz-glow{animation:dataTravel 3.8s cubic-bezier(.25,.1,.25,1) both}
+@keyframes dataTravel{0%{left:-25%;opacity:0;transform:scale(.5)}15%{opacity:.14}45%{opacity:.3}80%{opacity:.22}100%{left:100%;opacity:0;transform:scale(1.65)}}
+.case-live-line{display:flex;align-items:center;gap:10px;min-height:33px;padding:5px 11px;border-radius:10px;background:color-mix(in srgb,var(--accent) 7%,white);border:1px solid color-mix(in srgb,var(--accent) 15%,#e0e8f1);color:#415570;font-weight:740;font-size:clamp(12px,1vw,16px)}
+.case-live-copy{flex:1;min-width:0}
+.case-percentage{font-variant-numeric:tabular-nums;font-weight:900;color:var(--accent)}
+.live-pulse{height:9px;width:9px;flex:none;background:var(--accent);border-radius:50%;box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 15%,white)}
+.case-right.animating:not(.finished) .live-pulse{animation:liveBlink .85s ease-in-out infinite}
+@keyframes liveBlink{50%{box-shadow:0 0 0 9px color-mix(in srgb,var(--accent) 1%,white);opacity:.55}}
+.case-right.finished .case-live-line{background:#edf9f3;border-color:#b9e4cd;color:#166d50}
+.run-btn{font-size:clamp(12px,1.05vw,16px);padding:10px 15px}
+.run-state{font-size:clamp(12px,.99vw,15px)}
+.mail-mock{max-width:520px;gap:10px}
+.mail-row{font-size:clamp(13px,1.09vw,17px);padding:11px 12px;border-radius:11px;gap:11px;grid-template-columns:20px 1fr auto}
+.mail-row i{font-size:clamp(11px,.92vw,15px)}
+.case-right.animating .mail-row{animation:inboxProcess .9s cubic-bezier(.22,.8,.26,1) both;animation-delay:calc(.45s + var(--i)*.7s)}
+@keyframes inboxProcess{0%{opacity:.35;transform:translateX(-18px)}40%{opacity:1;border-color:var(--accent);transform:translateX(9px)}100%{opacity:1;transform:none;border-color:#bfdbd3;background:#f1fcf8}}
+.doc-mock{max-width:490px;grid-template-columns:145px 1fr;gap:23px}
+.doc-sheet{height:148px;padding:19px;gap:11px}
+.doc-sheet i{height:8px}
+.case-right.animating .doc-sheet{animation:scanPaper 2.5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes scanPaper{0%{transform:rotate(-8deg) translateY(15px);opacity:.65}45%{transform:rotate(0) translateY(0);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}100%{transform:rotate(-5deg)}}
+.data-bars{height:140px}
+.data-bars span{transition:height .8s}
+.case-right.animating .data-bars span{animation:barRise .85s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(1.3s + var(--i)*.23s)}
+.invoice-mock{max-width:510px}
+.inv{padding:clamp(14px,1.5vw,24px);gap:12px}
+.inv strong{font-size:clamp(17px,1.4vw,23px)}
+.inv small{font-size:clamp(12px,.99vw,16px)}
+.case-right.animating .inv.ok{animation:verifyInvoice 1.2s cubic-bezier(.3,1,.3,1) 1.65s both}
+@keyframes verifyInvoice{0%{transform:scale(.86);opacity:.3;border-color:#dfe7ee}65%{transform:scale(1.05);box-shadow:0 0 0 8px #dff7ed}100%{transform:scale(1);opacity:1;box-shadow:0 6px 25px #b0e6ce99}}
+.case-right.animating .inv-status{animation:appearAfter .8s 2.55s both}
+.stock-mock{max-width:470px;gap:20px}
+.stock-line{font-size:clamp(14px,1.15vw,19px);grid-template-columns:100px 1fr 56px;gap:12px}
+.stock-line b{font-size:clamp(13px,1.08vw,16px)}
+.stock-line .stock-track{height:15px}
+.stock-alert{font-size:clamp(13px,1.04vw,17px);padding:10px}
+.case-right.animating .stock-fill.low{animation:stockDrain 1.35s 1.1s ease-out both}
+.case-right.animating .stock-alert{animation:alertOn 1.15s 2.2s both}
+.chat-mock{max-width:520px;gap:14px}
+.bubble{font-size:clamp(15px,1.2vw,20px);padding:12px 16px}
+.chat-mock .lang{font-size:clamp(13px,1.07vw,17px);padding:8px 16px}
+.case-right.animating .chat-mock .lang{animation:fadeUp .55s 1.1s both}
+.case-right.animating .bubble.ai{animation:revealBubble .9s 2.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+/* Exercise cards and action slide: usable from the back of the room. */
+.challenge-grid{gap:20px}
+.code-card{padding:clamp(19px,1.9vw,29px)}
+.code-card .caption{font-size:clamp(12px,1.07vw,16px)}
+.code-card pre{font-size:clamp(14px,1.25vw,19px);line-height:1.58}
+.action-mini{font-size:clamp(13px,1.1vw,18px);padding:10px 14px}
+.flow-steps{gap:12px}
+.flow-step{padding:clamp(13px,1.5vw,21px)}
+.flow-step b{font-size:clamp(14px,1.2vw,18px)}
+.flow-step span{font-size:clamp(14px,1.18vw,18px)}
+.network .net-node{min-width:98px;padding:clamp(12px,1.2vw,20px);font-size:clamp(14px,1.12vw,18px)}
+.closing-quote{font-size:clamp(54px,5.8vw,92px)}
+.closing-q{font-size:clamp(24px,2.55vw,41px)}
+/* Staggered entrance: modern, energetic, but unobtrusive. */
+.slide.incoming .slide-header{animation:revealIn .45s .08s both}
+.slide.incoming .question-lead,.slide.incoming .section-title,.slide.incoming .welcome-title,.slide.incoming>.h2,.slide.incoming .case-title{animation:revealIn .6s .14s both}
+.slide.incoming .story-panel,.slide.incoming .case-stage,.slide.incoming .agenda-grid,.slide.incoming .section-questions,.slide.incoming .challenge-grid{animation:revealIn .63s .27s both}
+@keyframes revealIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+/* If a projector is short, preserve layout and avoid any element crossing its footer. */
+@media(max-height:800px) and (min-width:641px){
+ .slide{padding:clamp(20px,2.8vh,29px) clamp(28px,3.2vw,54px) 24px}
+ .h2{font-size:clamp(38px,4.1vw,62px)}
+ .section-title{font-size:clamp(47px,5.1vw,78px)}
+ .section-intro{font-size:clamp(19px,1.75vw,25px)}
+ .question-lead{font-size:clamp(43px,4.25vw,65px)!important}
+ .question-lead.question-medium{font-size:clamp(39px,3.75vw,59px)!important}
+ .question-lead.question-long{font-size:clamp(37px,3.35vw,53px)!important}
+ .question-blurb{font-size:clamp(17px,1.42vw,23px)}
+ .story-item{font-size:clamp(15px,1.28vw,19px);padding:12px 15px}
+ .case-title{font-size:clamp(34px,3.4vw,52px)!important}
+ .case-hook{font-size:clamp(17px,1.46vw,22px);margin:6px 0 9px!important}
+ .case-before,.case-outcome{padding:13px 15px}
+ .case-before ul{font-size:clamp(13px,1.07vw,16px);line-height:1.35}
+ .case-before li+li{margin-top:6px}
+ .case-outcome p{font-size:clamp(13px,1.04vw,16px)}
+ .case-right{padding:12px 15px;gap:7px}
+ .step{min-height:44px;font-size:clamp(10px,.9vw,13px)}
+ .viz-area{min-height:125px}
+ .case-live-line{font-size:clamp(11px,.86vw,14px);min-height:26px;padding:3px 8px}
+ .case-screen-head{font-size:clamp(11px,.9vw,14px)}
+ .run-btn{font-size:clamp(11px,.92vw,14px);padding:9px 10px}
+ .run-state{font-size:clamp(10px,.86vw,13px)}
+ .mail-row{font-size:clamp(11px,.9vw,14px);padding:7px 9px}
+ .mail-row i{font-size:clamp(10px,.8vw,12px)}
+ .doc-sheet{height:105px}.data-bars{height:95px}
+ .stock-mock{gap:10px}.stock-line{font-size:12px}.stock-alert{font-size:11px;padding:6px}
+ .bubble{font-size:13px;padding:8px 12px}.chat-mock{gap:6px}.chat-mock .lang{font-size:11px;padding:4px 9px}
+ .code-card pre{font-size:clamp(13px,1.06vw,16px);line-height:1.43}
+ .flow-step{padding:11px}.flow-step span{font-size:13px}
+ .agenda-item{padding:12px 17px}.agenda-grid{gap:10px}
+ .agenda-title{font-size:clamp(16px,1.3vw,20px)}
+ .agenda-short{font-size:clamp(12px,1.02vw,16px)}
+ .panel{padding:clamp(13px,1.6vw,24px)}
+ .point{font-size:clamp(15px,1.32vw,20px)}
+ .small{font-size:clamp(12px,1.07vw,16px)}
+}
+@media (max-width:1080px) and (min-width:641px){
+ .question-lead{font-size:clamp(37px,4.2vw,52px)!important}
+ .question-lead.question-medium{font-size:clamp(34px,3.8vw,46px)!important}
+ .question-lead.question-long{font-size:clamp(32px,3.5vw,42px)!important}
+ .question-wrap{gap:14px}
+ .case-stage{grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);gap:10px}
+ .case-before ul{font-size:13px}
+ .case-right{padding:10px}
+ .case-live-line{font-size:10px}
+ .mail-row{font-size:11px}.mail-row i{font-size:10px}
+ .stock-line{grid-template-columns:70px 1fr 38px}
+ .case-title{font-size:clamp(30px,3.45vw,42px)!important}
+ .float-card .lbl{font-size:clamp(13px,1.2vw,16px)}
+}
+@media(max-width:640px){
+ .presentation,.toolbar{width:calc(100vw - 16px);max-height:calc(100dvh - 70px)}
+ .slide{padding:23px 19px}
+ .question-lead,.question-lead.question-medium,.question-lead.question-long{font-size:clamp(31px,7.4vw,43px)!important}
+ .section-title{font-size:clamp(37px,8vw,54px)}
+ .welcome-title{font-size:clamp(31px,7.5vw,47px)}
+ .case-title{font-size:clamp(27px,6.1vw,38px)!important}
+ .case-left{grid-template-columns:1fr 1fr}
+ .case-live-line{font-size:12px}
+ .case-before ul{font-size:13px}
+ .point{font-size:15px}
+ .story-item{font-size:15px}
+ .agenda-item{padding:11px}
+ .agenda-title{font-size:15px}.agenda-short{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.slide.incoming .slide-header,.slide.incoming .question-lead,.slide.incoming .section-title,.slide.incoming .welcome-title,.slide.incoming>.h2,.slide.incoming .case-title,.slide.incoming .story-panel,.slide.incoming .case-stage,.slide.incoming .agenda-grid,.slide.incoming .section-questions,.slide.incoming .challenge-grid{animation:none!important}}
+
+
+/* --- 2026-11 layout + animation refinements --- */
+.question-wrap{grid-template-columns:1fr!important;align-content:start;gap:24px;max-width:1240px}
+.story-panel{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-content:start}
+.story-panel .story-item:last-child:nth-child(odd){grid-column:1/-1}
+.question-blurb{max-width:980px;font-size:clamp(18px,1.7vw,24px)!important;line-height:1.58}
+.story-item{padding:16px 18px!important;border-radius:16px!important}
+.story-item b{font-size:15px!important}
+.case-stage{grid-template-columns:1fr!important;grid-template-rows:auto 1fr;gap:18px!important;align-content:start}
+.case-left{display:grid!important;grid-template-columns:1fr 1fr;gap:14px}
+.case-before,.case-outcome{height:100%}
+.case-right{min-height:360px!important;padding:18px 20px!important;border-radius:22px!important;box-shadow:0 18px 40px rgba(33,62,108,.12)}
+.case-screen-head{font-size:13px!important}
+.case-hook{font-size:clamp(18px,1.6vw,23px)!important;margin:12px 0 16px!important;max-width:1050px}
+.pipeline{gap:9px!important;margin:8px 0 10px!important}
+.step{min-height:60px!important;padding:10px 8px!important;border-radius:14px!important;font-size:clamp(13px,1.05vw,16px)!important}
+.step-arrow{font-size:24px!important}
+.viz-area{min-height:195px!important;border-radius:18px!important;padding:18px!important}
+.case-live-line{padding:12px 14px!important;border-radius:14px!important;font-size:clamp(13px,1.03vw,16px)!important}
+.run-state{font-size:clamp(13px,1.03vw,16px)!important}
+.loop-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:color-mix(in srgb,var(--accent) 10%,white);border:1px solid color-mix(in srgb,var(--accent) 28%,#dce9f5);color:#284362;font-size:clamp(12px,.97vw,15px);font-weight:800;white-space:nowrap}
+.loop-pill::before{content:'↺';font-size:15px;color:var(--accent)}
+/* modern process map for slide 17 */
+.process-shell{display:flex;flex-direction:column;gap:18px;max-width:1240px}
+.process-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(2,minmax(145px,auto));gap:18px 14px;align-items:stretch;margin-top:8px}
+.proc-card{position:relative;padding:18px 18px 16px;border-radius:20px;background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);border:1px solid #dbe8f6;box-shadow:0 18px 36px rgba(43,73,115,.10)}
+.proc-card h3{margin:8px 0 8px;font-size:clamp(22px,1.9vw,30px);color:#0f2741}
+.proc-card p{margin:0;color:#496177;font-size:clamp(14px,1.06vw,17px);line-height:1.5}
+.proc-kicker{font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--accent)}
+.proc-icon{font-size:28px;line-height:1;margin-top:8px}
+.proc-chip{display:inline-flex;align-items:center;margin-top:14px;padding:7px 10px;border-radius:999px;background:#eef6ff;border:1px solid #d7e6f6;color:#33526f;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.proc-chip.alt{background:#f4fbf8;border-color:#d7efe2;color:#25634d}
+.proc-chip.hot{background:#f8f0ff;border-color:#e4d7f6;color:#6944aa}
+.proc-card.request{grid-column:1 / 5;grid-row:1}
+.proc-card.inventory{grid-column:5 / 9;grid-row:1}
+.proc-card.quote{grid-column:9 / 13;grid-row:1}
+.proc-card.invoice{grid-column:9 / 13;grid-row:2}
+.proc-card.report{grid-column:5 / 9;grid-row:2}
+.proc-connector{position:relative;overflow:visible}
+.proc-connector.right{height:4px;align-self:center;border-radius:999px;background:linear-gradient(90deg,#c8daef,var(--accent))}
+.proc-connector.right::after,.proc-connector.left::after,.proc-connector.down::after{content:'';position:absolute;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 14%,white)}
+.proc-connector.right::before{content:'›';position:absolute;right:-2px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:900;color:var(--accent)}
+.proc-connector.left{height:4px;align-self:center;border-radius:999px;background:linear-gradient(90deg,var(--accent),#c8daef)}
+.proc-connector.left::before{content:'‹';position:absolute;left:-2px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:900;color:var(--accent)}
+.proc-connector.down{width:4px;justify-self:center;border-radius:999px;background:linear-gradient(180deg,var(--accent),#c8daef)}
+.proc-connector.down::before{content:'⌄';position:absolute;left:50%;bottom:-10px;transform:translateX(-50%);font-size:22px;font-weight:900;color:var(--accent)}
+.c12{grid-column:4 / 5;grid-row:1}.c23{grid-column:8 / 9;grid-row:1}.c34{grid-column:10 / 11;grid-row:1 / 3;min-height:64px}.c45{grid-column:8 / 9;grid-row:2}
+.c12::after{top:50%;left:-8px;transform:translateY(-50%);animation:procFlowRight 7s linear infinite}
+.c23::after{top:50%;left:-8px;transform:translateY(-50%);animation:procFlowRight 7s linear infinite 1.7s}
+.c34::after{left:50%;top:-8px;transform:translateX(-50%);animation:procFlowDown 7s linear infinite 3.4s}
+.c45::after{top:50%;right:-8px;transform:translateY(-50%);animation:procFlowLeft 7s linear infinite 5.1s}
+@keyframes procFlowRight{0%{left:-10px;opacity:0}10%{opacity:1}85%{opacity:1}100%{left:calc(100% - 8px);opacity:0}}
+@keyframes procFlowLeft{0%{right:-10px;opacity:0}10%{opacity:1}85%{opacity:1}100%{right:calc(100% - 8px);opacity:0}}
+@keyframes procFlowDown{0%{top:-10px;opacity:0}10%{opacity:1}85%{opacity:1}100%{top:calc(100% - 8px);opacity:0}}
+.process-foot{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.process-note{padding:15px 16px;border-radius:16px;background:#f6faff;border:1px solid #dbe8f6;color:#36536e;font-size:clamp(14px,1.03vw,17px);line-height:1.5}
+@media(max-width:1180px){
+  .process-grid{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .proc-card.request,.proc-card.inventory,.proc-card.quote,.proc-card.invoice,.proc-card.report,.c12,.c23,.c34,.c45{grid-column:auto!important;grid-row:auto!important}
+  .proc-connector{display:none}
+  .process-foot{grid-template-columns:1fr}
+}
+@media(max-width:980px){
+  .story-panel{grid-template-columns:1fr!important}
+  .case-left{grid-template-columns:1fr!important}
+}
+
+
+/* Workshop overview: visual editorial cards, no agenda timings */
+.slide:has(.journey-landing){background:radial-gradient(ellipse at 94% 12%,rgba(109,84,203,.07),transparent 33%),linear-gradient(150deg,#fff 0%,#fff 68%,#f8faff 100%)}
+.journey-landing{display:flex;flex-direction:column;flex:1;min-height:0;gap:clamp(11px,1.7vh,20px)}
+.journey-intro{text-align:left;max-width:1500px}
+.journey-intro .overline{font-size:clamp(11px,.88vw,14px);letter-spacing:.13em;color:#6952b7;font-weight:850}
+.journey-intro h1{font-size:clamp(37px,4.3vw,68px);line-height:1.055;letter-spacing:-.052em;font-weight:900;margin:8px 0 9px;color:#17263e}
+.journey-intro p{font-size:clamp(15px,1.38vw,22px);color:#62758c;line-height:1.43;margin:0;max-width:1000px}
+.journey-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(145px,1fr));gap:clamp(11px,1.25vw,20px);flex:1;min-height:0;margin:clamp(4px,.6vh,10px) 0 0}
+.journey-card{grid-column:span 2;min-width:0;display:flex;flex-direction:column;gap:8px;border-radius:20px;background:#fff;border:1px solid #e1e8f3;box-shadow:0 10px 24px rgba(37,69,119,.065);padding:clamp(14px,1.45vw,24px);position:relative;overflow:hidden;cursor:pointer;transition:box-shadow .3s,transform .3s,border-color .3s}
+.journey-card:nth-child(n+4){grid-column:span 3}
+.journey-card::before{content:'';height:4px;position:absolute;top:0;left:0;right:0;background:var(--journey-accent)}
+.journey-card::after{content:'';position:absolute;right:-48px;top:-51px;width:154px;height:154px;border-radius:50%;background:color-mix(in srgb,var(--journey-accent) 7%,transparent);pointer-events:none}
+.journey-card-1{--journey-accent:#7257c5}.journey-card-2{--journey-accent:#dc8952}.journey-card-3{--journey-accent:#2695a9}.journey-card-4{--journey-accent:#b75b9f}.journey-card-5{--journey-accent:#37997a}
+.journey-card:hover,.journey-card:focus-visible{transform:translateY(-4px);border-color:color-mix(in srgb,var(--journey-accent) 38%,#e1e8f3);box-shadow:0 17px 37px rgba(45,74,114,.12)}
+.journey-card:focus-visible{outline:3px solid color-mix(in srgb,var(--journey-accent) 50%,white);outline-offset:2px}
+.journey-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.journey-number{font-size:clamp(12px,1vw,16px);font-weight:850;color:#8899aa;letter-spacing:.13em}
+.journey-icon{width:clamp(45px,4.1vw,67px);height:clamp(45px,4.1vw,67px);display:flex;align-items:center;justify-content:center;border-radius:16px;background:color-mix(in srgb,var(--journey-accent) 9%,white);color:var(--journey-accent)}
+.journey-card-body{position:relative;z-index:1;margin-top:auto}
+.journey-card h2{margin:0 0 6px;font-size:clamp(19px,1.8vw,29px);font-weight:850;letter-spacing:-.028em;line-height:1.12;color:#182b46}
+.journey-card p{margin:0;font-size:clamp(13px,1.08vw,17px);line-height:1.36;color:#667d94;max-width:430px}
+.journey-explore{font-size:clamp(10px,.76vw,13px);font-weight:850;letter-spacing:.12em;color:var(--journey-accent);display:flex;align-items:center;gap:10px;margin-top:5px;position:relative;z-index:1}
+.journey-explore span{font-size:18px;line-height:1}
+.journey-footer{display:flex;align-items:center;gap:10px;font-size:clamp(12px,1.03vw,16px);color:#6b8095;padding-top:3px}
+.journey-pulse{width:8px;height:8px;border-radius:50%;background:#7c67c5;box-shadow:0 0 0 5px #eee9fb}
+@media(max-height:830px){.slide:has(.journey-landing){padding-top:clamp(17px,2.4vh,28px);padding-bottom:clamp(14px,2.1vh,25px)}.slide:has(.journey-landing) .slide-header{margin-bottom:12px}.journey-intro h1{font-size:clamp(34px,3.8vw,60px)}.journey-intro p{font-size:clamp(14px,1.16vw,19px)}.journey-grid{gap:11px;grid-template-rows:repeat(2,minmax(124px,1fr))}.journey-card{padding:clamp(12px,1.2vw,20px);gap:5px}.journey-card h2{font-size:clamp(18px,1.55vw,25px)}.journey-card p{font-size:clamp(12px,.94vw,15px)}.journey-icon{width:48px;height:48px}.journey-icon svg{width:25px;height:25px}}
+@media(max-width:760px){.journey-intro h1{font-size:clamp(33px,6vw,48px)}.journey-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;flex:none}.journey-card,.journey-card:nth-child(n+4){grid-column:span 1;min-height:190px}.journey-card:last-child{grid-column:1 / -1}.journey-card h2{font-size:20px}.journey-card p{font-size:13px}.journey-footer{padding:8px 0}}
+@media(max-width:450px){.journey-grid{grid-template-columns:1fr}.journey-card,.journey-card:nth-child(n+4),.journey-card:last-child{grid-column:1;min-height:160px}}
+@media(prefers-reduced-motion:reduce){.journey-card{transition:none}}
+
+
+
+/* Minimal editorial overview: five slim, borderless clickable rows */
+.journey-row.journey-card-1{--journey-accent:#694fc0}
+.journey-row.journey-card-2{--journey-accent:#c77a43}
+.journey-row.journey-card-3{--journey-accent:#118c9b}
+.journey-row.journey-card-4{--journey-accent:#ab559d}
+.journey-row.journey-card-5{--journey-accent:#20876a}
+.slide:has(.journey-rows-layout){background:#fff!important}
+.journey-rows-layout{
+  display:flex!important;flex-direction:column!important;
+  gap:clamp(9px,1.4vh,16px)!important;min-height:0;flex:1;
+  max-width:none!important;
+}
+.journey-rows-layout .journey-intro{max-width:none}
+.journey-rows-layout .journey-intro .overline{
+  color:#777d9e!important;font-size:clamp(10px,.82vw,13px);letter-spacing:.16em;
+}
+.journey-rows-layout .journey-intro h1{
+  font-size:clamp(35px,3.8vw,59px)!important;line-height:1.06;
+  letter-spacing:-.052em;margin:5px 0 6px;font-weight:880;
+}
+.journey-rows-layout .journey-intro p{font-size:clamp(14px,1.18vw,19px)!important;line-height:1.35;color:#718195;margin:0}
+.journey-rows{
+  display:grid;grid-template-rows:repeat(5,clamp(63px,8.7vh,90px));gap:0;
+  min-height:0;flex:none;margin:auto 0;
+  border-top:1px solid #e5eaf1;
+}
+.journey-row{
+  display:grid;grid-template-columns:clamp(45px,5vw,76px) minmax(0,1.54fr) minmax(0,1fr) clamp(25px,3.2vw,46px);
+  align-items:center;gap:clamp(10px,1.7vw,28px);
+  min-width:0;min-height:0;position:relative;
+  padding:clamp(6px,1vh,12px) clamp(4px,.8vw,13px);
+  background:transparent!important;box-shadow:none!important;
+  border:0!important;border-bottom:1px solid #e5eaf1!important;
+  border-radius:0!important;cursor:pointer;
+  transition:background .22s ease,color .22s ease;
+}
+.journey-row::before{
+  content:'';position:absolute;left:0;top:16%;bottom:16%;width:3px;
+  border-radius:8px;background:var(--journey-accent);
+  transform:scaleY(0);transform-origin:center;transition:transform .24s ease;
+}
+.journey-row:hover,.journey-row:focus-visible{background:#fafbff!important;outline:none}
+.journey-row:focus-visible{outline:2px solid #bcb1ef;outline-offset:-2px}
+.journey-row:hover::before,.journey-row:focus-visible::before{transform:scaleY(1)}
+.journey-row .jr-number{
+  display:block!important;place-items:unset;
+  width:auto!important;height:auto!important;border-radius:0!important;
+  background:none!important;box-shadow:none!important;
+  color:var(--journey-accent)!important;
+  font-size:clamp(15px,1.15vw,20px)!important;
+  line-height:1.2;font-weight:780;letter-spacing:.04em;
+}
+.journey-row h2{
+  margin:0;letter-spacing:-.039em;line-height:1.09;
+  color:#14263f;font-weight:830;
+  font-size:clamp(22px,2.13vw,35px)!important;
+  transition:color .22s ease;
+}
+.journey-row:hover h2{color:var(--journey-accent)}
+.journey-row p{
+  font-size:clamp(13px,1.13vw,19px)!important;
+  color:#74859a;line-height:1.3;margin:0;letter-spacing:-.008em;
+}
+.journey-row .jr-arrow{
+  font-size:clamp(19px,1.7vw,26px)!important;font-weight:450;
+  color:#afbbc9!important;text-align:center;line-height:1;
+  transition:transform .24s ease,color .24s ease;
+}
+.journey-row:hover .jr-arrow,.journey-row:focus-visible .jr-arrow{color:var(--journey-accent)!important;transform:translate(4px,-3px)}
+.journey-rows-layout .journey-footer{
+  margin:clamp(2px,.6vh,8px) 0 0;padding:0;color:#91a0b0;
+  font-size:clamp(11px,.9vw,15px)!important;line-height:1.2;
+}
+.journey-rows-layout .journey-pulse{width:6px;height:6px;box-shadow:0 0 0 4px #f1effb;background:#806bc5}
+@media(max-height:830px){
+ .slide:has(.journey-rows-layout){padding-top:clamp(15px,2vh,23px);padding-bottom:clamp(12px,1.6vh,20px)}
+ .slide:has(.journey-rows-layout) .slide-header{margin-bottom:clamp(5px,.8vh,12px)}
+ .journey-rows-layout{gap:clamp(5px,.8vh,11px)!important}
+ .journey-rows-layout .journey-intro h1{font-size:clamp(32px,3.4vw,50px)!important;margin:3px 0 5px}
+ .journey-rows-layout .journey-intro p{font-size:clamp(13px,1.04vw,17px)!important}
+ .journey-rows{margin:auto 0}
+ .journey-row{padding:3px 8px}
+ .journey-row h2{font-size:clamp(21px,2.02vw,29px)!important}
+ .journey-row p{font-size:clamp(12px,1.08vw,17px)!important}
+ .journey-row .jr-number{font-size:clamp(14px,1.06vw,17px)!important}
+ .journey-rows-layout .journey-footer{font-size:11px!important}
+}
+@media(max-width:920px){
+ .journey-row{grid-template-columns:38px minmax(0,1.24fr) minmax(0,1fr) 24px;gap:10px}
+ .journey-row h2{font-size:clamp(21px,2.5vw,26px)!important}
+ .journey-row p{font-size:clamp(12px,1.5vw,15px)!important}
+}
+@media(max-width:650px){
+ .journey-rows{flex:none;grid-template-rows:repeat(5,minmax(70px,auto))}
+ .journey-row{grid-template-columns:32px minmax(0,1fr) 22px;grid-template-rows:auto auto;column-gap:10px;row-gap:4px;padding:11px 4px}
+ .journey-row .jr-number{grid-row:1/3;align-self:center}
+ .journey-row h2{grid-column:2;grid-row:1;font-size:clamp(19px,4.45vw,25px)!important}
+ .journey-row p{grid-column:2;grid-row:2;font-size:clamp(12px,3.1vw,14px)!important}
+ .journey-row .jr-arrow{grid-column:3;grid-row:1/3;align-self:center}
+ .journey-rows-layout .journey-intro h1{font-size:clamp(30px,6vw,40px)!important}
+}
+@media(prefers-reduced-motion:reduce){.journey-row,.journey-row::before,.journey-row h2,.journey-row .jr-arrow{transition:none}}
+
+
+/* FULL-WIDTH VISUALS — major fixes on the first comparison and similar slides */
+.question-wrap{max-width:none!important;width:100%!important;grid-template-columns:minmax(0,1fr)!important}
+.question-wrap>.story-panel{width:100%;max-width:none!important;justify-self:stretch!important}
+.story-panel>:not(.story-item){grid-column:1/-1!important;width:100%!important;min-width:0}
+.story-panel>.vs-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(16px,1.9vw,28px)!important;min-height:clamp(235px,34vh,335px);align-items:stretch}
+.story-panel>.vs-grid>.panel{width:100%;min-height:clamp(235px,34vh,335px)!important;padding:clamp(22px,2.3vw,35px)!important;display:flex;flex-direction:column;justify-content:center;gap:14px;border-radius:22px!important}
+.story-panel .vs-header h3{font-size:clamp(25px,2.22vw,36px)!important;letter-spacing:-.035em;line-height:1.15}
+.story-panel .vs-tag{font-size:clamp(12px,1.03vw,16px)!important}
+.story-panel .vs-grid .small{font-size:clamp(16px,1.5vw,23px)!important;line-height:1.45!important;margin:0!important}
+.story-panel .vs-grid .role-tag{font-size:clamp(11px,1.08vw,15px)!important;padding:8px 12px!important;background:#f1f5fb;border:1px solid #dbe5f0;color:#37516e;border-radius:999px}
+.story-panel .vs-grid .panel>div:last-child{flex-wrap:wrap!important;gap:8px!important;margin-top:8px!important}
+.story-panel>.float-cards{width:100%!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;align-items:stretch}
+.story-panel .float-card{min-width:0;width:100%!important;min-height:clamp(195px,29vh,290px)!important;padding:clamp(22px,2.1vw,33px)!important;display:flex;flex-direction:column;justify-content:center;gap:10px;border-radius:20px}
+.story-panel .float-card .huge{font-size:clamp(39px,4vw,61px)!important;line-height:1}
+.story-panel .float-card .lbl{font-size:clamp(18px,1.55vw,24px)!important;line-height:1.3}
+.story-panel>.panel{padding:clamp(24px,2.5vw,36px)!important;border-radius:22px!important;min-height:clamp(235px,31vh,315px);display:flex;flex-direction:column;justify-content:center}
+.story-panel>.panel .overline{font-size:clamp(12px,1.1vw,16px)!important}
+.story-panel>.panel .small{font-size:clamp(16px,1.35vw,21px)!important;line-height:1.45}
+.story-panel>.before-after{width:100%!important;grid-column:1/-1!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch;gap:22px!important}
+.story-panel>.before-after .ba-ctrl{min-width:0;padding:clamp(17px,2vw,28px);border-radius:20px}
+.story-panel>.before-after .ba-item{font-size:clamp(16px,1.5vw,22px)!important}
+.story-panel>.before-after .arrow-big{font-size:clamp(32px,3vw,52px)!important;align-self:center}
+.story-panel>.panel .network{min-height:130px!important;height:auto!important;gap:14px!important}
+.story-panel>.panel .network .net-node{font-size:clamp(15px,1.4vw,22px)!important;min-width:clamp(135px,15vw,220px);padding:20px!important;border-radius:16px}
+.story-panel>.panel .calc-row{gap:20px!important}
+.story-panel>.panel .field label{font-size:clamp(14px,1.12vw,18px)!important}
+.story-panel>.panel .calc-result{margin-top:20px}
+/* Flow animations: occupy an entire slide height, rather than stacking offscreen */
+.slide:has(.case-stage) .case-stage{display:grid!important;grid-template-columns:minmax(270px,.75fr) minmax(0,1.35fr)!important;grid-template-rows:minmax(0,1fr)!important;align-content:stretch!important;gap:clamp(13px,1.4vw,21px)!important;min-height:0!important;flex:1!important}
+.slide:has(.case-stage) .case-left{display:flex!important;flex-direction:column!important;gap:13px!important;min-width:0;min-height:0!important}
+.slide:has(.case-stage) .case-before{height:auto!important;flex:0 1 auto;padding:clamp(15px,1.4vw,23px)!important}
+.slide:has(.case-stage) .case-outcome{height:auto!important;flex:1 1 auto;padding:clamp(15px,1.4vw,23px)!important}
+.slide:has(.case-stage) .case-right{height:100%!important;min-height:0!important;padding:clamp(13px,1.35vw,20px)!important;min-width:0;overflow:hidden}
+.slide:has(.case-stage) .case-before ul{line-height:1.5!important;font-size:clamp(13px,1.12vw,17px)!important}
+.slide:has(.case-stage) .case-outcome p{font-size:clamp(13px,1.1vw,17px)!important}
+.slide:has(.case-stage) .viz-area{min-height:90px!important;flex:1 1 auto}
+.slide:has(.case-stage) .pipeline{margin:4px 0 6px!important}
+.slide:has(.case-stage) .step{min-height:48px!important;font-size:clamp(11px,1.0vw,14px)!important}
+.slide:has(.case-stage) .case-hook{margin:7px 0 12px!important}
+.slide:has(.case-stage) .case-live-line{padding:8px 12px!important}
+/* Make the connected business process slide fit projector screens cleanly. */
+.slide:has(.process-grid) .sub{margin:6px 0 12px!important;font-size:clamp(14px,1.15vw,18px)!important}
+.slide:has(.process-grid)>.h2{font-size:clamp(32px,3.1vw,47px)!important;line-height:1.08;margin:0!important}
+.slide:has(.process-grid) .process-shell{gap:8px!important;flex:1;min-height:0!important}
+.slide:has(.process-grid) .process-grid{grid-template-rows:repeat(2,minmax(116px,1fr))!important;gap:9px 11px!important;margin:0!important;min-height:0}
+.slide:has(.process-grid) .proc-card{padding:11px 15px!important;border-radius:15px!important;display:flex;flex-direction:column;justify-content:center}
+.slide:has(.process-grid) .proc-kicker{font-size:10px!important}
+.slide:has(.process-grid) .proc-icon{font-size:21px!important;margin:3px 0!important}
+.slide:has(.process-grid) .proc-card h3{font-size:clamp(19px,1.55vw,25px)!important;margin:3px 0!important;line-height:1.1}
+.slide:has(.process-grid) .proc-card p{font-size:clamp(11px,.93vw,15px)!important;line-height:1.25!important}
+.slide:has(.process-grid) .proc-chip{font-size:9px!important;padding:5px 9px!important;margin-top:6px!important;align-self:flex-start}
+.slide:has(.process-grid) .process-foot{gap:9px!important}
+.slide:has(.process-grid) .process-note{font-size:clamp(11px,.93vw,14px)!important;line-height:1.3;padding:10px 12px!important}
+.slide:has(.process-grid) .bottom-msg{margin-top:7px!important;font-size:clamp(11px,1vw,15px)!important}
+@media(max-width:980px){
+ .story-panel>.vs-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .story-panel>.float-cards{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .slide:has(.case-stage) .case-stage{grid-template-columns:minmax(200px,.8fr) minmax(0,1.2fr)!important}
+ .story-panel .vs-grid .role-tag{padding:6px 8px!important}
+}
+@media(max-width:680px){
+ .story-panel>.vs-grid,.story-panel>.float-cards{grid-template-columns:1fr!important}
+ .story-panel>.before-after{grid-template-columns:1fr!important}
+ .slide:has(.case-stage) .case-stage{grid-template-columns:1fr!important;grid-template-rows:auto auto!important}
+ .slide:has(.case-stage) .case-left{display:grid!important;grid-template-columns:1fr 1fr!important}
+ .slide:has(.case-stage) .case-right{min-height:340px!important}
+}
+
+
+/* Targeted fit corrections for the enlarged visuals */
+.slide[data-slide="5"] .story-panel>.panel{display:grid!important;grid-template-columns:minmax(0,.92fr) minmax(0,1fr);grid-template-rows:auto 1fr;align-items:center;gap:0 25px;padding:20px 26px!important;min-height:250px!important}
+.slide[data-slide="5"] .story-panel>.panel>.overline{grid-column:1;grid-row:1;align-self:end}
+.slide[data-slide="5"] .story-panel>.panel>.h3{grid-column:1;grid-row:2;align-self:center;margin:0!important;line-height:1.02;font-size:clamp(28px,2.85vw,44px)!important}
+.slide[data-slide="5"] .story-panel>.panel>div:last-child{grid-column:2;grid-row:1/3;margin:0!important;align-self:center}
+.slide[data-slide="5"] .story-panel>.panel .point{font-size:clamp(15px,1.16vw,18px)!important;line-height:1.36!important;padding:7px 0!important}
+.slide[data-slide="25"] .story-panel>.panel{min-height:0!important;padding:16px 22px!important;justify-content:stretch}
+.slide[data-slide="25"] .story-panel>.panel .t-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;margin-top:12px!important}
+.slide[data-slide="25"] .story-panel>.panel .t-grid>.panel{min-height:160px!important;padding:15px!important;display:flex;flex-direction:column;justify-content:center}
+.slide[data-slide="25"] .story-panel>.panel .stat-big{font-size:clamp(28px,2.65vw,40px)!important;letter-spacing:-.035em;line-height:1.05}
+.slide[data-slide="25"] .story-panel>.panel .small{font-size:clamp(13px,1.03vw,17px)!important;margin-top:8px!important}
+/* Process connectors now live in the whitespace between nodes, never over their text. */
+.slide:has(.process-grid) .process-grid{gap:18px 25px!important}
+.slide:has(.process-grid) .proc-connector{display:none!important}
+.slide:has(.process-grid) .proc-card{z-index:1}
+.slide:has(.process-grid) .proc-card.request:after,
+.slide:has(.process-grid) .proc-card.inventory:after,
+.slide:has(.process-grid) .proc-card.invoice:after,
+.slide:has(.process-grid) .proc-card.quote:after{
+ position:absolute;display:flex;align-items:center;justify-content:center;
+ background:var(--accent);color:white;box-shadow:0 3px 9px color-mix(in srgb,var(--accent) 22%,transparent);
+ width:26px;height:26px;font-size:19px;font-weight:900;line-height:1;
+ border-radius:50%;z-index:10;animation:connectorPulse 4s ease-in-out infinite
+}
+.slide:has(.process-grid) .proc-card.request:after,
+.slide:has(.process-grid) .proc-card.inventory:after{content:'›';top:50%;right:-26px;transform:translateY(-50%)}
+.slide:has(.process-grid) .proc-card.quote:after{content:'⌄';left:50%;bottom:-25px;transform:translateX(-50%)}
+.slide:has(.process-grid) .proc-card.invoice:after{content:'‹';top:50%;left:-26px;transform:translateY(-50%)}
+.slide:has(.process-grid) .proc-card.inventory:after{animation-delay:1s}
+.slide:has(.process-grid) .proc-card.quote:after{animation-delay:2s}
+.slide:has(.process-grid) .proc-card.invoice:after{animation-delay:3s}
+@keyframes connectorPulse{0%,100%{opacity:.73;filter:saturate(.95)}45%{opacity:1;filter:saturate(1.3)}}
+@media(max-width:1180px){.slide:has(.process-grid) .proc-card:after{display:none!important}}
+@media(max-width:780px){
+ .slide[data-slide="5"] .story-panel>.panel{display:flex!important;flex-direction:column;align-items:stretch}
+ .slide[data-slide="25"] .story-panel>.panel .t-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+
+/* Slide 10: precise, consistently centered process connectors. */
+.dependency-network{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:clamp(8px,1.3vw,18px)!important;width:100%;}
+.dependency-network .net-node{display:flex;align-items:center;justify-content:center;min-height:84px;flex:0 0 clamp(145px,17vw,205px);box-sizing:border-box;line-height:1.25;}
+.dependency-network .centered-connector{display:flex;align-items:center;justify-content:center;align-self:center;flex:1 1 45px;min-width:26px;height:24px!important;position:relative;background:none!important;}
+.dependency-network .centered-connector::after{content:none!important;display:none!important;}
+.dependency-network .centered-connector svg{display:block;width:100%;height:24px;overflow:visible;}
+.dependency-network .centered-connector path{fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;}
+@media(max-width:700px){
+ .dependency-network{gap:6px!important;}
+ .dependency-network .net-node{flex:0 1 30%;min-width:0!important;min-height:66px;padding:8px 5px!important;font-size:clamp(10px,2.6vw,14px)!important;}
+ .dependency-network .centered-connector{flex:1 1 18px;min-width:15px;}
+}
+
+</style>
+</head>
+<body>
+<div id="app">
+  <main class="presentation" id="deck" aria-label="Interactive workshop presentation"><div id="slideHost"></div><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="notes" id="notes"></div></main>
+  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="notesBtn" title="Speaker notes (N)" aria-label="Toggle speaker notes">▤</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 29</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
+  <div class="help" id="help"><strong>Keyboard shortcuts</strong><p><kbd>→</kbd> <kbd>Space</kbd> Next slide</p><p><kbd>←</kbd> Previous slide</p><p><kbd>Home</kbd> First slide · <kbd>End</kbd> Last</p><p><kbd>G</kbd> Agenda · <kbd>F</kbd> Fullscreen</p><p><kbd>N</kbd> Speaker notes · <kbd>P</kbd> Print/PDF</p><p><kbd>?</kbd> This help</p><p style="color:#9eb1cd">Use case demos loop automatically every 10 seconds. All content works offline; AI tools for the live challenge require internet.</p></div>
+  <div id="announce" aria-live="polite"></div>
+</div>
+<script>
+(()=>{
+'use strict';
+const ACC=['#644ac7','#9a6219','#087f86','#b13f80','#178166'];
+const S=[];
+function add(section,type,title,html,opts={}){ S.push({section,type,title,html,...opts}); }
+function head(sec,label,time){return `<div class="slide-header"><span class="number-chip">${sec===0?'THE WORKSHOP':`0${sec} / 05`}</span><span class="header-separator"></span><span>${label}</span>${time?`<span class="clock-chip"><span class="dot"></span>${time}</span>`:''}</div>`}
+function cards(items){return `<div class="bullets">${items.map((a,i)=>`<div class="story-item"><b>${String(i+1).padStart(2,'0')}</b><span>${a}</span></div>`).join('')}</div>`}
+function pts(items){return `<div class="bullets">${items.map(a=>`<div class="point"><i class="marker"></i><span>${a}</span></div>`).join('')}</div>`}
+function q(sec,n,title,description,points,visual='',note=''){const duration=({1:4,2:3,3:3,4:4,5:3,6:3,10:4,11:3,12:3,13:3,14:4,15:3})[n]||3;add(sec,'question',title,`${head(sec,SECTION_NAMES[sec],duration+' MIN · DISCUSSION')}<div class="question-wrap"><div><div class="overline">BIG QUESTION ${n} · WHAT DO YOU THINK?</div><h1 class="h2 question-lead ${title.length>67?'question-long':title.length>48?'question-medium':'question-short'}">${title}</h1><p class="question-blurb">${description}</p><div class="bottom-msg" style="margin-top:23px">YOUR TURN! Raise a hand. Share your take.</div></div><div class="story-panel">${visual||cards(points)}</div></div>`,{notes:note||`Ask the question. Pause for audience reactions. Cover: ${points.join('; ')}.`})}
+const SECTION_NAMES={1:'The SME advantage',2:'The hidden cost of manual work',3:'Real business opportunities',4:'People, culture & change',5:'From curiosity to action'};
+function section(sec,big,title,desc,tags,notes=''){add(sec,'section',title,`${head(sec,SECTION_NAMES[sec],`${[0,10,10,20,10,10][sec]} MINUTES`)}<div class="section-giant">${String(sec).padStart(2,'0')}</div><div style="margin:auto 0;max-width:900px;z-index:1"><div class="overline">Chapter ${String(sec).padStart(2,'0')} / 05 · ${big}</div><h1 class="h1 section-title">${title}</h1><p class="section-intro">${desc}</p><div class="section-questions">${tags.map(t=>`<span>${t}</span>`).join('')}</div></div>`,{notes:notes||`Introduce ${SECTION_NAMES[sec]}. Keep it accessible and business-focused.`})}
+function block(sec,title,subtitle,inner,note='',tag='KEY IDEA'){add(sec,'content',title,`${head(sec,SECTION_NAMES[sec],tag)}<h1 class="h2" style="max-width:850px">${title}</h1>${subtitle?`<p class="sub" style="margin:12px 0 22px">${subtitle}</p>`:''}${inner}`,{notes:note})}
+function caseViz(id){const all={inbox:`<div class="mail-mock"><div class="mail-row" style="--i:0"><span class="flag"></span><b>Supplier quotation</b><i>Route → Sales</i></div><div class="mail-row" style="--i:1"><span class="flag"></span><b>Urgent customer request</b><i>High priority</i></div><div class="mail-row" style="--i:2"><span class="flag"></span><b>Delivery question</b><i>Draft reply</i></div></div>`,documents:`<div class="doc-mock"><div class="doc-sheet"><i></i><i></i><i></i><i></i><i></i></div><div class="data-bars"><span style="--i:0;--h:40%"></span><span style="--i:1;--h:73%"></span><span style="--i:2;--h:56%"></span><span style="--i:3;--h:92%"></span></div></div>`,invoice:`<div class="invoice-mock"><div class="inv"><strong>INV-204</strong><div class="inv-dash"></div><div class="inv-dash"></div><small>Amount: €480</small></div><div style="font-size:24px;color:var(--accent)">→</div><div class="inv ok"><strong>✓ Matched</strong><div class="inv-dash"></div><small>Ready for review</small></div><div class="inv-status">PAYMENT CHECK</div></div>`,inventory:`<div class="stock-mock"><div class="stock-line"><label>Product A</label><div class="stock-track"><div class="stock-fill low" style="--w:12%"></div></div><b>10 pcs</b></div><div class="stock-line"><label>Product B</label><div class="stock-track"><div class="stock-fill" style="--w:73%"></div></div><b>65 pcs</b></div><div class="stock-line"><label>Product C</label><div class="stock-track"><div class="stock-fill" style="--w:49%"></div></div><b>42 pcs</b></div><div class="stock-alert">⚠ Product A · stock below reorder level</div></div>`,customer:`<div class="chat-mock"><div class="bubble">Can you deliver to Skopje next week? 🇲🇰</div><div class="lang">EN → MK / SQ / SR</div><div class="bubble ai">Thank you! We can review availability and send a quotation shortly. ✓</div></div>`};return all[id]}
+const CASES=[
+{id:'inbox',name:'The Overloaded Inbox',sub:'Communication & Requests',hook:'What if your inbox could organize itself?!',before:['Incoming requests scattered across channels','Slow replies and missed follow-ups','Team manually sorts every message'],flow:['Receive','Classify','Prioritize','Draft'],outcome:'A clearer inbox, faster routing, and suggested replies ready for human review.',question:'What if no urgent request ever got lost again?!',notes:'Discuss how every industry processes enquiries: customers, suppliers, service requests. This is an illustrative automated workflow, not a claim that every message can be handled without review.'},
+{id:'documents',name:'From Paperwork to Insights',sub:'Documents, Data & Reporting',hook:'What if your data could tell you what to do next?!',before:['Data scattered in PDFs, Excel and email','Copy-and-paste reporting','Decisions based on outdated information'],flow:['Collect','Extract','Validate','Report'],outcome:'Structured information, refreshed reports, and better questions for managers to investigate.',question:'How much useful information is trapped inside your files?',notes:'Connect PDFs, Excel files, reports and management decisions. Emphasize verification of extracted values and privacy.'},
+{id:'invoice',name:'Smarter Invoicing',sub:'Financial Operations',hook:'What if invoices no longer needed constant chasing?!',before:['Manual invoice entry and checks','Late payment follow-ups','Errors and duplicate records'],flow:['Read','Match','Flag','Follow up'],outcome:'Invoices can be pre-checked, discrepancies flagged, and reminders prepared while staff approve sensitive actions.',question:'Do your invoices create value or just more admin?',notes:'Example: receive invoice; compare to order; identify discrepancy; prepare payment reminder. Do not imply accounting decisions should occur without review.'},
+{id:'inventory',name:'Know What You Have',sub:'Inventory & Resource Management',hook:'What if your business warned you before stock ran out?',before:['No single view of stock','Last-minute shortages and excess stock','Reactive purchasing decisions'],flow:['Track','Detect','Alert','Plan'],outcome:'Earlier shortage alerts, more informed replenishment, and fewer operational surprises.',question:'Can your business see a problem before your customers do?',notes:'Applies to materials, spare parts, room availability, farm supplies and even personnel capacity. AI forecasts are estimates, not guarantees.'},
+{id:'customer',name:'Customers Across Borders',sub:'Faster, Multilingual Service',hook:'What if customers got relevant answers in their preferred language?',before:['Slow quotations and response times','Language barriers across markets','Inconsistent updates for customers'],flow:['Understand','Translate','Prepare','Review'],outcome:'Clearer communication, faster quotations, and cross-border customer service supported by human approval.',question:'Can your company grow beyond its current language boundaries?',notes:'Specific to Western Balkans. Discuss regional languages, logistics and consistent communication. Confirm prices and availability before promising delivery.'}
+];
+function cs(c,i){const secs=['5 USE CASES','5 USE CASES','5 USE CASES','5 USE CASES','5 USE CASES'];const qprefix=i<=2?'Q7 · What if most routine admin work could be automated?':i===3?'Q8 · What if problems were detected earlier?':'Q9 · Can you serve more customers with the same team?';add(3,'case',c.name,`${head(3,'Use case '+(i+1)+' / 5','2 MIN · LIVE ANIMATION')}<div class="overline">${qprefix}</div><h1 class="h3 case-title">${c.name}</h1><div class="case-topic">${c.sub}</div><div class="case-hook">${c.hook}</div><div class="case-stage"><div class="case-left"><div class="case-before"><div class="ba-label">BEFORE · THE FRICTION</div><ul>${c.before.map(t=>`<li>${t}</li>`).join('')}</ul></div><div class="case-outcome"><div class="ba-label">AFTER · THE OPPORTUNITY</div><p>${c.outcome}</p><p style="margin-top:11px;color:#5f788b;font-size:12px">Ask the room: “${c.question}”</p></div></div><div class="case-right" data-scenario="${c.id}" data-stage="-1"><div class="case-screen-head"><span>PROCESS SIMULATION</span><span class="fake-dots"><i></i><i></i><i></i></span></div><div class="pipeline" aria-label="Animated workflow steps">${c.flow.map((s,j)=>`<div class="step" data-step="${j}">${s}</div>${j===3?'':'<span class="step-arrow">›</span>'}`).join('')}</div><div class="viz-area">${caseViz(c.id)}<div class="viz-glow" aria-hidden="true"></div></div><div class="case-live-line"><span class="live-pulse"></span><span class="case-live-copy">Ready to demonstrate</span><span class="case-percentage">0%</span></div><div class="actionbar"><span class="run-state" id="status-${c.id}">Illustrative automated workflow</span><span class="loop-pill">Auto-loop demo · every 10s</span></div></div></div>`,{caseId:c.id,notes:c.notes});}
+
+// 00 — HERO / AGENDA
+add(0,'hero','AI-Powered Services for Digital Transformation of MSMEs in the Western Balkans',`${head(0,'Cross-Border Workshop','17 NOVEMBER 2026')}<div class="welcome-shell"><div class="welcome-kicker"><span class="welcome-symbol">✦</span> WELCOME TO THE WORKSHOP</div><h1 class="welcome-title"><span class="welcome-title-highlight">AI-Powered Services</span><br>for Digital Transformation<br>of MSMEs in the Western Balkans</h1><div class="welcome-rule"></div><p class="welcome-subtitle">Exploring practical opportunities for smarter, more innovative businesses</p><div class="welcome-bottom"><div class="welcome-location"><span>INNOFEIT · Skopje, North Macedonia</span><span class="welcome-location-divider"></span><span>17 November 2026</span></div></div></div>`,{notes:'Reception/holding slide: keep this slide visible while attendees arrive. When ready, press Next or the right arrow to begin. The session itself starts with the agenda on the next slide.'});
+add(0,'agenda','Workshop Overview',`${head(0,'Workshop overview','')}<div class="journey-landing journey-rows-layout"><div class="journey-intro"><div class="overline">FIVE CONVERSATIONS · ONE SHARED FUTURE</div><h1>Where could your business <span class="gradient">go next?</span></h1><p>Explore the challenges and opportunities shaping the future of SMEs.</p></div><div class="journey-rows">
+<div class="journey-row journey-card-1" data-jump="2" role="button" tabindex="0" aria-label="Explore The SME Advantage"><span class="jr-number">01</span><h2>The SME Advantage</h2><p>What if being smaller made you faster?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-2" data-jump="6" role="button" tabindex="0" aria-label="Explore The Hidden Cost"><span class="jr-number">02</span><h2>The Hidden Cost of Manual Work</h2><p>Where is your time slipping away?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-3" data-jump="10" role="button" tabindex="0" aria-label="Explore Real Business Opportunities"><span class="jr-number">03</span><h2>Real Business Opportunities</h2><p>What could work automatically?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-4" data-jump="19" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-5" data-jump="23" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+</div><div class="journey-footer"><span class="journey-pulse"></span> Different industries. Shared challenges. New opportunities.</div></div>`,{notes:'Introduce the five themes conversationally. Click any row to jump to its chapter. Ask which theme feels most relevant to the audience.'});
+
+// 01 — SME ADVANTAGE
+section(1,'THE ADVANTAGE','Small in size. <span class="gradient">Fast in innovation.</span>','SMEs may lack the budgets of large corporations, but they can often experiment, adapt and make decisions faster.',['Faster decisions','Closer to customers','Room to experiment'],'This is not a claim that every SME is faster or more innovative. Frame it as an advantage they can choose to cultivate.');
+q(1,1,'Could a 10-person team beat a corporation of 1,000?!','The biggest advantage is not always money. Sometimes it is the ability to move.',[
+'Fewer layers can mean quicker decisions.','Closer relationships can reveal customer needs faster.','Small teams can test, learn and adapt without a giant rollout.'],`<div class="vs-grid"><div class="panel"><div class="vs-header"><h3>Large organization</h3><span class="vs-tag">Scale</span></div><p class="small">Idea → reviews → approvals → coordination → rollout</p><div style="display:flex;gap:5px;margin-top:15px">${['Idea','Review','Approve','Deploy'].map(x=>`<span class="role-tag">${x}</span>`).join('')}</div></div><div class="panel hot"><div class="vs-header"><h3>Agile SME</h3><span class="vs-tag">Speed</span></div><p class="small">Idea → quick pilot → learn → improve</p><div style="display:flex;gap:5px;margin-top:15px;flex-wrap:wrap">${['Test','Learn','Improve'].map(x=>`<span class="role-tag">${x}</span>`).join('')}</div></div></div>`, 'Explain that large companies can have scale and expertise; SMEs can build an advantage through lean processes. Invite real examples.');
+q(1,2,'What if your biggest competitor doesn’t even exist yet?!','Digital-first newcomers can change customer expectations faster than established businesses expect.',[
+'New entrants can build around modern customer experiences.','Speed and convenience can matter as much as brand recognition.','Continuous learning beats assuming yesterday’s model will always win.'],`<div class="float-cards"><div class="float-card"><div class="huge">01</div><div class="lbl">A new customer frustration is discovered</div></div><div class="float-card"><div class="huge">02</div><div class="lbl">A small team tests a digital service</div></div><div class="float-card"><div class="huge">03</div><div class="lbl">The market starts expecting something new</div></div></div>`);
+q(1,3,'Too small to innovate? Or too small NOT to?!','Innovation does not have to mean a million-euro transformation programme.',[
+'Innovation can be a better process, not a new invention.','Small pilots reduce the risk of experimentation.','Doing nothing also has a cost: lost time and changing customer expectations.'],`<div class="panel hot"><div class="overline">A different definition of innovation</div><h2 class="h3">One problem.<br><span class="gradient">One experiment.</span><br>One measurable result.</h2><div style="margin-top:20px">${pts(['Start with a problem customers or staff actually face.','Try the smallest useful improvement.','Keep what works; change what doesn’t.'])}</div></div>`);
+
+// 02 — HIDDEN COST
+section(2,'THE PROBLEM','Busy is not the same as <span class="gradient">productive.</span>','Every business loses time through repeated tasks, errors, workarounds and information that is difficult to find.',['Repetitive work','Hidden operational costs','Key-person dependency']);
+q(2,4,'How much money is your business losing without knowing?!','A quick illustration: everyday manual work becomes a material annual cost.',[
+'Repeated administration uses time that could go to customers.','Manual handoffs create delays and rework.','Small inefficiencies multiply across people and months.'],`<div class="panel hot"><div class="overline">Interactive · Rough annual time cost</div><div class="calc-row"><div class="field"><label for="team">Employees</label><input id="team" inputmode="numeric" type="number" min="1" max="10000" value="8" /></div><div class="field"><label for="min">Minutes / day</label><input id="min" inputmode="numeric" type="number" min="0" max="480" value="120" /></div><div class="field"><label for="rate">Hourly cost (€)</label><input id="rate" inputmode="decimal" type="number" min="0" max="1000" value="8" /></div></div><div class="calc-result"><div><small>Illustrative yearly labor time cost<br>220 workdays; not guaranteed savings</small></div><strong id="calcCost">€28,160</strong></div></div>`, 'Ask audience to estimate minutes of repeated effort. This is a rough labor-time illustration, not a saving guarantee or full ROI.');
+q(2,5,'Are your people working hard on tasks that should not exist?!','Technology should remove unnecessary effort, not remove the human value from work.',[
+'Being busy is not the same as creating value.','Repeated copying, checking and chasing can be redesigned.','Free time can be invested in relationships, quality and growth.'],`<div class="before-after"><div class="ba-ctrl"><div class="ba-label">BUSY WORK</div><div class="ba-item">Copy → Paste</div><div class="ba-item">Check → Recheck</div><div class="ba-item">Email → Remind</div></div><div class="arrow-big">→</div><div class="ba-ctrl after"><div class="ba-label">HIGHER-VALUE WORK</div><div class="ba-item">Solve customer problems</div><div class="ba-item">Improve products</div><div class="ba-item">Grow relationships</div></div></div>`);
+q(2,6,'What happens if your most important employee is absent tomorrow?!','How much business knowledge exists only in someone’s memory or personal spreadsheet?',[
+'Undocumented processes create operational dependency.','Knowledge sharing and standardized workflows improve resilience.','Automation can support continuity, but people still own accountability.'],`<div class="panel hot"><div class="overline">A fragile workflow</div><div class="network dependency-network"><div class="net-node">Customers</div><div class="net-line centered-connector"><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><path d="M 1 12 H 95 M 89 6 L 95 12 L 89 18"/></svg></div><div class="net-node main">One<br>expert</div><div class="net-line centered-connector"><svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true"><path d="M 1 12 H 95 M 89 6 L 95 12 L 89 18"/></svg></div><div class="net-node">Every<br>decision</div></div><div class="small" style="margin-top:16px">What happens if this one person is unavailable?</div></div>`);
+
+// 03 — USE CASES
+section(3,'THE POSSIBILITIES','What can automation & AI <span class="gradient">actually do?</span>','Five familiar business challenges. Five animated examples. One hands-on experiment that connects them.',['Communication','Documents & reporting','Invoicing','Inventory','Customers'],'Make clear these are animations of possible workflow patterns, not integrations with live company systems.');
+CASES.forEach(cs);
+block(3,'One business. Five connected processes.','Automation becomes more valuable when information flows between teams instead of stopping at every handoff.',`<div class="process-shell"><div class="process-grid"><div class="proc-card request"><div class="proc-kicker">01 · CUSTOMER</div><div class="proc-icon">📩</div><h3>Customer Request</h3><p>An enquiry or order arrives by email, website form or sales call.</p><div class="proc-chip">Trigger point</div></div><div class="proc-connector right c12"></div><div class="proc-card inventory"><div class="proc-kicker">02 · OPERATIONS</div><div class="proc-icon">📦</div><h3>Inventory Check</h3><p>Availability is checked against stock, capacity or resources.</p><div class="proc-chip alt">Operational validation</div></div><div class="proc-connector right c23"></div><div class="proc-card quote"><div class="proc-kicker">03 · SALES</div><div class="proc-icon">💶</div><h3>Quotation</h3><p>Pricing, delivery assumptions and terms are prepared for review.</p><div class="proc-chip hot">Human approval checkpoint</div></div><div class="proc-connector down c34"></div><div class="proc-card invoice"><div class="proc-kicker">04 · FINANCE</div><div class="proc-icon">🧾</div><h3>Invoice</h3><p>Once the order is confirmed, financial documents can be prepared faster.</p><div class="proc-chip">Document workflow</div></div><div class="proc-connector left c45"></div><div class="proc-card report"><div class="proc-kicker">05 · MANAGEMENT</div><div class="proc-icon">📊</div><h3>Reporting</h3><p>Business data feeds dashboards, follow-ups and better decisions.</p><div class="proc-chip alt">Decision support</div></div></div><div class="process-foot"><div class="process-note"><b>Key idea:</b> One customer interaction can trigger multiple connected business processes.</div><div class="process-note"><b>Why it matters:</b> The more connected the flow is, the less information gets retyped, delayed or lost.</div></div></div><div class="bottom-msg">The goal is connected work with clear checkpoints — not automation for its own sake.</div>`, 'Use this slide to show the business process as a connected chain rather than isolated automations. Emphasize that human approval remains essential at key points.');
+block(3,'Hands-on: The AI Business Challenge','An easy laptop exercise. No coding or installations needed. Just a browser and an AI assistant with text chat.',`<div class="challenge-grid"><div class="code-card"><div class="caption">CUSTOMER EMAIL + INVENTORY</div><pre>Customer: “Please quote 12 units of Product A
+and 8 units of Product B for next week.”
+
+Product A · in stock: 10 · price: €20 / unit
+Product B · in stock: 15 · price: €30 / unit</pre><button class="action-mini" data-copy="dataset" style="margin-top:12px">Copy example data</button></div><div class="panel hot"><div class="overline">What participants should produce</div>${pts(['Understand the customer’s request.','Spot the shortage: <b>2 units of Product A</b>.','Calculate the quote: <b>€480 before tax</b>.','Draft a response without promising unavailable stock.'])}<p class="small" style="margin-top:16px">Uses fictional business data. Live AI chat requires an internet connection; the slide itself works offline.</p></div></div>`,'Give participants two minutes to open their preferred AI tool. They can copy the dataset into the chat. Do not use real confidential information. The correct total is €480 excluding tax (12×20 + 8×30), with a 2-unit Product A shortage.');
+block(3,'Your turn. Can AI handle the request?','Copy this prompt into your preferred AI assistant, together with the sample data from the previous slide.',`<div class="code-card" style="margin-bottom:14px"><div class="caption">COPY-READY PROMPT</div><pre>Act as a business operations assistant.
+Review this customer order and our inventory.
+1. Identify products and quantities.
+2. Check stock shortages.
+3. Calculate the quote excluding tax.
+4. Draft a professional customer email.
+Do not promise delivery when stock is insufficient.
+Clearly state assumptions and ask for human approval.</pre><button class="action-mini" data-copy="prompt" style="margin-top:10px">Copy AI prompt</button></div><div class="flow-steps"><div class="flow-step"><b>01 · 2 MIN</b><span>Understand the request</span></div><div class="flow-step"><b>02 · 2 MIN</b><span>Check the inventory</span></div><div class="flow-step"><b>03 · 2 MIN</b><span>Prepare quotation</span></div><div class="flow-step"><b>04 · 2 MIN</b><span>Draft + verify reply</span></div></div><p class="bottom-msg">Discussion: Would you trust the AI result without checking it?</p>`,'8-minute live exercise, followed by 2 minutes discussion within this 20-minute section; adjust by shortening narrated animations. Tell audience to check arithmetic and assumptions.');
+
+// 04 — PEOPLE, CULTURE & CHANGE
+section(4,'THE HUMAN SIDE','Technology changes workflows. <span class="gradient">People make change work.</span>','The real conversation is not only what AI can do, but also what employees, leaders and teams will do differently.',['Jobs & skills','Human + AI','Trust & adoption']);
+q(4,10,'Is AI going to replace YOU?!','Some tasks will change. Some roles may change too. The useful question is which skills become more valuable.',[
+'Automating a task is not always the same as eliminating a role.','Judgment, empathy, accountability and relationships still matter.','Continuous learning becomes an advantage for employees and companies.'],`<div class="vs-grid"><div class="panel"><div class="overline">AI is strong at</div>${pts(['Pattern finding','Repetitive drafting','Processing large volumes'])}</div><div class="panel hot"><div class="overline">People are essential for</div>${pts(['Accountability','Complex judgment','Customer trust'])}</div></div>`,'Acknowledge genuine workforce uncertainty and that displacement can happen. Avoid blanket promises. Emphasize upskilling and involving workers.');
+q(4,11,'Will your next best colleague be human or an AI agent?!','Imagine an assistant that can prepare, organize and recommend, while people remain responsible.',[
+'AI can help summarize, draft, extract and surface next actions.','People decide policy, exceptions and important commitments.','Useful systems combine speed with review, security and clear ownership.'],`<div class="panel hot"><div class="network" style="height:176px"><div class="net-node">Employee<br>sets goal</div><div class="net-line"></div><div class="net-node main">AI<br>assists</div><div class="net-line"></div><div class="net-node">Human<br>approves</div></div><p class="small">AI assistance is not the same as unsupervised decision-making.</p></div>`);
+q(4,12,'What if WE are the biggest barrier to innovation?!','Successful change needs more than an impressive demo.',[
+'People may fear losing control or being replaced.','Leadership should explain why a process is changing.','Small, shared wins can build confidence and trust.'],`<div class="t-grid three"><div class="panel"><div class="lead-icon" style="font-size:25px">👂</div><b>Listen</b><p class="small">Start with the staff who do the work.</p></div><div class="panel"><div class="lead-icon" style="font-size:25px">🧪</div><b>Experiment</b><p class="small">Pilot a small, controlled change.</p></div><div class="panel hot"><div class="lead-icon" style="font-size:25px">🤝</div><b>Build trust</b><p class="small">Let teams shape the improved process.</p></div></div>`);
+
+// 05 — ACTION
+section(5,'YOUR NEXT STEP','Curiosity is good. <span class="gradient">Action is better.</span>','You do not need a huge technology programme to begin. Pick a real problem, test one improvement, and measure its impact.',['Low-cost starting points','Simple ROI','A practical next step']);
+q(5,13,'Is AI really too expensive for your business?!','The first decision is not which tool to buy; it is which problem is worth solving.',[
+'Some improvements use tools a company already has.','Subscriptions, off-the-shelf products and custom solutions have different costs.','Start with a pilot; consider privacy, maintenance and training too.'],`<div class="panel hot"><div class="overline">START WITH THE QUESTION</div><h2 class="h3">What problem would be worth <span class="gradient">€1, €100, or €1,000</span> to solve?</h2><div class="small" style="margin-top:18px">No universal price or ROI: it depends on volume, complexity, quality requirements and total cost of ownership.</div></div>`);
+q(5,14,'What if doing NOTHING costs more than automating?!','You don’t need a complicated business case to start thinking about value.',[
+'Establish how long the current process takes.','Consider setup, subscriptions, maintenance and review time.','Measure time saved, accuracy, speed and customer experience.'],`<div class="panel hot"><div class="overline">A SIMPLE PILOT SCORECARD</div><div class="t-grid"><div class="panel"><div class="stat-big">Time</div><div class="small">Minutes per task × frequency</div></div><div class="panel"><div class="stat-big">Quality</div><div class="small">Errors, delays and rework</div></div><div class="panel"><div class="stat-big">Cost</div><div class="small">Setup + running + oversight</div></div><div class="panel"><div class="stat-big">Value</div><div class="small">Better speed, service and capacity</div></div></div></div>`);
+q(5,15,'Your competitors adopt AI tomorrow. Where are YOU in three years?!','Not every trend deserves an investment. But standing still should be a deliberate decision, too.',[
+'Identify one repetitive or frustrating task.','Run a low-risk pilot and involve the people doing the work.','Measure the result; expand only if it actually helps.'],`<div class="panel hot"><div class="overline">A PRACTICAL FIRST MONTH</div><div class="timeline"><div class="milestone"><b>Find</b><span>Pick one problem</span></div><div class="milestone"><b>Try</b><span>Run a small test</span></div><div class="milestone"><b>Measure</b><span>Compare results</span></div><div class="milestone"><b>Decide</b><span>Scale or rethink</span></div></div><div class="bottom-msg">Start small → Test → Measure → Scale</div></div>`);
+add(5,'closing','Your Next Big Step Starts Small',`${head(5,'Closing discussion','FINAL QUESTION')}<div style="margin:auto 0"><div class="overline">Take one idea back to your business</div><h1 class="closing-quote">You don't need to be a big company to <span class="gradient">think big.</span></h1><p class="closing-q">If you could automate <b>ONE process</b> tomorrow, what would you choose?!</p><div class="closing-list"><span class="pill">START SMALL</span><span class="pill">MOVE FAST</span><span class="pill">WORK SMARTER</span></div><div style="margin-top:31px;color:#9fb6d6;font-size:14px">Thank you · Questions & discussion</div></div>`,{notes:'Close with a challenge: each participant writes down one process they might improve this month. Invite one or two examples from different industries. Thank the audience.'});
+
+const host=document.getElementById('slideHost'), progress=document.getElementById('progress'),notes=document.getElementById('notes'),label=document.getElementById('indexLabel'),prev=document.getElementById('prevBtn'),next=document.getElementById('nextBtn'),help=document.getElementById('help');
+let active=0, notesOn=false, demoTimers=[];
+function setAccent(section){document.documentElement.style.setProperty('--accent',section===0?'#644ac7':ACC[section-1]);}
+function cancelDemos(){demoTimers.forEach(clearTimeout);demoTimers=[];}
+function cleanHeadings(slide){
+  slide.querySelectorAll('h1,h2,h3').forEach(h=>{
+    // Defensive cleanup for accidental Markdown pasted into headings.
+    const first=h.firstChild;
+    if(first && first.nodeType===Node.TEXT_NODE) first.textContent=first.textContent.replace(/^\s*#{1,6}\s+/,'').replace(/^\s*\*\*?/,'');
+    const walker=document.createTreeWalker(h,NodeFilter.SHOW_TEXT);
+    while(walker.nextNode()){
+      const t=walker.currentNode;
+      t.textContent=t.textContent.replace(/\*\*(.*?)\*\*/g,'$1').replace(/\*([^*]+)\*/g,'$1');
+    }
+  });
+}
+function render(index,dir=1){if(index<0||index>=S.length)return;cancelDemos();active=index;const s=S[index];setAccent(s.section);const el=document.createElement('section');el.className='slide '+(dir<0?'reverse':'incoming');el.innerHTML=s.html;cleanHeadings(el);el.setAttribute('aria-label',`Slide ${index+1}: ${s.title}`);el.dataset.slide=index;host.replaceChildren(el);label.textContent=`${String(index+1).padStart(2,'0')} / ${String(S.length).padStart(2,'0')}`;progress.style.width=`${(index+1)/S.length*100}%`;prev.disabled=index===0;next.disabled=index===S.length-1;notes.textContent=s.notes||'Invite a short discussion and connect the topic with daily business challenges.';notes.classList.toggle('visible',notesOn);document.getElementById('announce').textContent=`Slide ${index+1} of ${S.length}: ${s.title}`;history.replaceState(null,'',`#${index+1}`);el.querySelectorAll('[data-jump]').forEach(x=>{x.addEventListener('click',()=>render(Number(x.dataset.jump)));x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();render(Number(x.dataset.jump))}})});el.querySelectorAll('[data-replay]').forEach(x=>x.addEventListener('click',()=>runDemo(x.dataset.replay)));el.querySelectorAll('[data-copy]').forEach(x=>x.addEventListener('click',()=>copyText(x.dataset.copy,x)));el.querySelectorAll('#team,#min,#rate').forEach(x=>x.addEventListener('input',updateCalc));updateCalc();if(s.caseId)demoTimers.push(setTimeout(()=>runDemo(s.caseId),550));}
+function go(delta){render(active+delta,delta)}
+const STORY_STAGES={
+ inbox:['Reading customer messages','Sorting by urgency and owner','Preparing draft answers','Ready for human review'],
+ documents:['Reading invoices and PDFs','Extracting relevant fields','Checking data consistency','Turning data into insights'],
+ invoice:['Reading invoice details','Comparing order and amount','Flagging potential mismatches','Preparing follow-up'],
+ inventory:['Monitoring current stock','Checking stock against demand','Detecting shortage risk','Preparing reorder alert'],
+ customer:['Reading customer request','Identifying language and intent','Drafting localized response','Ready to send after approval']
+};
+function runDemo(id){
+ cancelDemos();
+ const sEl=host.querySelector('.slide'),box=sEl?.querySelector('.case-right');
+ if(!box)return;
+ box.classList.remove('animating','finished');
+ box.dataset.stage='-1';
+ void box.offsetWidth;
+ box.classList.add('animating');
+ const steps=[...box.querySelectorAll('.step')];
+ const status=box.querySelector('.run-state');
+ const live=box.querySelector('.case-live-copy');
+ const percent=box.querySelector('.case-percentage');
+ steps.forEach(st=>st.classList.remove('active','done'));
+ status.textContent='Processing business information…';
+ live.textContent='Starting workflow';percent.textContent='0%';
+ const stages=STORY_STAGES[id]||[];
+ const baseDelay=240;
+ const stepDelay=1150;
+ const slideIndexAtStart=active;
+ for(let i=0;i<steps.length;i++){
+   demoTimers.push(setTimeout(()=>{
+    if(active!==slideIndexAtStart)return;
+    box.dataset.stage=String(i);
+    steps.forEach((st,j)=>{st.classList.toggle('done',j<i);st.classList.toggle('active',j===i)});
+    const line=stages[i]||'Processing';
+    live.textContent=line;
+    status.textContent=`Step ${i+1} / ${steps.length}`;
+    percent.textContent=`${Math.round((i+1)/steps.length*100)}%`;
+   },i*stepDelay+baseDelay));
+ }
+ const endTime=(steps.length-1)*stepDelay+baseDelay+760;
+ demoTimers.push(setTimeout(()=>{
+  if(active!==slideIndexAtStart)return;
+  steps.forEach(st=>{st.classList.remove('active');st.classList.add('done')});
+  box.dataset.stage='4';
+  box.classList.add('finished');
+  live.textContent='Workflow finished. Human review remains essential.';
+  status.textContent='✓ Simulation complete';
+  percent.textContent='100%';
+ },endTime));
+ demoTimers.push(setTimeout(()=>{
+  if(active!==slideIndexAtStart)return;
+  runDemo(id);
+ },endTime+10000));
+}
+
+function updateCalc(){const team=host.querySelector('#team'),minutes=host.querySelector('#min'),rate=host.querySelector('#rate'),result=host.querySelector('#calcCost');if(!team||!minutes||!rate||!result)return;const v=Math.max(0,Number(team.value))*Math.max(0,Number(minutes.value))/60*Math.max(0,Number(rate.value))*220;result.textContent='€'+Math.round(v).toLocaleString('en-US');}
+const copyData={dataset:'Customer email: Please quote 12 units of Product A and 8 units of Product B for delivery next week.\nInventory:\nProduct A: 10 units in stock; EUR 20 per unit.\nProduct B: 15 units in stock; EUR 30 per unit.',prompt:'Act as a business operations assistant. Review this customer order and our inventory. 1. Identify products and quantities. 2. Check stock shortages. 3. Calculate the quote excluding tax. 4. Draft a professional customer email. Do not promise delivery when stock is insufficient. Clearly state assumptions and ask for human approval.'};
+async function copyText(name,btn){const txt=copyData[name];if(!txt)return;try{await navigator.clipboard.writeText(txt);btn.textContent='✓ Copied';}catch(e){const t=document.createElement('textarea');t.value=txt;t.style.position='fixed';t.style.left='-9999px';document.body.append(t);t.select();try{document.execCommand('copy');btn.textContent='✓ Copied';}catch(e2){btn.textContent='Select and copy text above';}t.remove();}setTimeout(()=>{btn.textContent=name==='prompt'?'Copy AI prompt':'Copy example data'},2000);}
+function printDeck(){const current=active;const fr=document.createDocumentFragment();S.forEach((s,i)=>{const section=document.createElement('section');section.className='slide';section.style.setProperty('--accent',s.section===0?'#644ac7':ACC[s.section-1]);section.innerHTML=s.html;fr.append(section)});const printHost=document.createElement('div');printHost.id='printDeck';printHost.style.display='none';printHost.append(fr);document.body.append(printHost);const style=document.createElement('style');style.id='printStyle';style.textContent='@media print {#app{display:none!important} #printDeck{display:block!important;width:100%;} #printDeck .slide{aspect-ratio:16/9;height:100vh;position:relative!important;border-radius:0;padding:40px 55px} }';document.head.append(style);setTimeout(()=>{window.print();setTimeout(()=>{style.remove();printHost.remove();render(current)},1000)},100);}
+prev.addEventListener('click',()=>go(-1));next.addEventListener('click',()=>go(1));document.getElementById('tocBtn').addEventListener('click',()=>render(1));document.getElementById('notesBtn').addEventListener('click',()=>{notesOn=!notesOn;notes.classList.toggle('visible',notesOn)});document.getElementById('helpBtn').addEventListener('click',()=>help.classList.toggle('open'));document.getElementById('printBtn').addEventListener('click',printDeck);document.getElementById('fullBtn').addEventListener('click',()=>{if(document.fullscreenElement)document.exitFullscreen();else document.getElementById('app').requestFullscreen?.()});document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(1)}else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1)}else if(e.key==='Home'){e.preventDefault();render(0)}else if(e.key==='End'){e.preventDefault();render(S.length-1)}else if(e.key.toLowerCase()==='g'){render(1)}else if(e.key.toLowerCase()==='n'){notesOn=!notesOn;notes.classList.toggle('visible',notesOn)}else if(e.key.toLowerCase()==='f'){if(document.fullscreenElement)document.exitFullscreen();else document.getElementById('app').requestFullscreen?.()}else if(e.key.toLowerCase()==='p'){e.preventDefault();printDeck()}else if(e.key==='?'){help.classList.toggle('open')}});
+let touchX=0,touchY=0;document.getElementById('deck').addEventListener('touchstart',e=>{touchX=e.touches[0].clientX;touchY=e.touches[0].clientY},{passive:true});document.getElementById('deck').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX,dy=e.changedTouches[0].clientY-touchY;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5)go(dx<0?1:-1)},{passive:true});
+window.addEventListener('hashchange',()=>{const x=Number(location.hash.slice(1))-1;if(Number.isInteger(x)&&x>=0&&x<S.length&&x!==active)render(x)});
+const initial=Number(location.hash.slice(1))-1;render(Number.isInteger(initial)&&initial>=0&&initial<S.length?initial:0);window.__workshop={get slides(){return S.length},goto:render,get index(){return active}};
+})();
+</script>
+</body>
+</html>
