@@ -1109,6 +1109,11 @@ body:before{display:none}
 @media(max-width:700px){.hc-flow{grid-template-columns:1fr;gap:6px;padding:8px 0}.hc-arrow{display:none}.hc-step{padding:5px 0}.hc-step h2{margin:4px 0 3px;font-size:17px}.hc-step p{max-width:none}.hc-hero h1{font-size:31px}.hc-actions{gap:12px}.hc-action{grid-template-columns:1fr;gap:5px}.hc-action-n{font-size:18px}.hc-action h3{font-size:16px}.hc-action p{font-size:11px}.hc-lower-heading h2{font-size:17px}.hc-lower-heading span{display:none}.hc-message{margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.slide.incoming .hc-step,.slide.incoming .hc-action{animation:none!important}}
 
+
+/* Question headline restored on merged human–AI slide */
+.hc-hero h1{font-size:clamp(30px,3.1vw,52px);max-width:1230px;letter-spacing:-.06em}
+@media(max-width:1100px){.hc-hero h1{font-size:clamp(29px,3.15vw,42px)}}
+@media(max-width:700px){.hc-hero h1{font-size:clamp(26px,5vw,33px)}}
 </style>
 </head>
 <body>
@@ -1278,11 +1283,11 @@ add(3,'practical-order','AI-Assisted Order Processing',`${head(3,'Real business 
 section(4,'THE HUMAN SIDE','Technology changes workflows. <span class="gradient">People make change work.</span>','The real conversation is not only what AI can do, but also what employees, leaders and teams will do differently.',['Jobs & skills','Human + AI','Trust & adoption']);
 q(4,10,'Is AI going to replace YOU?!','Some tasks will change. Some roles may change too. The useful question is which skills become more valuable.',[
 'Automating a task is not always the same as eliminating a role.','Judgment, empathy, accountability and relationships still matter.','Continuous learning becomes an advantage for employees and companies.'],`<div class="vs-grid"><div class="panel"><div class="overline">AI is strong at</div>${pts(['Pattern finding','Repetitive drafting','Processing large volumes'])}</div><div class="panel hot"><div class="overline">People are essential for</div>${pts(['Accountability','Complex judgment','Customer trust'])}</div></div>`,'Acknowledge genuine workforce uncertainty and that displacement can happen. Avoid blanket promises. Emphasize upskilling and involving workers.');
-add(4,'content','People + AI · The future of teamwork',`${head(4,SECTION_NAMES[4],'')}<div class="hc-shell">
+add(4,'content','Will your next colleague be an AI agent?',`${head(4,SECTION_NAMES[4],'')}<div class="hc-shell">
  <div class="hc-hero">
   <div class="hc-kicker">THE FUTURE OF TEAMWORK</div>
-  <h1>Better tools. <em>Stronger teams.</em></h1>
-  <p>AI can accelerate everyday work. People set the direction, take responsibility and make change successful.</p>
+  <h1>Will your next colleague be <em>an AI agent?</em></h1>
+  <p>AI can take on routine work. People still set priorities, review outcomes and build trust.</p>
  </div>
  <div class="hc-section-tag"><span>01</span> A human-led AI workflow</div>
  <div class="hc-flow" aria-label="People define goals, AI assists and people make the final decision">
