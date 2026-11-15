@@ -1114,12 +1114,44 @@ body:before{display:none}
 .hc-hero h1{font-size:clamp(30px,3.1vw,52px);max-width:1230px;letter-spacing:-.06em}
 @media(max-width:1100px){.hc-hero h1{font-size:clamp(29px,3.15vw,42px)}}
 @media(max-width:700px){.hc-hero h1{font-size:clamp(26px,5vw,33px)}}
+
+/* merged action slide */
+.action-merge{display:grid;gap:14px;max-width:1240px;margin-top:20px}
+.action-row{display:grid;grid-template-columns:64px minmax(340px,1.15fr) minmax(280px,.95fr);gap:18px;align-items:center;padding:18px 20px;border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);border:1px solid #dfe9f3;box-shadow:0 10px 26px rgba(39,68,108,.06)}
+.action-no{font-size:30px;font-weight:900;letter-spacing:-.06em;color:var(--accent)}
+.action-q{font-size:clamp(22px,1.9vw,30px);line-height:1.12;font-weight:860;color:#122741;letter-spacing:-.03em}
+.action-copy{margin-top:8px;color:#53677d;font-size:clamp(15px,1.05vw,17px);line-height:1.52}
+.action-copy ul{margin:9px 0 0 18px;padding:0}.action-copy li{margin:3px 0}
+.action-side{padding:14px 16px;border-radius:18px;background:linear-gradient(90deg,#f5f9ff 0%,#fbfdff 100%);border:1px solid #dfe8f2}
+.action-kicker{font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.action-side b{display:block;font-size:clamp(20px,1.65vw,26px);line-height:1.12;color:#17304b;margin-bottom:6px}
+.action-side span{display:block;color:#546a7f;font-size:clamp(14px,1.0vw,16px);line-height:1.45}
+.action-foot{margin-top:18px;padding:16px 18px;border-radius:18px;background:linear-gradient(90deg,#f5f9ff 0%,#fbfdff 100%);border:1px solid #dfe8f2;color:#36506a;font-size:clamp(15px,1.03vw,17px);line-height:1.55}
+@media(max-width:1080px){.action-row{grid-template-columns:52px 1fr;align-items:start}.action-side{grid-column:2}.action-q{font-size:clamp(21px,2.3vw,28px)}}
+@media(max-width:700px){.action-row{grid-template-columns:1fr;gap:10px}.action-no{font-size:22px}.action-side{grid-column:auto}}
+
+
+/* Slide 15: premium compact editorial treatment for three AI adoption questions */
+.action-editorial{margin-top:clamp(13px,2vh,23px);width:100%;border-top:1px solid #d7e2ec}
+.ae-row{display:grid;grid-template-columns:46px minmax(0,1.18fr) minmax(0,.92fr);gap:clamp(14px,2vw,27px);padding:clamp(13px,1.75vh,19px) 4px;border-bottom:1px solid #dce6ef;align-items:center}
+.ae-num{font-size:clamp(23px,2.2vw,31px);font-weight:850;color:#228f82;letter-spacing:-.06em;align-self:start;line-height:1.05}
+.ae-primary h2{font-size:clamp(20px,1.83vw,27px);line-height:1.13;letter-spacing:-.035em;color:#112a46;font-weight:860;margin:0}
+.ae-primary h2 em{font-style:normal;color:#207f76}
+.ae-primary p{font-size:clamp(13px,.95vw,15px);line-height:1.38;color:#667c91;margin:6px 0 0}
+.ae-answer span{display:block;font-size:clamp(9px,.78vw,11px);letter-spacing:.13em;font-weight:850;color:#228c76;margin-bottom:6px}
+.ae-answer strong{display:block;font-size:clamp(15px,1.26vw,19px);font-weight:800;line-height:1.13;color:#1f3955}
+.ae-answer p{font-size:clamp(12px,.9vw,14px);color:#65788d;line-height:1.4;margin:5px 0 0}
+.ae-takeaway{display:flex;align-items:center;gap:12px;margin-top:clamp(13px,1.9vh,21px);padding:0 4px;color:#284b62;font-size:clamp(14px,1.3vw,19px);letter-spacing:-.01em}
+.ae-star{font-size:23px;color:#238f81}
+@media(max-width:950px){.ae-row{grid-template-columns:36px minmax(0,1.15fr) minmax(0,.9fr);gap:12px;padding:12px 2px}.ae-primary h2{font-size:19px}.ae-primary p{font-size:12px}.ae-answer strong{font-size:14px}.ae-answer p{font-size:12px}}
+@media(max-width:620px){.ae-row{grid-template-columns:28px 1fr;gap:8px}.ae-answer{grid-column:2}.ae-primary h2{font-size:18px}.ae-primary p{margin-top:3px}}
+
 </style>
 </head>
 <body>
 <div id="app">
   <main class="presentation" id="deck" aria-label="Interactive workshop presentation"><div id="slideHost"></div><div class="progress-track"><div class="progress-fill" id="progress"></div></div></main>
-  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 18</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
+  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 16</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
   <div class="help" id="help"><strong>Keyboard shortcuts</strong><p><kbd>→</kbd> <kbd>Space</kbd> Next slide</p><p><kbd>←</kbd> Previous slide</p><p><kbd>Home</kbd> First slide · <kbd>End</kbd> Last</p><p><kbd>G</kbd> Agenda · <kbd>F</kbd> Fullscreen</p><p><kbd>P</kbd> Print/PDF</p><p><kbd>?</kbd> This help</p><p style="color:#9eb1cd">Animations run automatically. Slides work offline; using a live AI assistant requires internet.</p></div>
   <div id="announce" aria-live="polite"></div>
 </div>
@@ -1310,12 +1342,12 @@ add(4,'content','Will your next colleague be an AI agent?',`${head(4,SECTION_NAM
 
 // 05 — ACTION
 section(5,'YOUR NEXT STEP','Curiosity is good. <span class="gradient">Action is better.</span>','You do not need a huge technology programme to begin. Pick a real problem, test one improvement, and measure its impact.',['Low-cost starting points','Simple ROI','A practical next step']);
-q(5,13,'Is AI really too expensive for your business?!','The first decision is not which tool to buy; it is which problem is worth solving.',[
-'Some improvements use tools a company already has.','Subscriptions, off-the-shelf products and custom solutions have different costs.','Start with a pilot; consider privacy, maintenance and training too.'],`<div class="panel hot"><div class="overline">START WITH THE QUESTION</div><h2 class="h3">What problem would be worth <span class="gradient">€1, €100, or €1,000</span> to solve?</h2><div class="small" style="margin-top:18px">No universal price or ROI: it depends on volume, complexity, quality requirements and total cost of ownership.</div></div>`);
-q(5,14,'What if doing NOTHING costs more than automating?!','You don’t need a complicated business case to start thinking about value.',[
-'Establish how long the current process takes.','Consider setup, subscriptions, maintenance and review time.','Measure time saved, accuracy, speed and customer experience.'],`<div class="panel hot"><div class="overline">A SIMPLE PILOT SCORECARD</div><div class="t-grid"><div class="panel"><div class="stat-big">Time</div><div class="small">Minutes per task × frequency</div></div><div class="panel"><div class="stat-big">Quality</div><div class="small">Errors, delays and rework</div></div><div class="panel"><div class="stat-big">Cost</div><div class="small">Setup + running + oversight</div></div><div class="panel"><div class="stat-big">Value</div><div class="small">Better speed, service and capacity</div></div></div></div>`);
-q(5,15,'Your competitors adopt AI tomorrow. Where are YOU in three years?!','Not every trend deserves an investment. But standing still should be a deliberate decision, too.',[
-'Identify one repetitive or frustrating task.','Run a low-risk pilot and involve the people doing the work.','Measure the result; expand only if it actually helps.'],`<div class="panel hot"><div class="overline">A PRACTICAL FIRST MONTH</div><div class="timeline"><div class="milestone"><b>Find</b><span>Pick one problem</span></div><div class="milestone"><b>Try</b><span>Run a small test</span></div><div class="milestone"><b>Measure</b><span>Compare results</span></div><div class="milestone"><b>Decide</b><span>Scale or rethink</span></div></div><div class="bottom-msg">Start small → Test → Measure → Scale</div></div>`);
+block(5,'Three questions before you start','Cost, value and action — three practical decisions for SMEs adopting AI.',`<div class="action-editorial">
+ <div class="ae-row"><div class="ae-num">01</div><div class="ae-primary"><h2>Is AI really too expensive <em>for your business?</em></h2><p>Start with the problem, not the software.</p></div><div class="ae-answer"><span>INVEST WISELY</span><strong>What is the problem worth solving?</strong><p>Use tools you already have, then test a small pilot.</p></div></div>
+ <div class="ae-row"><div class="ae-num">02</div><div class="ae-primary"><h2>What if doing nothing costs more <em>than automating?</em></h2><p>Manual work has a cost, even when nobody tracks it.</p></div><div class="ae-answer"><span>MEASURE THE VALUE</span><strong>Time · Quality · Cost · Experience</strong><p>Compare your current process with the pilot results.</p></div></div>
+ <div class="ae-row"><div class="ae-num">03</div><div class="ae-primary"><h2>Your competitors adopt AI tomorrow. <em>Where are you in three years?</em></h2><p>Progress starts with one repeatable improvement.</p></div><div class="ae-answer"><span>TAKE THE FIRST STEP</span><strong>Find → Try → Measure → Decide</strong><p>Expand only when the improvement proves useful.</p></div></div>
+ </div><div class="ae-takeaway"><span class="ae-star">✦</span><strong>Start small. Measure what changes. Scale what works.</strong></div>`, 'Three connected business decisions: budget, return on doing nothing, and first-month pilot.');
+
 add(5,'closing','Your Next Big Step Starts Small',`${head(5,'Closing','NEXT STEPS')}<div style="margin:auto 0"><div class="overline">Take one idea back to your business</div><h1 class="closing-quote">You don't need to be a big company to <span class="gradient">think big.</span></h1><p class="closing-q">If you could automate <b>ONE process</b> tomorrow, what would you choose?!</p><div class="closing-list"><span class="pill">START SMALL</span><span class="pill">MOVE FAST</span><span class="pill">WORK SMARTER</span></div><div style="margin-top:31px;color:#9fb6d6;font-size:14px">Thank you</div></div>`,{notes:'Close with a challenge: each participant writes down one process they might improve this month. Invite one or two examples from different industries. Thank the audience.'});
 
 const host=document.getElementById('slideHost'), progress=document.getElementById('progress'),label=document.getElementById('indexLabel'),prev=document.getElementById('prevBtn'),next=document.getElementById('nextBtn'),help=document.getElementById('help');
