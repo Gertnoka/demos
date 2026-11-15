@@ -846,12 +846,57 @@ body:before{display:none}
  .dependency-network .centered-connector{flex:1 1 18px;min-width:15px;}
 }
 
+
+/* Unified SME Advantage discussion – three former slides in one. */
+.sme-onepage{display:flex;flex:1;flex-direction:column;gap:clamp(12px,1.8vh,19px);min-height:0;width:100%;}
+.sme-discussion-heading{flex:none;}
+.sme-discussion-heading .overline{font-size:clamp(10px,.85vw,13px);letter-spacing:.15em;font-weight:850;}
+.sme-discussion-heading h1{font-size:clamp(33px,3.55vw,54px);font-weight:900;letter-spacing:-.045em;line-height:1.08;margin:7px 0 7px;}
+.sme-discussion-heading>p{color:#62738a;font-size:clamp(13px,1.22vw,18px);margin:0;line-height:1.38;}
+.sme-discussion-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.5vw,22px);flex:1;min-height:0;}
+.sme-discussion{display:flex;flex-direction:column;gap:clamp(9px,1.15vh,16px);min-width:0;padding:clamp(16px,1.5vw,25px);background:linear-gradient(145deg,#fff 30%,#fbfcff);border:1px solid #e4eaf2;border-top:4px solid var(--sme-color);border-radius:15px;box-shadow:0 7px 24px rgba(29,54,89,.05);}
+.sme-discussion-one{--sme-color:#644ac7;}.sme-discussion-two{--sme-color:#087f86;}.sme-discussion-three{--sme-color:#be5886;}
+.sme-discussion-label{display:flex;align-items:center;gap:10px;color:var(--sme-color);font-size:clamp(10px,.86vw,13px);font-weight:900;letter-spacing:.09em;white-space:nowrap;}
+.sme-discussion-label span{background:color-mix(in srgb,var(--sme-color) 11%,white);padding:5px 7px;border-radius:6px;font-size:clamp(11px,.87vw,14px);letter-spacing:0;}
+.sme-discussion h2{font-size:clamp(20px,2.1vw,30px);line-height:1.13;letter-spacing:-.035em;color:#1d2b44;margin:0;font-weight:850;}
+.sme-discussion h2 em{font-style:normal;color:var(--sme-color);}
+.sme-contrast{display:grid;gap:8px;margin-top:auto;}
+.sme-contrast-row{display:flex;flex-direction:column;gap:5px;padding:10px 11px;background:#f5f7fa;border:1px solid #e7ebf2;border-radius:9px;}
+.sme-contrast-row.fast{background:#f0f9f5;border-color:#d5e9df;}
+.sme-contrast-row b{font-size:clamp(10px,.8vw,12px);letter-spacing:.055em;color:#5f7188;}
+.sme-contrast-row.fast b{color:#227558;}
+.sme-contrast-row span{font-size:clamp(11px,1vw,15px);line-height:1.25;font-weight:650;color:#293b56;}
+.sme-steps{display:grid;gap:8px;margin-top:auto;}
+.sme-steps>div{display:flex;align-items:center;gap:10px;min-height:37px;padding:8px 10px;background:#f2f9f9;border:1px solid #ddeded;border-radius:9px;}
+.sme-steps i{flex:none;font-style:normal;font-size:12px;font-weight:900;color:#087f86;background:white;border:1px solid #cae2e2;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.sme-steps span{font-size:clamp(11px,.98vw,15px);color:#29475a;font-weight:700;line-height:1.2;}
+.sme-experiment{display:grid;gap:8px;margin-top:auto;}
+.sme-experiment>div{display:flex;align-items:center;gap:10px;min-height:34px;}
+.sme-experiment span{color:#aa4d77;background:#fcf0f5;font-size:clamp(10px,.9vw,12px);letter-spacing:.08em;font-weight:900;border-radius:6px;padding:6px 8px;}
+.sme-experiment b{font-size:clamp(14px,1.45vw,20px);color:#263750;line-height:1.12;}
+.sme-panel-insight{font-size:clamp(11px,1vw,14px);line-height:1.45;color:#62738a;margin:0;padding-top:10px;border-top:1px solid #e9eef3;}
+.sme-discussion-prompt{flex:none;display:flex;align-items:center;gap:16px;padding:clamp(11px,1.2vw,15px) clamp(14px,1.7vw,22px);background:#f0f4fa;border-left:4px solid #644ac7;border-radius:10px;}
+.sme-discussion-prompt span{font-size:clamp(10px,.85vw,12px);letter-spacing:.12em;color:#614cc4;font-weight:950;white-space:nowrap;}
+.sme-discussion-prompt strong{font-size:clamp(13px,1.15vw,17px);font-weight:750;color:#253a55;line-height:1.3;}
+@media(max-width:950px){
+ .sme-onepage{gap:8px}.sme-discussion{padding:12px;gap:6px}.sme-discussion-grid{gap:9px}
+ .sme-discussion h2{font-size:clamp(17px,2.2vw,23px)}
+ .sme-contrast-row{padding:7px}.sme-steps>div{padding:5px;min-height:29px}.sme-experiment>div{min-height:25px}
+ .sme-panel-insight{font-size:11px;padding-top:5px}.sme-discussion-prompt{padding:9px 12px}
+}
+@media(max-width:600px){
+ .sme-discussion-grid{grid-template-columns:1fr;overflow:visible;flex:none}
+ .sme-discussion{padding:13px;gap:8px}.sme-discussion h2{font-size:21px}
+ .sme-discussion-heading h1{font-size:34px}.sme-onepage{overflow:auto}
+ .sme-discussion-prompt{align-items:flex-start;flex-direction:column;gap:6px}
+}
+
 </style>
 </head>
 <body>
 <div id="app">
   <main class="presentation" id="deck" aria-label="Interactive workshop presentation"><div id="slideHost"></div><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="notes" id="notes"></div></main>
-  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="notesBtn" title="Speaker notes (N)" aria-label="Toggle speaker notes">▤</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 29</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
+  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="notesBtn" title="Speaker notes (N)" aria-label="Toggle speaker notes">▤</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 26</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
   <div class="help" id="help"><strong>Keyboard shortcuts</strong><p><kbd>→</kbd> <kbd>Space</kbd> Next slide</p><p><kbd>←</kbd> Previous slide</p><p><kbd>Home</kbd> First slide · <kbd>End</kbd> Last</p><p><kbd>G</kbd> Agenda · <kbd>F</kbd> Fullscreen</p><p><kbd>N</kbd> Speaker notes · <kbd>P</kbd> Print/PDF</p><p><kbd>?</kbd> This help</p><p style="color:#9eb1cd">Use case demos loop automatically every 10 seconds. All content works offline; AI tools for the live challenge require internet.</p></div>
   <div id="announce" aria-live="polite"></div>
 </div>
@@ -882,20 +927,38 @@ function cs(c,i){const secs=['5 USE CASES','5 USE CASES','5 USE CASES','5 USE CA
 add(0,'hero','AI-Powered Services for Digital Transformation of MSMEs in the Western Balkans',`${head(0,'Cross-Border Workshop','17 NOVEMBER 2026')}<div class="welcome-shell"><div class="welcome-kicker"><span class="welcome-symbol">✦</span> WELCOME TO THE WORKSHOP</div><h1 class="welcome-title"><span class="welcome-title-highlight">AI-Powered Services</span><br>for Digital Transformation<br>of MSMEs in the Western Balkans</h1><div class="welcome-rule"></div><p class="welcome-subtitle">Exploring practical opportunities for smarter, more innovative businesses</p><div class="welcome-bottom"><div class="welcome-location"><span>INNOFEIT · Skopje, North Macedonia</span><span class="welcome-location-divider"></span><span>17 November 2026</span></div></div></div>`,{notes:'Reception/holding slide: keep this slide visible while attendees arrive. When ready, press Next or the right arrow to begin. The session itself starts with the agenda on the next slide.'});
 add(0,'agenda','Workshop Overview',`${head(0,'Workshop overview','')}<div class="journey-landing journey-rows-layout"><div class="journey-intro"><div class="overline">FIVE CONVERSATIONS · ONE SHARED FUTURE</div><h1>Where could your business <span class="gradient">go next?</span></h1><p>Explore the challenges and opportunities shaping the future of SMEs.</p></div><div class="journey-rows">
 <div class="journey-row journey-card-1" data-jump="2" role="button" tabindex="0" aria-label="Explore The SME Advantage"><span class="jr-number">01</span><h2>The SME Advantage</h2><p>What if being smaller made you faster?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-2" data-jump="6" role="button" tabindex="0" aria-label="Explore The Hidden Cost"><span class="jr-number">02</span><h2>The Hidden Cost of Manual Work</h2><p>Where is your time slipping away?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-3" data-jump="10" role="button" tabindex="0" aria-label="Explore Real Business Opportunities"><span class="jr-number">03</span><h2>Real Business Opportunities</h2><p>What could work automatically?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-4" data-jump="19" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-5" data-jump="23" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-2" data-jump="4" role="button" tabindex="0" aria-label="Explore The Hidden Cost"><span class="jr-number">02</span><h2>The Hidden Cost of Manual Work</h2><p>Where is your time slipping away?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-3" data-jump="8" role="button" tabindex="0" aria-label="Explore Real Business Opportunities"><span class="jr-number">03</span><h2>Real Business Opportunities</h2><p>What could work automatically?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-4" data-jump="17" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-5" data-jump="21" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 </div><div class="journey-footer"><span class="journey-pulse"></span> Different industries. Shared challenges. New opportunities.</div></div>`,{notes:'Introduce the five themes conversationally. Click any row to jump to its chapter. Ask which theme feels most relevant to the audience.'});
 
 // 01 — SME ADVANTAGE
 section(1,'THE ADVANTAGE','Small in size. <span class="gradient">Fast in innovation.</span>','SMEs may lack the budgets of large corporations, but they can often experiment, adapt and make decisions faster.',['Faster decisions','Closer to customers','Room to experiment'],'This is not a claim that every SME is faster or more innovative. Frame it as an advantage they can choose to cultivate.');
-q(1,1,'Could a 10-person team beat a corporation of 1,000?!','The biggest advantage is not always money. Sometimes it is the ability to move.',[
-'Fewer layers can mean quicker decisions.','Closer relationships can reveal customer needs faster.','Small teams can test, learn and adapt without a giant rollout.'],`<div class="vs-grid"><div class="panel"><div class="vs-header"><h3>Large organization</h3><span class="vs-tag">Scale</span></div><p class="small">Idea → reviews → approvals → coordination → rollout</p><div style="display:flex;gap:5px;margin-top:15px">${['Idea','Review','Approve','Deploy'].map(x=>`<span class="role-tag">${x}</span>`).join('')}</div></div><div class="panel hot"><div class="vs-header"><h3>Agile SME</h3><span class="vs-tag">Speed</span></div><p class="small">Idea → quick pilot → learn → improve</p><div style="display:flex;gap:5px;margin-top:15px;flex-wrap:wrap">${['Test','Learn','Improve'].map(x=>`<span class="role-tag">${x}</span>`).join('')}</div></div></div>`, 'Explain that large companies can have scale and expertise; SMEs can build an advantage through lean processes. Invite real examples.');
-q(1,2,'What if your biggest competitor doesn’t even exist yet?!','Digital-first newcomers can change customer expectations faster than established businesses expect.',[
-'New entrants can build around modern customer experiences.','Speed and convenience can matter as much as brand recognition.','Continuous learning beats assuming yesterday’s model will always win.'],`<div class="float-cards"><div class="float-card"><div class="huge">01</div><div class="lbl">A new customer frustration is discovered</div></div><div class="float-card"><div class="huge">02</div><div class="lbl">A small team tests a digital service</div></div><div class="float-card"><div class="huge">03</div><div class="lbl">The market starts expecting something new</div></div></div>`);
-q(1,3,'Too small to innovate? Or too small NOT to?!','Innovation does not have to mean a million-euro transformation programme.',[
-'Innovation can be a better process, not a new invention.','Small pilots reduce the risk of experimentation.','Doing nothing also has a cost: lost time and changing customer expectations.'],`<div class="panel hot"><div class="overline">A different definition of innovation</div><h2 class="h3">One problem.<br><span class="gradient">One experiment.</span><br>One measurable result.</h2><div style="margin-top:20px">${pts(['Start with a problem customers or staff actually face.','Try the smallest useful improvement.','Keep what works; change what doesn’t.'])}</div></div>`);
+add(1,'discussion','The SME Advantage: Three Big Questions',`${head(1,SECTION_NAMES[1],'3 QUESTIONS · GROUP DISCUSSION')}<div class="sme-onepage">
+  <div class="sme-discussion-heading"><div class="overline">THE SME ADVANTAGE · DISCUSS TOGETHER</div><h1>Small teams. <span class="gradient">Big moves.</span></h1><p>Three perspectives on why SMEs can compete, adapt and innovate.</p></div>
+  <div class="sme-discussion-grid">
+    <article class="sme-discussion sme-discussion-one">
+      <div class="sme-discussion-label"><span>01</span> DECISION SPEED</div>
+      <h2>Can 10 people <em>outmove</em> 1,000?</h2>
+      <div class="sme-contrast"><div class="sme-contrast-row"><b>BIG COMPANY</b><span>Idea → Reviews → Approvals → Rollout</span></div><div class="sme-contrast-row fast"><b>AGILE SME</b><span>Idea → Pilot → Learn → Improve</span></div></div>
+      <p class="sme-panel-insight">Fewer layers and closer customer relationships can make decisions faster.</p>
+    </article>
+    <article class="sme-discussion sme-discussion-two">
+      <div class="sme-discussion-label"><span>02</span> FUTURE COMPETITION</div>
+      <h2>What if your next competitor <em>doesn't exist yet?</em></h2>
+      <div class="sme-steps"><div><i>1</i><span>Spot a customer frustration</span></div><div><i>2</i><span>Test a digital service</span></div><div><i>3</i><span>Raise market expectations</span></div></div>
+      <p class="sme-panel-insight">Convenience, speed and continuous learning can matter as much as scale.</p>
+    </article>
+    <article class="sme-discussion sme-discussion-three">
+      <div class="sme-discussion-label"><span>03</span> PRACTICAL INNOVATION</div>
+      <h2>Too small to innovate — <em>or too small not to?</em></h2>
+      <div class="sme-experiment"><div><span>ONE</span><b>Problem.</b></div><div><span>ONE</span><b>Experiment.</b></div><div><span>ONE</span><b>Measurable result.</b></div></div>
+      <p class="sme-panel-insight">Start small, reduce risk, measure progress. Doing nothing has a cost too.</p>
+    </article>
+  </div>
+  <div class="sme-discussion-prompt"><span>ASK THE ROOM</span><strong>Which of these three advantages could make the biggest difference in your business?</strong></div>
+</div>`,{notes:'One combined discussion replacing the former slides 4–6. Topic 1: ask whether a 10-person company can be faster than a 1,000-person corporation; acknowledge that large companies have important resources and scale, while small teams can shorten decision cycles and stay close to customers. Topic 2: discuss a new competitor identifying a customer frustration, testing a digital service, and changing expectations through speed/convenience. Topic 3: emphasize small innovations, no need for million-euro projects: one practical problem, one small experiment, one measurable outcome. Invite participants to select which advantage matters most in their company. Allow roughly 5–6 minutes for all three prompts.'});
 
 // 02 — HIDDEN COST
 section(2,'THE PROBLEM','Busy is not the same as <span class="gradient">productive.</span>','Every business loses time through repeated tasks, errors, workarounds and information that is difficult to find.',['Repetitive work','Hidden operational costs','Key-person dependency']);
