@@ -20,11 +20,66 @@ button,input{font:inherit}button{cursor:pointer}a{color:inherit}a:focus-visible,
 @media(max-width:400px){.controls{grid-template-columns:1fr}.setup-logo{display:none}.brand{font-size:11px}.duration{font-size:11px;padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
 </style>
+<style id="demo-styles">
+/* Shared, accessible animated preview. All activity is simulated locally. */
+.demo-launch{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 17px;min-height:44px;border:1px solid #a8dcd8;border-radius:11px;background:#e8f7f4;color:#096e69;box-shadow:0 4px 14px rgba(12,119,113,.07);font-family:inherit;font-size:14px;font-weight:850;cursor:pointer;transition:transform .18s,background .18s,box-shadow .18s}
+.demo-launch:hover{transform:translateY(-2px);background:#d6f0ec;box-shadow:0 8px 20px rgba(12,119,113,.14)}
+.demo-launch:focus-visible,.demo-close:focus-visible,.demo-replay:focus-visible{outline:3px solid #42c5bc;outline-offset:3px}
+.demo-play-icon{display:inline-grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#127e78;color:#fff;font-size:11px;padding-left:2px}
+body.demo-lock{overflow:hidden}
+.demo-backdrop{position:fixed;inset:0;background:rgba(8,28,43,.72);backdrop-filter:blur(9px);display:none;align-items:center;justify-content:center;padding:22px;z-index:10000;overflow-y:auto}
+.demo-backdrop.is-open{display:flex;animation:demoFade .2s ease both}
+.demo-dialog{width:min(830px,100%);max-height:min(92dvh,850px);display:flex;flex-direction:column;background:#f8fbfc;color:#133147;border:1px solid #d5e5e9;border-radius:23px;box-shadow:0 30px 90px rgba(0,21,38,.3);overflow:hidden;position:relative}
+.demo-head{padding:22px 25px 16px;background:#fff;border-bottom:1px solid #e1eaee;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex:none}
+.demo-title-flag{display:flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:900;color:#0b827b;margin-bottom:7px}
+.demo-live-dot{height:7px;width:7px;border-radius:50%;background:#15998c;box-shadow:0 0 0 4px #dff4f1}
+.demo-head h2{font-size:clamp(22px,3vw,28px);line-height:1.12;letter-spacing:-.04em;margin:0 0 5px!important;font-weight:850}
+.demo-head p{margin:0;color:#66808f;font-size:12px;line-height:1.45}
+.demo-close{border:1px solid #d8e6ec;background:#f6fafb;color:#517287;border-radius:11px;width:36px;height:36px;flex:none;display:grid;place-items:center;font-size:24px;line-height:1;cursor:pointer}
+.demo-close:hover{background:#e9f3f6}
+.demo-timeline{display:flex;gap:0;background:#fff;border-bottom:1px solid #e1eaee;padding:12px 23px;flex:none}
+.demo-step{display:flex;gap:7px;align-items:center;flex:1;font-size:11px;font-weight:800;color:#93a5af;letter-spacing:.01em;white-space:nowrap}
+.demo-step:before{content:'';width:19px;height:19px;border:1px solid #dce8ea;border-radius:50%;background:#f5f8fa;display:block;flex:none}
+.demo-step.is-active{color:#087b79}.demo-step.is-done{color:#668394}
+.demo-step.is-active:before{border-color:#10978e;background:#10978e;box-shadow:inset 0 0 0 5px #fff}
+.demo-step.is-done:before{border-color:#10978e;background:#10978e;box-shadow:inset 0 0 0 5px #10978e;outline:1px solid #10978e}
+.demo-body{overflow-y:auto;overscroll-behavior:contain;padding:22px 25px 24px;min-height:270px;flex:1}
+.demo-label{display:flex;justify-content:space-between;gap:10px;text-transform:uppercase;letter-spacing:.12em;color:#768f9b;font-weight:900;font-size:10px;margin:0 0 8px}
+.demo-chat-input{border:1px solid #d5e7eb;border-radius:14px;background:#fff;padding:15px 17px;min-height:70px;line-height:1.5;font-size:13px;color:#2b5062;box-shadow:0 4px 16px rgba(27,75,99,.03);white-space:pre-wrap;overflow-wrap:anywhere}
+.demo-cursor{display:inline-block;width:2px;height:1em;background:#0b8981;vertical-align:-.17em;animation:demoBlink .7s step-end infinite}
+.demo-processing{min-height:34px;display:none;align-items:center;gap:10px;color:#0d7e79;font-size:13px;font-weight:750;margin:11px 0 0;opacity:0;transition:opacity .18s}
+.demo-processing.is-visible{display:flex;opacity:1}
+.demo-spinner{display:inline-block;width:16px;height:16px;flex:none;border:2px solid #bee4e1;border-top-color:#0d847e;border-radius:50%;animation:demoSpin .75s linear infinite}
+.demo-result{margin-top:13px;display:none;animation:demoRise .3s ease both}
+.demo-result.is-visible{display:block}
+.demo-response-card{border:1px solid #d7e8ea;border-radius:14px;background:#fff;padding:16px 18px 13px;box-shadow:0 6px 18px rgba(21,65,79,.04)}
+.demo-response-top{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-bottom:11px;border-bottom:1px solid #e9eff2;margin-bottom:8px}
+.demo-response-top strong{font-size:13px;color:#12384b}
+.demo-response-top span{font-size:10px;font-weight:800;color:#11847b;background:#e8f7f4;padding:5px 8px;border-radius:30px}
+.demo-output-row{padding:10px 0;display:grid;grid-template-columns:23px minmax(0,1fr);gap:8px;align-items:start;border-bottom:1px solid #eef2f3;animation:demoRise .23s ease both}
+.demo-output-row:last-child{border-bottom:0}
+.demo-output-check{height:19px;width:19px;display:grid;place-items:center;border-radius:6px;background:#e3f6f0;color:#0b8476;font-weight:900;font-size:12px}
+.demo-output-row b{display:block;font-size:12.5px;line-height:1.45;color:#12384b;margin-bottom:2px}
+.demo-output-row p{font-size:12px;line-height:1.48;color:#627c8b;margin:0}
+.demo-kpi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 7px}
+.demo-kpi{border:1px solid #d6e8e7;border-radius:11px;padding:11px 12px;background:#f0f9f7;animation:demoRise .26s ease both}
+.demo-kpi small{display:block;color:#6a8691;font-weight:800;font-size:10px;margin-bottom:4px}
+.demo-kpi strong{font-size:clamp(17px,2.8vw,22px);letter-spacing:-.04em;color:#0b6d6a}
+.demo-mini-flow{margin-top:12px;border:1px solid #d4e8eb;border-radius:10px;background:#f4fafb;padding:11px 12px;font-size:11.5px;font-weight:750;color:#23536a;display:flex;flex-wrap:wrap;align-items:center;gap:8px;animation:demoRise .3s ease both}
+.demo-mini-flow .demo-arrow{color:#0b948c;font-weight:900;font-size:16px}
+.demo-foot{padding:14px 24px;background:#fff;border-top:1px solid #e1eaee;display:flex;align-items:center;justify-content:space-between;gap:14px;flex:none}
+.demo-disclaimer{margin:0;max-width:500px;font-size:11.3px;line-height:1.45;color:#77909a}
+.demo-replay{border:0;background:#113d4d;color:#fff;padding:11px 16px;border-radius:10px;font-size:12px;font-weight:850;white-space:nowrap;cursor:pointer}
+.demo-replay:hover{background:#176075}
+@keyframes demoBlink{50%{opacity:0}}@keyframes demoFade{from{opacity:0}to{opacity:1}}@keyframes demoSpin{to{transform:rotate(360deg)}}@keyframes demoRise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:630px){.demo-backdrop{padding:9px;align-items:center}.demo-dialog{border-radius:16px;max-height:94dvh}.demo-head{padding:16px}.demo-head h2{font-size:21px}.demo-timeline{padding:11px 14px}.demo-step{font-size:10px}.demo-body{padding:15px;min-height:250px}.demo-foot{padding:12px 15px}.demo-disclaimer{font-size:10px}.demo-replay{padding:10px 12px}.demo-kpi-grid{gap:5px}.demo-kpi{padding:9px 7px}.demo-kpi strong{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.demo-backdrop.is-open,.demo-output-row,.demo-result,.demo-kpi,.demo-mini-flow{animation:none!important}.demo-cursor,.demo-spinner{animation:none!important}}
+</style>
 </head>
-<body>
+<body data-demo-kind="email">
 <main class="page">
  <header class="top"><span class="brand">SME · Hands-on Automation</span><span class="duration">7-minute exercise</span></header>
- <div class="hero"><div><div class="eyebrow">From manual to automatic</div><h1>Organize your inbox.<br><em>Automatically.</em></h1><p>Build one simple rule that organizes incoming customer emails. Choose your email platform and follow three steps.</p></div><div class="switch" role="tablist" aria-label="Choose your email platform"><button id="tabGmail" role="tab" aria-selected="true" aria-controls="instructions" type="button">Gmail</button><button id="tabOutlook" role="tab" aria-selected="false" aria-controls="instructions" type="button">Outlook</button></div></div>
+ <div class="hero"><div><div class="eyebrow">From manual to automatic</div><h1>Organize your inbox.<br><em>Automatically.</em></h1><p>Build one simple rule that organizes incoming customer emails. Choose your email platform and follow three steps.</p><button type="button" class="demo-launch" id="demoLaunch" style="margin-top:15px"><span class="demo-play-icon" aria-hidden="true">▶</span> Demonstrate demo</button></div><div class="switch" role="tablist" aria-label="Choose your email platform"><button id="tabGmail" role="tab" aria-selected="true" aria-controls="instructions" type="button">Gmail</button><button id="tabOutlook" role="tab" aria-selected="false" aria-controls="instructions" type="button">Outlook</button></div></div>
  <section class="workshop" id="instructions" role="tabpanel" aria-label="Email automation steps">
   <div class="setup"><div class="setup-left"><div class="setup-logo" id="logo">G</div><div><div class="setup-label" id="platformTitle">Gmail · Filter + Label</div><div class="setup-desc">No coding. No extra tools.</div></div></div><a class="primary-link" id="openEmail" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">Open Gmail ↗</a></div>
   <div class="controls"><div class="field"><label for="keyword">Email subject contains</label><input id="keyword" value="Order" maxlength="60" spellcheck="false" autocomplete="off"></div><div class="field"><label id="destLabel" for="destination">Apply label</label><input id="destination" value="Orders" maxlength="60" spellcheck="false" autocomplete="off"></div></div>
@@ -66,6 +121,79 @@ button,input{font:inherit}button{cursor:pointer}a{color:inherit}a:focus-visible,
  ['keyword','destination'].forEach(id=>$(id).addEventListener('input',render));
  $('copyBtn').addEventListener('click',async()=>{const text=$('testSubject').textContent;try{await navigator.clipboard.writeText(text);$('copyBtn').textContent='Copied ✓'}catch(e){const el=$('testSubject');const r=document.createRange();r.selectNodeContents(el);window.getSelection().removeAllRanges();window.getSelection().addRange(r);$('copyBtn').textContent='Select and copy';}setTimeout(()=>$('copyBtn').textContent='Copy test subject',1600)});
  render();
+})();
+</script>
+<div class="demo-backdrop" id="demoOverlay" aria-hidden="true">
+  <section class="demo-dialog" id="demoDialog" role="dialog" aria-modal="true" aria-labelledby="demoTitle" tabindex="-1">
+    <header class="demo-head"><div><div class="demo-title-flag"><span class="demo-live-dot" aria-hidden="true"></span> Interactive preview · simulated</div><h2 id="demoTitle">See it in action</h2><p id="demoSubtitle">Watch a sample request become a practical result.</p></div><button type="button" class="demo-close" id="demoClose" aria-label="Close demonstration">×</button></header>
+    <div class="demo-timeline" aria-label="Demo progress"><div class="demo-step" id="demoStage1">Type request</div><div class="demo-step" id="demoStage2">Process</div><div class="demo-step" id="demoStage3">See result</div></div>
+    <div class="demo-body" id="demoBody"><div class="demo-label"><span>YOUR REQUEST</span><span id="demoPromptHint">Example prompt</span></div><div class="demo-chat-input"><span id="demoTyping"></span><span class="demo-cursor" id="demoCaret" aria-hidden="true"></span></div><div class="demo-processing" id="demoProcessing" role="status" aria-live="polite"><span class="demo-spinner" aria-hidden="true"></span><span id="demoProcessingText">Generating a sample response...</span></div><div class="demo-result" id="demoResult"><div class="demo-label"><span>DEMONSTRATION RESPONSE</span><span>Illustrative only</span></div><div class="demo-response-card"><div class="demo-response-top"><strong id="demoResponseTitle">Suggested next steps</strong><span>Example output</span></div><div id="demoKpis"></div><div id="demoOutput"></div><div id="demoFlow"></div></div></div></div>
+    <footer class="demo-foot"><p class="demo-disclaimer">This animation is a prewritten example, not a live AI analysis or a connection to your accounts. For real results, follow the exercise on this page.</p><button type="button" class="demo-replay" id="demoReplay">↻ Play again</button></footer>
+  </section>
+</div>
+<script id="demo-interaction">
+(()=>{
+ 'use strict';
+ const $=id=>document.getElementById(id);
+ const overlay=$('demoOverlay'),dialog=$('demoDialog'),launch=$('demoLaunch');
+ const title=$('demoTitle'),sub=$('demoSubtitle'),typing=$('demoTyping'),caret=$('demoCaret'),processing=$('demoProcessing'),result=$('demoResult');
+ const stages=[$('demoStage1'),$('demoStage2'),$('demoStage3')];
+ let runId=0, priorFocus=null;
+ const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+ const row=(heading,body)=>({heading,body});
+ function scenario(){
+   const kind=document.body.dataset.demoKind;
+   if(kind==='assessment')return {
+     title:'From business problem to action plan', subtitle:'Example: handling customer orders in a small business',
+     prompt:'We receive customer orders by email, check stock in Excel and manually prepare quotes. Recommend a low-cost automation, specific tools and a 30-day pilot.',
+     response:'A practical automation blueprint',rows:[
+       row('Recommended tools','Gmail + Make + Google Sheets; use a draft email for human approval.'),
+       row('Automate this flow','New order email → extract items → check stock → prepare a quote draft.'),
+       row('Your first 60 minutes','Create a sample inventory sheet and test one fictional customer request.'),
+       row('30-day pilot','Track time saved, exceptions and draft accuracy before scaling.')]
+   };
+   if(kind==='email'){
+     const gmail=$('tabGmail')?.getAttribute('aria-selected')==='true';
+     const keyword=($('keyword')?.value||'Order').trim().slice(0,48)||'Order';
+     const dest=($('destination')?.value||'Orders').trim().slice(0,48)||'Orders';
+     return {
+       title:'Watch your inbox rule do the work', subtitle:gmail?'Gmail filter → automatic label':'Outlook rule → automatic folder',
+       prompt:`Show me how to organize new ${gmail?'Gmail':'Outlook'} messages automatically. If the subject contains "${keyword}", ${gmail?'apply the label':'move it to the folder'} "${dest}".`,
+       response:gmail?'Gmail filter setup':'Outlook rule setup',
+       rows:[row(gmail?'Create a label':'Create a folder',`Name it “${dest}”.`),row(gmail?'Add a subject filter':'Add a subject rule',`Match the subject keyword “${keyword}”.`),row('Choose an automatic action',gmail?`Apply the “${dest}” label.`:`Move matching messages to “${dest}”.`),row('Send a test email',`Subject: ${keyword} – Workshop Test. Check the result.`)],
+       flow:['✉ New message',`“${keyword}” matched`,gmail?`✓ Label: ${dest}`:`✓ Folder: ${dest}`]
+     };
+   }
+   return {
+      title:'Watch a spreadsheet become business insights',subtitle:'Sample calculations from the workshop’s 180 fictional transactions',
+      prompt:'Analyze the uploaded 180-row sales Excel. Show revenue, gross profit, margin, best-selling product and practical next actions. Use only the data provided.',
+      response:'Sales performance · example',
+      kpis:[['Revenue','€103,389'],['Gross profit','€29,415'],['Gross margin','28.5%']],
+      rows:[row('Top product by revenue','Interior Door — €23,607 across the sample data.'),row('What to investigate','Compare revenue and gross margins across the main product categories.'),row('First action','Verify the cost assumptions, then review pricing for high-volume products.')],
+      flow:['180 sales records','KPI report + recommended actions']
+   };
+ }
+ function stage(i){stages.forEach((el,n)=>{el.classList.toggle('is-active',n===i);el.classList.toggle('is-done',n<i)});}
+ function resetView(){typing.textContent='';caret.style.display='inline-block';processing.classList.remove('is-visible');result.classList.remove('is-visible');$('demoKpis').replaceChildren();$('demoOutput').replaceChildren();$('demoFlow').replaceChildren();$('demoProcessingText').textContent='Generating a sample response...';stage(0);}
+ function addRow(info){const node=document.createElement('div');node.className='demo-output-row';const mark=document.createElement('span');mark.className='demo-output-check';mark.textContent='✓';const content=document.createElement('div');const strong=document.createElement('b');strong.textContent=info.heading;const p=document.createElement('p');p.textContent=info.body;content.append(strong,p);node.append(mark,content);$('demoOutput').append(node);node.scrollIntoView({block:'nearest',behavior:reduced?'auto':'smooth'});}
+ function makeKpis(items){if(!items)return;const grid=document.createElement('div');grid.className='demo-kpi-grid';items.forEach(([label,value])=>{let c=document.createElement('div');c.className='demo-kpi';const small=document.createElement('small');small.textContent=label;const strong=document.createElement('strong');strong.textContent=value;c.append(small,strong);grid.append(c)});$('demoKpis').append(grid);}
+ function makeFlow(items){if(!items)return;const flow=document.createElement('div');flow.className='demo-mini-flow';items.forEach((txt,i)=>{const s=document.createElement('span');s.textContent=txt;flow.append(s);if(i<items.length-1&&txt!=='→'){let a=document.createElement('span');a.className='demo-arrow';a.textContent='→';flow.append(a)}});$('demoFlow').append(flow);}
+ async function run(){const id=++runId;resetView();const data=scenario();title.textContent=data.title;sub.textContent=data.subtitle;$('demoResponseTitle').textContent=data.response;
+   if(reduced){typing.textContent=data.prompt;caret.style.display='none';stage(2);result.classList.add('is-visible');makeKpis(data.kpis);data.rows.forEach(addRow);makeFlow(data.flow);return;}
+   const prompt=data.prompt,steps=Math.max(1,Math.ceil(prompt.length/3));
+   for(let i=1;i<=steps;i++){if(id!==runId)return;typing.textContent=prompt.slice(0,Math.min(i*3,prompt.length));await wait(28)}
+   if(id!==runId)return;caret.style.display='none';stage(1);processing.classList.add('is-visible');await wait(950);
+   if(id!==runId)return;processing.classList.remove('is-visible');stage(2);result.classList.add('is-visible');makeKpis(data.kpis);
+   for(const item of data.rows){if(id!==runId)return;addRow(item);await wait(390)}
+   if(id!==runId)return;makeFlow(data.flow);
+ }
+ function openDemo(){if(!launch)return;priorFocus=document.activeElement;overlay.classList.add('is-open');overlay.setAttribute('aria-hidden','false');document.body.classList.add('demo-lock');$('demoClose').focus();run()}
+ function closeDemo(){++runId;overlay.classList.remove('is-open');overlay.setAttribute('aria-hidden','true');document.body.classList.remove('demo-lock');if(priorFocus&&priorFocus.isConnected)priorFocus.focus()}
+ launch?.addEventListener('click',openDemo);$('demoClose').addEventListener('click',closeDemo);$('demoReplay').addEventListener('click',run);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)closeDemo()});
+ document.addEventListener('keydown',e=>{if(!overlay.classList.contains('is-open'))return;if(e.key==='Escape'){e.preventDefault();closeDemo()}else if(e.key==='Tab'){const focusable=[...dialog.querySelectorAll('button,[href],input')].filter(x=>!x.disabled&&x.offsetParent!==null);if(focusable.length){const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}});
 })();
 </script>
 </body>
