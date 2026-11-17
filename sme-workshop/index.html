@@ -957,62 +957,6 @@ body:before{display:none}
 @media(max-width:730px){.uc-headings,.uc-row{grid-template-columns:24px minmax(0,1fr) 15px minmax(0,1fr);gap:8px}.uc-headings span:nth-child(3),.uc-row .uc-old{display:none}.uc-headings span:last-child{grid-column:4}.uc-arrow{font-size:18px}.uc-area h2{font-size:clamp(14px,2.4vw,20px)}.uc-area>span{font-size:9px}.uc-new{font-size:clamp(11px,1.8vw,14px)}.uc-human{display:none}}
 @media(prefers-reduced-motion:reduce){.slide.incoming .uc-row{animation:none!important}}
 
-/* PAGE 9 — single editorial, connected workflow rather than five cards */
-.slide:has(.bj-content){--bj-text:#14283f;--bj-muted:#5a6f87;}
-.slide:has(.bj-content) .slide-header{margin-bottom:clamp(10px,1.4vw,21px)}
-.bj-content{display:flex;flex-direction:column;flex:1;min-height:0;min-width:0}
-.bj-intro{flex:none;max-width:1100px}
-.bj-eyebrow{font-size:clamp(10px,.84vw,13px);font-weight:900;letter-spacing:.14em;color:var(--accent);margin-bottom:clamp(8px,1.25vh,14px)}
-.bj-intro h1{font-size:clamp(33px,3.38vw,58px);line-height:1.07;font-weight:900;letter-spacing:-.055em;margin:0;color:var(--bj-text)}
-.bj-intro p{font-size:clamp(13px,1.2vw,19px);line-height:1.45;color:var(--bj-muted);margin:clamp(7px,1.25vh,14px) 0 0}
-.bj-stages{--bj-node:clamp(60px,6.1vw,86px);position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;align-items:stretch;flex:none;min-height:0;margin-top:auto;margin-bottom:auto;padding:clamp(18px,2.4vh,27px) 0}
-.bj-line{pointer-events:none;position:absolute;top:calc(21px + 16px + var(--bj-node)/2 + clamp(18px,2.4vh,27px));left:10%;right:10%;height:2px;background:linear-gradient(90deg,#74acd2 0%,#69aaa5 35%,#896cc9 52%,#64a3ba 72%,#7cc7b1 100%);z-index:0}
-.bj-step{--bj-tone:#28899e;position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 clamp(5px,.8vw,16px);min-width:0;color:var(--bj-text)}
-.bj-request{--bj-tone:#2791ac}.bj-inventory{--bj-tone:#318f7e}.bj-quote{--bj-tone:#7652c6}.bj-invoice{--bj-tone:#3281bd}.bj-report{--bj-tone:#2b998b}
-.bj-step:not(:last-child):after{content:"";position:absolute;z-index:2;top:calc(21px + 16px + var(--bj-node)/2 - 4px);right:-2px;width:8px;height:8px;transform:rotate(45deg);border-top:2px solid #5b899c;border-right:2px solid #5b899c;background:#fff}
-.bj-label{height:21px;display:flex;align-items:center;gap:7px;justify-content:center;white-space:nowrap;font-size:clamp(9px,.78vw,13px);letter-spacing:.095em;font-weight:850;color:#6e8095}
-.bj-label b{font-size:clamp(12px,.98vw,17px);letter-spacing:0;color:var(--bj-tone)}
-.bj-node{width:var(--bj-node);height:var(--bj-node);display:flex;align-items:center;justify-content:center;flex:none;border-radius:50%;margin-top:16px;background:linear-gradient(150deg,#fff 10%,color-mix(in srgb,var(--bj-tone) 8%,white));border:2px solid color-mix(in srgb,var(--bj-tone) 40%,white);color:var(--bj-tone);box-shadow:0 0 0 8px #fff,0 6px 18px color-mix(in srgb,var(--bj-tone) 11%,transparent);position:relative;z-index:1;transition:transform .3s ease,box-shadow .3s ease}
-.bj-node svg{width:48%;height:48%;stroke:currentColor;fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
-.bj-step:hover .bj-node{transform:translateY(-5px);box-shadow:0 0 0 8px #fff,0 9px 18px color-mix(in srgb,var(--bj-tone) 19%,transparent)}
-.bj-step h2{margin:clamp(15px,2.3vh,24px) 0 0;font-size:clamp(17px,1.6vw,27px);line-height:1.16;font-weight:860;letter-spacing:-.035em;min-height:2.3em;max-width:12ch}
-.bj-step p{margin:clamp(5px,1vh,11px) 0 0;font-size:clamp(11px,.97vw,16px);line-height:1.43;color:#5d7088;max-width:22ch}
-.bj-mini,.bj-review-label{display:block;margin-top:clamp(10px,1.5vh,15px);padding-top:0;font-size:clamp(10px,.79vw,13px);font-weight:780;color:#728396;letter-spacing:.01em}
-.bj-review-label{color:#7951bf;letter-spacing:.03em;font-weight:900}
-.bj-takeaway{flex:none;display:flex;align-items:center;gap:clamp(10px,1.2vw,20px);padding:clamp(13px,1.55vh,21px) 0;border-top:1px solid #dce6f0;color:#4d657e;font-size:clamp(12px,1.06vw,17px);line-height:1.4}
-.bj-takeaway-mark{width:26px;height:4px;border-radius:5px;background:var(--accent);flex:none}
-.bj-takeaway strong{font-size:clamp(13px,1.05vw,18px);color:#203b53;white-space:nowrap}
-.bj-takeaway-people{margin-left:auto;color:#5a4598;font-weight:770;white-space:nowrap}
-@media(max-width:1100px){
- .bj-stages{--bj-node:62px;padding:13px 0}
- .bj-line{top:calc(21px + 16px + var(--bj-node)/2 + 13px)}
- .bj-step h2{font-size:clamp(16px,1.55vw,20px);margin-top:13px}
- .bj-step p{font-size:clamp(11px,1.04vw,13px)}
- .bj-takeaway{gap:9px;flex-wrap:wrap}
- .bj-takeaway-people{margin-left:35px}
-}
-@media(max-height:680px){
- .slide:has(.bj-content){padding-top:20px;padding-bottom:19px}
- .bj-stages{--bj-node:58px;padding:10px 0}
- .bj-line{top:calc(21px + 16px + var(--bj-node)/2 + 10px)}
- .bj-step h2{margin-top:11px}
- .bj-mini,.bj-review-label{margin-top:7px}
- .bj-intro p{margin-top:7px}
- .bj-takeaway{padding:10px 0}
-}
-@media(max-width:700px){
- .bj-stages{--bj-node:48px}
- .bj-step{padding:0 3px}
- .bj-step h2{font-size:13px}
- .bj-step p{font-size:10px}
- .bj-mini,.bj-review-label{font-size:9px}
- .bj-label span{display:none}
- .bj-step:not(:last-child):after{right:-1px;width:6px;height:6px}
- .bj-takeaway-people{margin-left:0}
-}
-@media(prefers-reduced-motion:reduce){.bj-node{transition:none!important}}
-
-
 /* Two-page workshop practical example, redesigned as one editorial case study */
 .slide:has(.sc-shell) .slide-header{margin-bottom:clamp(11px,1.5vh,20px)}
 .sc-shell{display:flex;flex-direction:column;flex:1;min-height:0;min-width:0;color:#153047}
@@ -1234,7 +1178,7 @@ body:has(.adv-editorial) .navbtn.primary:hover{background:#076a73!important}
 <body>
 <div id="app">
   <main class="presentation" id="deck" aria-label="Interactive workshop presentation"><div id="slideHost"></div><div class="progress-track"><div class="progress-fill" id="progress"></div></div></main>
-  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 16</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
+  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 15</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
   <div class="help" id="help"><strong>Keyboard shortcuts</strong><p><kbd>→</kbd> <kbd>Space</kbd> Next slide</p><p><kbd>←</kbd> Previous slide</p><p><kbd>Home</kbd> First slide · <kbd>End</kbd> Last</p><p><kbd>G</kbd> Agenda · <kbd>F</kbd> Fullscreen</p><p><kbd>P</kbd> Print/PDF</p><p><kbd>?</kbd> This help</p><p style="color:#9eb1cd">Animations run automatically. Slides work offline; using a live AI assistant requires internet.</p></div>
   <div id="announce" aria-live="polite"></div>
 </div>
@@ -1267,8 +1211,8 @@ add(0,'agenda','Workshop Overview',`${head(0,'Workshop overview','')}<div class=
 <div class="journey-row journey-card-1" data-jump="2" role="button" tabindex="0" aria-label="Explore The SME Advantage"><span class="jr-number">01</span><h2>The SME Advantage</h2><p>What if being smaller made you faster?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 <div class="journey-row journey-card-2" data-jump="4" role="button" tabindex="0" aria-label="Explore The Hidden Cost"><span class="jr-number">02</span><h2>The Hidden Cost of Manual Work</h2><p>Where is your time slipping away?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 <div class="journey-row journey-card-3" data-jump="6" role="button" tabindex="0" aria-label="Explore Real Business Opportunities"><span class="jr-number">03</span><h2>Real Business Opportunities</h2><p>What could work automatically?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-4" data-jump="10" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-5" data-jump="13" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-4" data-jump="9" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-5" data-jump="12" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 </div><div class="journey-footer"><span class="journey-pulse"></span> Different industries. Shared challenges. New opportunities.</div></div>`,{notes:'Introduce the five themes conversationally. Click any row to jump to its chapter. Ask which theme feels most relevant to the audience.'});
 
 // 01 — SME ADVANTAGE
@@ -1321,49 +1265,6 @@ add(3,'usecase-overview','Five everyday use cases',`${head(3,'Real business oppo
   <div class="uc-footer"><div class="uc-foot-mark"></div><span><b>The common thread:</b> Less repetition. Better information. More time for people.</span><span class="uc-human">Human review stays essential</span></div>
 </div>`,{notes:'Five use cases now share one overview slide. Discuss each process briefly; connect daily friction to opportunity without technical detail. Human review and verification remain important.'});
 
-add(3,'business-journey','From one request to a connected business',`${head(3,'Real business opportunities','CONNECTED WORKFLOW')}
-  <div class="bj-content">
-    <div class="bj-intro">
-      <div class="bj-eyebrow">ONE CUSTOMER INTERACTION · FIVE CONNECTED STEPS</div>
-      <h1>One request. <span class="gradient">One connected business.</span></h1>
-      <p>A simple customer enquiry can move through the business without starting from scratch at every handoff.</p>
-    </div>
-    <div class="bj-stages" aria-label="Five-step business workflow">
-      <div class="bj-line" aria-hidden="true"></div>
-      <div class="bj-step bj-request">
-    <div class="bj-label"><b>01</b><span>CUSTOMER</span></div>
-    <div class="bj-node"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="25" rx="5"/><path d="M7 16.5L24 28l17-11.5"/><path d="M16 9h16"/></svg></div>
-    <h2>Customer request</h2>
-    <p>An enquiry or order starts the workflow.</p>
-    
-  </div><div class="bj-step bj-inventory">
-    <div class="bj-label"><b>02</b><span>OPERATIONS</span></div>
-    <div class="bj-node"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 17 9v20l-17 9L7 34V14L24 5Z"/><path d="m7 14 17 9 17-9M24 23v20M15 10l17 10"/></svg></div>
-    <h2>Check availability</h2>
-    <p>Stock, capacity and resources are verified.</p>
-    
-  </div><div class="bj-step bj-quote bj-review">
-    <div class="bj-label"><b>03</b><span>SALES</span></div>
-    <div class="bj-node"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 5h17l7 7v29H13a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3Z"/><path d="M30 5v8h7M16 23h16M16 30h12"/><path d="m28 35 3 3 6-7"/></svg></div>
-    <h2>Prepare quotation</h2>
-    <p>Pricing and terms are drafted for approval.</p>
-    <span class="bj-review-label">✓ HUMAN APPROVAL</span>
-  </div><div class="bj-step bj-invoice">
-    <div class="bj-label"><b>04</b><span>FINANCE</span></div>
-    <div class="bj-node"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 6h22v36l-5-4-6 4-6-4-5 4V6Z"/><path d="M19 15h11M19 22h11M19 29h5"/></svg></div>
-    <h2>Create invoice</h2>
-    <p>Documents follow the confirmed order.</p>
-    
-  </div><div class="bj-step bj-report">
-    <div class="bj-label"><b>05</b><span>MANAGEMENT</span></div>
-    <div class="bj-node"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 40h35"/><rect x="11" y="26" width="7" height="14" rx="1"/><rect x="22" y="17" width="7" height="23" rx="1"/><rect x="33" y="8" width="7" height="32" rx="1"/></svg></div>
-    <h2>Update reporting</h2>
-    <p>One shared data trail supports decisions.</p>
-    
-  </div>
-    </div>
-    <div class="bj-takeaway"><span class="bj-takeaway-mark" aria-hidden="true"></span><strong>The result</strong><span>Less retyping. Fewer delays. More reliable information across teams.</span><span class="bj-takeaway-people">People remain in control of decisions.</span></div>
-  </div>`,{notes:'Illustrative connected business workflow. Customer request → availability → quotation with human review → invoice → reporting. The benefits arise when information moves through teams with clear review checkpoints.'});
 add(3,'practical-order','AI-Assisted Order Processing',`${head(3,'Real business opportunities','PRACTICAL EXAMPLE')}
   <div class="sc-shell">
     <div class="sc-hero"><div class="sc-kicker">FROM CUSTOMER REQUEST TO INFORMED DECISION</div><h1>One order.<span class="gradient" style="margin-left:.13em">A smarter response.</span></h1><p>See how AI can help check stock, price an order and prepare a reply — with people in control.</p></div>
