@@ -1178,7 +1178,7 @@ body:has(.adv-editorial) .navbtn.primary:hover{background:#076a73!important}
 <body>
 <div id="app">
   <main class="presentation" id="deck" aria-label="Interactive workshop presentation"><div id="slideHost"></div><div class="progress-track"><div class="progress-fill" id="progress"></div></div></main>
-  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 15</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
+  <nav class="toolbar" aria-label="Presentation navigation"><div class="tool-left"><span class="brandbar">SME · Digital Transformation</span><button class="iconbtn" id="tocBtn" title="Agenda (G)" aria-label="Go to agenda">☷</button><button class="iconbtn" id="helpBtn" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button><span class="shortcuts">← → to navigate · F fullscreen</span></div><div class="tool-right"><button class="iconbtn" id="printBtn" title="Print or save as PDF (P)" aria-label="Print">⎙</button><button class="iconbtn" id="fullBtn" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button><button class="navbtn" id="prevBtn">← Previous</button><span id="indexLabel" class="page-indicator">01 / 14</span><button class="navbtn primary" id="nextBtn">Next →</button></div></nav>
   <div class="help" id="help"><strong>Keyboard shortcuts</strong><p><kbd>→</kbd> <kbd>Space</kbd> Next slide</p><p><kbd>←</kbd> Previous slide</p><p><kbd>Home</kbd> First slide · <kbd>End</kbd> Last</p><p><kbd>G</kbd> Agenda · <kbd>F</kbd> Fullscreen</p><p><kbd>P</kbd> Print/PDF</p><p><kbd>?</kbd> This help</p><p style="color:#9eb1cd">Animations run automatically. Slides work offline; using a live AI assistant requires internet.</p></div>
   <div id="announce" aria-live="polite"></div>
 </div>
@@ -1211,8 +1211,8 @@ add(0,'agenda','Workshop Overview',`${head(0,'Workshop overview','')}<div class=
 <div class="journey-row journey-card-1" data-jump="2" role="button" tabindex="0" aria-label="Explore The SME Advantage"><span class="jr-number">01</span><h2>The SME Advantage</h2><p>What if being smaller made you faster?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 <div class="journey-row journey-card-2" data-jump="4" role="button" tabindex="0" aria-label="Explore The Hidden Cost"><span class="jr-number">02</span><h2>The Hidden Cost of Manual Work</h2><p>Where is your time slipping away?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 <div class="journey-row journey-card-3" data-jump="6" role="button" tabindex="0" aria-label="Explore Real Business Opportunities"><span class="jr-number">03</span><h2>Real Business Opportunities</h2><p>What could work automatically?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-4" data-jump="9" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
-<div class="journey-row journey-card-5" data-jump="12" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-4" data-jump="8" role="button" tabindex="0" aria-label="Explore People and Change"><span class="jr-number">04</span><h2>People &amp; Change</h2><p>How will your team evolve with AI?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
+<div class="journey-row journey-card-5" data-jump="11" role="button" tabindex="0" aria-label="Explore From Ideas to Action"><span class="jr-number">05</span><h2>From Ideas to Action</h2><p>What will you change first?</p><span class="jr-arrow" aria-hidden="true">↗</span></div>
 </div><div class="journey-footer"><span class="journey-pulse"></span> Different industries. Shared challenges. New opportunities.</div></div>`,{notes:'Introduce the five themes conversationally. Click any row to jump to its chapter. Ask which theme feels most relevant to the audience.'});
 
 // 01 — SME ADVANTAGE
@@ -1264,39 +1264,6 @@ add(3,'usecase-overview','Five everyday use cases',`${head(3,'Real business oppo
   </div>
   <div class="uc-footer"><div class="uc-foot-mark"></div><span><b>The common thread:</b> Less repetition. Better information. More time for people.</span><span class="uc-human">Human review stays essential</span></div>
 </div>`,{notes:'Five use cases now share one overview slide. Discuss each process briefly; connect daily friction to opportunity without technical detail. Human review and verification remain important.'});
-
-add(3,'practical-order','AI-Assisted Order Processing',`${head(3,'Real business opportunities','PRACTICAL EXAMPLE')}
-  <div class="sc-shell">
-    <div class="sc-hero"><div class="sc-kicker">FROM CUSTOMER REQUEST TO INFORMED DECISION</div><h1>One order.<span class="gradient" style="margin-left:.13em">A smarter response.</span></h1><p>See how AI can help check stock, price an order and prepare a reply — with people in control.</p></div>
-    <div class="sc-main">
-      <div class="sc-source">
-        <div class="sc-eyebrow"><span>01</span> CUSTOMER REQUEST</div>
-        <h2>The incoming order</h2>
-        <div class="sc-message">“Please quote <strong>12 units of Product A</strong> and <strong>8 units of Product B</strong> for next week.”</div>
-        <div class="sc-data-title">CURRENT INVENTORY</div>
-        <div class="sc-table-head"><span>PRODUCT</span><span>IN STOCK</span><span>UNIT PRICE</span></div>
-        <div class="sc-table-row"><b>Product A</b><strong class="sc-short">10 units</strong><span>€20</span></div>
-        <div class="sc-table-row"><b>Product B</b><strong>15 units</strong><span>€30</span></div>
-      </div>
-      <div class="sc-outcome">
-        <div class="sc-eyebrow"><span>02</span> AI-ASSISTED REVIEW</div>
-        <h2>Catch the shortage <span class="gradient">before promising delivery.</span></h2>
-        <div class="sc-kpis">
-          <div class="sc-kpi"><div class="sc-kpi-number">2</div><div class="sc-kpi-note"><b>Product A units short</b><br>12 requested · 10 available</div></div>
-          <div class="sc-kpi"><div class="sc-kpi-number">€480</div><div class="sc-kpi-note"><b>Indicative order value</b><br>Before tax · pending stock confirmation</div></div>
-        </div>
-        <div class="sc-flow-title">THE REVIEW WORKFLOW</div>
-        <div class="sc-flow"><div class="sc-flow-step"><b>01</b>Understand request</div><div class="sc-flow-step"><b>02</b>Verify inventory</div><div class="sc-flow-step"><b>03</b>Calculate quote</div><div class="sc-flow-step"><b>04</b>Draft customer reply</div></div>
-        <div class="sc-review">Human approval for availability, pricing and customer commitments.</div>
-      </div>
-    </div>
-    <div class="sc-prompt">
-      <div class="sc-prompt-kicker">TRY THE EXAMPLE</div>
-      <div class="sc-prompt-text">Give AI the order and inventory, ask it to identify shortages, calculate the total and draft a professional reply.</div>
-      <button class="sc-copy" data-copy="dataset">Copy example data</button>
-      <button class="sc-copy strong" data-copy="prompt">Copy AI prompt</button>
-    </div>
-  </div>`,{notes:'One practical example combining the customer request, inventory data, expected findings, and a copy-ready AI prompt. The quote amount is based on requested quantities, not confirmed availability; human approval is required.'});
 
 // 04 — PEOPLE, CULTURE & CHANGE
 section(4,'THE HUMAN SIDE','Technology changes workflows. <span class="gradient">People make change work.</span>','The real conversation is not only what AI can do, but also what employees, leaders and teams will do differently.',['Jobs & skills','Human + AI','Trust & adoption']);
